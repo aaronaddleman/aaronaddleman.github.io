@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://localhost:4000</loc>
+    </url>
+    
+    
+    <url>
+        <loc>http://localhost:4000/404.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/about/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/feed.xml</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/posts/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/resume/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/sitemap.xml</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/theme-setup/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page2/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page3/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page4/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page5/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page6/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page7/index.html</loc>
+    </url>
+    
+
+    
+    <url>
+        <loc>http://localhost:4000/articles/ruby-interesting-methods/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/sourcetree-cli/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/multiple-line-editing-with-sublime-text-2/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/vmware-fusion-hgfs-permissions/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/varnish-notes-and-lessons-learned/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/add-syntax-to-textpow-for-ultraviolet/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/add-new-syntax-into-nestacms-with-ultraviolet-and-textpow/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/monitoring-log-files-visually/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/wordpress-without-wp-admin/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/verify-redirects-with-ruby/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/apache-deflating-my-brain/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/git-cheat-sheet/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/markdown-syntax/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/redmine-installation-methods/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/git-remove-submodule-from-project/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/rvm-ruby-and-osx/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/centos-install-munin-with-dynamic-graphs/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/using-shellwords-with-system-calls/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/ruby-append-text-to-duplicate-items-in-array/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/copy-git-repo-to-another/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/open-file-in-external-editor/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/limiting-commenting-to-articles/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/convert-invalid-strings-into-entities/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/nesta-caching/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/ruby-find-last-file-entry/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/backup_ee_environments/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/puppet-summaries/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/quick-permissions-summary-reporting/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/using-nokogiri/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/openldap-and-ppolicy/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/articles/nesta-passenger-rvm-apache/</loc>
+    </url>
+    
+</urlset>

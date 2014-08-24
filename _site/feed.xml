@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Aaron Addleman</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2014-08-23T20:33:47-07:00</updated>
+<id>http://localhost:4000/</id>
+<author>
+  <name>Aaron Addleman</name>
+  <uri>http://localhost:4000/</uri>
+  <email>aaronaddleman@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Ruby's 'Interesting methods']]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/ruby-interesting-methods/" />
+  <id>http://localhost:4000/articles/ruby-interesting-methods</id>
+  <published>2014-08-23T00:00:00-07:00</published>
+  <updated>2014-08-23T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;why&quot;&gt;Why&lt;/h1&gt;
+
+&lt;p&gt;When using Ruby’s IRB tool to investigate some code you have the power to list of the methods that are available on objects. You can do this by typing the object’s name followed by a “.” and then hitting the tab button. While this is nice, it happens to list all of the methods. Below is a nice way of removing the methods from the object called Object and then you are showed only the “interesting_methods” that might be relevent.&lt;/p&gt;
+
+&lt;h1 id=&quot;how&quot;&gt;How&lt;/h1&gt;
+
+&lt;p&gt;Here is how to create the method into the class of Object:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;TypeName&quot;&gt;Object&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Return only the methods not present on basic objects&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;interesting_methods&lt;/span&gt;
+    (&lt;span class=&quot;Variable&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;methods&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Object&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;instance_methods&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;sort&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/ruby-interesting-methods/&quot;&gt;Ruby's 'Interesting methods'&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on August 23, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[SourceTree cli]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/sourcetree-cli/" />
+  <id>http://localhost:4000/articles/sourcetree-cli</id>
+  <updated>2014-07-25 08:21:34 -0700T00:00:00-00:00</updated>
+  <published>2014-07-25T00:00:00-07:00</published>
+  
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;what&quot;&gt;What&lt;/h2&gt;
+
+&lt;p&gt;When using Source Tree for the Mac, I noticed there is an option for installing a CLI based tool that is called &lt;code&gt;stree&lt;/code&gt;. This allows for launching Source Tree from a terminal prompt which can save a couple of clicks.&lt;/p&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+
+&lt;p&gt;There are no fancy arguments that you can pass to the &lt;code&gt;stree&lt;/code&gt; program, other than just the path you want to have added in SourceTree, but I like that I can make a new git area and add the folder into SourceTree.&lt;/p&gt;
+
+&lt;h2 id=&quot;how&quot;&gt;How&lt;/h2&gt;
+
+&lt;p&gt;To install the command line tool you can do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to the SourceTree app menu&lt;/li&gt;
+  &lt;li&gt;Click on &lt;code&gt;Install Commandline Tool&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Type in your admin credentials&lt;/li&gt;
+&lt;/ol&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/sourcetree-cli/&quot;&gt;SourceTree cli&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on July 25, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Multiple Line Editing with Sublime Text 2]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/multiple-line-editing-with-sublime-text-2/" />
+  <id>http://localhost:4000/articles/multiple-line-editing-with-sublime-text-2</id>
+  <published>2013-08-21T00:00:00-07:00</published>
+  <updated>2013-08-21T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;multiple-line-editing-with-sublime-text-2&quot;&gt;Multiple Line Editing with Sublime Text 2&lt;/h1&gt;
+
+&lt;p&gt;This morning I almost yelled out “that is so @#%*ing awesome” at work because the multiple line editing in Sublime Text 2 is so cool. Below are the notes of what I found out about this amazing setup.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-situation&quot;&gt;The situation&lt;/h2&gt;
+
+&lt;p&gt;I was making a Puppet module in Sublime Text 2 and had the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  :::puppet
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/multiple-line-editing-with-sublime-text-2/&quot;&gt;Multiple Line Editing with Sublime Text 2&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on August 21, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[VMWare Fusion and the HGFS permissions]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/vmware-fusion-hgfs-permissions/" />
+  <id>http://localhost:4000/articles/vmware-fusion-hgfs-permissions</id>
+  <published>2013-06-24T00:00:00-07:00</published>
+  <updated>2013-06-24T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Flag: draft&lt;/p&gt;
+
+&lt;h1 id=&quot;vmware-fusion-and-the-hgfs-permissions&quot;&gt;VMWare Fusion and the HGFS permissions&lt;/h1&gt;
+&lt;p&gt;While working with VMware Fusion on my Mac I noticed a problem with the permissions. In summary (rest of my notes are below) I modified the start script of the vmware tools to mount the &lt;code&gt;hgfs&lt;/code&gt; directory with the permissions I wanted for my project.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+# Mount all hgfs filesystems
+vmware_mount_vmhgfs() {
+  if [ &quot;`is_vmhgfs_mounted`&quot; = &quot;no&quot; ]; then
+    #OLD vmware_exec_selinux &quot;mount -t vmhgfs .host:/ $vmhgfs_mnt&quot;
+    vmware_exec_selinux &quot;mount -o uid=48,gid=48 -t vmhgfs .host:/ $vmhgfs_mnt&quot;
+  fi
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Might be a good idea to have these numbers be the same as my Mac operating system.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/vmware-fusion-hgfs-permissions/&quot;&gt;VMWare Fusion and the HGFS permissions&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on June 24, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Varnish notes and lessons]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/varnish-notes-and-lessons-learned/" />
+  <id>http://localhost:4000/articles/varnish-notes-and-lessons-learned</id>
+  <published>2013-06-24T00:00:00-07:00</published>
+  <updated>2013-06-24T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;While spending time with Varnish I started a note pad with my notes and lessons of how to work with Varnish. I should say I am still new to Varnish and my notes are by no means a best solution for the problems they address, but I found myself refering back multiple times.&lt;/p&gt;
+
+&lt;h2 id=&quot;diagnostics&quot;&gt;Diagnostics&lt;/h2&gt;
+
+&lt;p&gt;To get some information on what is going on in Varnish, I have used the following methods for help in these matters:&lt;/p&gt;
+
+&lt;h3 id=&quot;view-the-headers&quot;&gt;View the headers&lt;/h3&gt;
+
+&lt;p&gt;It’s nice to view the headers of the page or resource to determain some fields that may have been set from Varnish to help with troublesooting. Or to show which cookies you might need to remove.&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; install the GET program to help with diagnostics&lt;/span&gt;
+yum install perl-libwww-perl
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; install firefox addon to help view http headers&lt;/span&gt;
+https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/&lt;/pre&gt;
+
+&lt;h3 id=&quot;ulrs-hitting-the-backend-and-not-getting-cached&quot;&gt;ULRs hitting the backend and not getting cached&lt;/h3&gt;
+
+&lt;p&gt;If you need to view the requests that are not getting cached, this command helps. There are two ways to view this list, one that is constantly updating, and the other that prints out the top entries and then exits.&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; looking for urls that are hitting the backend&lt;/span&gt;
+varnishtop -i txurl
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; looking for urls that are hitting the backend, print out and exit&lt;/span&gt;
+varnishtop -1 -i txurl
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; after finding the heavy hitter, examine the log entries of the url /foo/bar&lt;/span&gt;
+varnishlog -c -m &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;RxURL:^/foo/bar&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;test-varnish-configuration-script-for-errors&quot;&gt;Test varnish configuration script for errors&lt;/h3&gt;
+
+&lt;p&gt;Sometimes making changes to the VCL configuration can results in error. Find out where the error is with this command:  /usr/sbin/varnishd -C -f default.vcl&lt;/p&gt;
+
+&lt;h2 id=&quot;vcl-configuration-notes&quot;&gt;VCL configuration notes&lt;/h2&gt;
+
+&lt;h2 id=&quot;cache-management&quot;&gt;Cache management&lt;/h2&gt;
+
+&lt;h3 id=&quot;example-of-adding-a-ban-using-telnet-localhost-6082&quot;&gt;Example of adding a ban using &lt;code&gt;telnet localhost 6082&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;ban.url req.http.host ~ &amp;quot;www.website.com&amp;quot; &amp;amp;&amp;amp; req.url ~ &amp;quot;/directory/of/path/&amp;quot;&lt;/pre&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/varnish-notes-and-lessons-learned/&quot;&gt;Varnish notes and lessons&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on June 24, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Add new syntax into Nestacms for use with Ultraviolet and Textpow]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/add-syntax-to-textpow-for-ultraviolet/" />
+  <id>http://localhost:4000/articles/add-syntax-to-textpow-for-ultraviolet</id>
+  <published>2013-06-18T00:00:00-07:00</published>
+  <updated>2013-06-18T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Flags: draft&lt;/p&gt;
+
+&lt;h1 id=&quot;add-new-syntax-into-nestacms-for-use-with-ultraviolet-and-textpow&quot;&gt;Add new syntax into Nestacms for use with Ultraviolet and Textpow&lt;/h1&gt;
+
+&lt;h2 id=&quot;how-to-start&quot;&gt;How to start&lt;/h2&gt;
+
+&lt;p&gt;Make sure you have all the necessary changes to Nestacms for &lt;a href=&quot;/articles/rack-codehighligher&quot;&gt;Setting up rack-codehighligher with Nestacms&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;converting-a-textmate-syntax-bundle&quot;&gt;Converting a Textmate Syntax bundle&lt;/h2&gt;
+
+&lt;p&gt;Download the bundle (usually from a github respository) to get ready for conversion. Once you have the &lt;code&gt;Language.tmLanguage&lt;/code&gt; convert the language file to a yaml file which should end up with a file name like &lt;code&gt;source.Language.syntax&lt;/code&gt; by using this command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+plist2yaml Language.tmLanguage &amp;gt; source.Language.syntax
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you get an error like the following you need to be inside the &lt;code&gt;Language.tmbundle/Syntaxes&lt;/code&gt; directory where the &lt;code&gt;.tmLanuage&lt;/code&gt; file is located:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in `read&#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in `initialize&#39;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `new&#39;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `parse_xml&#39;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in `&amp;lt;top (required)&amp;gt;&#39;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load&#39;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `&amp;lt;main&amp;gt;&#39;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `eval&#39;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `&amp;lt;main&amp;gt;&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;load-the-syntax-file-into-nestacms&quot;&gt;Load the syntax file into Nestacms&lt;/h2&gt;
+
+&lt;p&gt;By adding the following code into your app.rb file the syntax will be available:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+Textpow::SyntaxNode.load(File.expand_path(&#39;public/syntaxes/source.vcl.syntax&#39;, Nesta::App.root))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;use-the-syntax-on-you-files&quot;&gt;Use the syntax on you files&lt;/h2&gt;
+
+&lt;p&gt;To apply the syntax I came up with some code for printing code from the &lt;code&gt;app.rb&lt;/code&gt; file by making this method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+# load custom syntaxes
+Textpow::SyntaxNode.load(File.expand_path(&#39;public/syntaxes/source.vcl.syntax&#39;, Nesta::App.root))
+
+def print_code(opt={})
+  filename = opt[:filename]
+  theme = opt[:theme] || &quot;brilliance_black&quot;
+  syntax = opt[:syntax]
+  show_code = opt[:show_code] || true
+
+  text = File.read(Dir.pwd + &#39;/public/&#39; + filename)
+  processor = Textpow::RecordingProcessor.new
+  result = Uv.parse( text, &quot;xhtml&quot;, syntax, false, &quot;eiffel&quot;)
+
+  haml(:print_code, :layout =&amp;gt; false, :locals =&amp;gt; { :code =&amp;gt; result, :filename =&amp;gt; filename })
+
+  case show_code
+  when true
+    return haml(:print_code, :layout =&amp;gt; false, :locals =&amp;gt; { :code =&amp;gt; result, :filename =&amp;gt; filename })
+  when false
+    return download_link
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now when you want to call some code, make a &lt;code&gt;haml&lt;/code&gt; file and include the file with the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+= print_code(&quot;file_with_language.vcl&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;notes&quot;&gt;Notes&lt;/h1&gt;
+
+&lt;p&gt;To list the availble syntaxes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+uv --list syntaxes
+&lt;/code&gt;&lt;/pre&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/add-syntax-to-textpow-for-ultraviolet/&quot;&gt;Add new syntax into Nestacms for use with Ultraviolet and Textpow&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on June 18, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Add new syntax into Nestacms for use with Ultraviolet and Textpow]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/add-new-syntax-into-nestacms-with-ultraviolet-and-textpow/" />
+  <id>http://localhost:4000/articles/add-new-syntax-into-nestacms-with-ultraviolet-and-textpow</id>
+  <published>2013-06-18T00:00:00-07:00</published>
+  <updated>2013-06-18T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;how-to-start&quot;&gt;How to start&lt;/h2&gt;
+
+&lt;p&gt;Make sure you have all the necessary changes to Nestacms for &lt;a href=&quot;/articles/rack-codehighligher&quot;&gt;Setting up rack-codehighligher with Nestacms&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;converting-a-textmate-syntax-bundle&quot;&gt;Converting a Textmate Syntax bundle&lt;/h2&gt;
+
+&lt;p&gt;Download the bundle (usually from a github respository) to get ready for conversion. Once you have the &lt;code&gt;Language.tmLanguage&lt;/code&gt; convert the language file to a yaml file which should end up with a file name like &lt;code&gt;source.Language.syntax&lt;/code&gt; by using this command:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;plist2yaml Language.tmLanguage &lt;span class=&quot;Keyword&quot;&gt;&amp;gt;&lt;/span&gt; source.Language.syntax&lt;/pre&gt;
+
+&lt;p&gt;If you get an error like the following you need to be inside the &lt;code&gt;Language.tmbundle/Syntaxes&lt;/code&gt; directory where the &lt;code&gt;.tmLanuage&lt;/code&gt; file is located:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;read&amp;#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;initialize&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `new&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;parse_xml&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Keyword&quot;&gt;&amp;lt;&lt;/span&gt;top (required)&lt;span class=&quot;Keyword&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;eval&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `&amp;lt;main&amp;gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;load-the-syntax-file-into-nestacms&quot;&gt;Load the syntax file into Nestacms&lt;/h2&gt;
+
+&lt;p&gt;By adding the following code into your app.rb file the syntax will be available:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;SyntaxNode&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;expand_path&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;public/syntaxes/source.vcl.syntax&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;LibraryObject&quot;&gt;Nesta&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;App&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;root&lt;/span&gt;))&lt;/pre&gt;
+
+&lt;h2 id=&quot;use-the-syntax-on-you-files&quot;&gt;Use the syntax on you files&lt;/h2&gt;
+
+&lt;p&gt;To apply the syntax I came up with some code for printing code from the &lt;code&gt;app.rb&lt;/code&gt; file by making this method:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; load custom syntaxes&lt;/span&gt;
+    &lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;SyntaxNode&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;expand_path&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;public/syntaxes/source.vcl.syntax&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;LibraryObject&quot;&gt;Nesta&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;App&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;root&lt;/span&gt;))
+
+    &lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;print_code&lt;/span&gt;(&lt;span class=&quot;FunctionParameter&quot;&gt;opt&lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;FunctionParameter&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;FunctionParameter&quot;&gt;}&lt;/span&gt;&lt;/span&gt;)
+      filename &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt;]
+      theme &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;theme&lt;/span&gt;] &lt;span class=&quot;Keyword&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;brilliance_black&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+      syntax &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;syntax&lt;/span&gt;]
+      show_code &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;show_code&lt;/span&gt;] &lt;span class=&quot;Keyword&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;
+
+      text &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;read&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;Dir&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;pwd&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;/public/&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;+&lt;/span&gt; filename)
+      processor &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;RecordingProcessor&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;
+      result &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Uv&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;parse&lt;/span&gt;( text, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;xhtml&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, syntax, &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;eiffel&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)
+
+      &lt;span class=&quot;FunctionName&quot;&gt;haml&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;print_code&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;layout&lt;/span&gt; =&amp;gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;locals&lt;/span&gt; =&amp;gt; { &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;code&lt;/span&gt; =&amp;gt; result, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt; =&amp;gt; filename })
+
+      &lt;span class=&quot;Keyword&quot;&gt;case&lt;/span&gt; show_code
+      &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;haml&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;print_code&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;layout&lt;/span&gt; =&amp;gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;locals&lt;/span&gt; =&amp;gt; { &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;code&lt;/span&gt; =&amp;gt; result, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt; =&amp;gt; filename })
+      &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;
+        &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; download_link
+      &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now when you want to call some code, make a &lt;code&gt;haml&lt;/code&gt; file and include the file with the following:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;= print_code(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;file_with_language.vcl&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)&lt;/pre&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;function &lt;span class=&quot;FunctionName&quot;&gt;inthefile&lt;/span&gt;() {
+  export set VAR=&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;this code is inside the article&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+}&lt;/pre&gt;
+
+&lt;h1 id=&quot;notes&quot;&gt;Notes&lt;/h1&gt;
+
+&lt;p&gt;To list the availble syntaxes:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;uv --list syntaxes&lt;/pre&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/add-new-syntax-into-nestacms-with-ultraviolet-and-textpow/&quot;&gt;Add new syntax into Nestacms for use with Ultraviolet and Textpow&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on June 18, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Monitoring log files visually with logstalgia or gltail]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/monitoring-log-files-visually/" />
+  <id>http://localhost:4000/articles/monitoring-log-files-visually</id>
+  <published>2013-05-30T00:00:00-07:00</published>
+  <updated>2013-05-30T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;monitoring-log-files-visually-with-logstalgia-or-gltail&quot;&gt;Monitoring log files visually with logstalgia or gltail&lt;/h1&gt;
+
+&lt;p&gt;Log files can sometimes get boring. But monitoring them visually can make them awesome. There are two tools that I have found which provide a visual look at log files: &lt;strong&gt;&lt;a href=&quot;https://code.google.com/p/logstalgia/&quot;&gt;logstalgia&lt;/a&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;a href=&quot;http://www.fungie.org&quot;&gt;gltail&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;logstalgia&quot;&gt;Logstalgia&lt;/h1&gt;
+&lt;p&gt;## Summary
+Very cool program that takes the log file and sets up two columns on the far left and far right. On the far left is the host who has requested the resource and a small round ball goes across to the right column. On the right column is the resource that the host has requested while the ball size represents the size of the request. When the ball moves across the screen and reaches the right side column the status code appears. Most status codes bounce off a moving paddle, while others like a 404 or 403 status code continue through. This visual difference between good status codes and not so good status codes is one of the main benefits of using the visual tool, in my humble opinion. Some other benefits are the size of the ball, amount of hosts on the left side, and amount of resources used per host being represented by the total count of balls flying around.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-on-mac-os-x&quot;&gt;Installing on Mac OS X&lt;/h2&gt;
+
+&lt;p&gt;Here are the steps necessary for building &lt;a href=&quot;https://code.google.com/p/logstalgia/&quot;&gt;logstalgia&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-short-summary&quot;&gt;The short summary&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Install brew&lt;/li&gt;
+  &lt;li&gt;Install the necessary recipies using brew&lt;/li&gt;
+  &lt;li&gt;Download &lt;a href=&quot;/public/files/logstalgia-1.0.3.tar.gz&quot;&gt;logstalgia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Run &lt;code&gt;./configure&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Run &lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;straight-up-commands-after-installing-brew&quot;&gt;Straight up commands (after installing brew)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+(cd to the logstalgia source directory)
+brew install ftgl
+brew install sdl
+brew install sdl_image
+brew install pcre
+brew install libpng
+brew install jpeg
+./configure
+make
+./logstalgia data/example.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;running-logstalgia&quot;&gt;Running logstalgia&lt;/h2&gt;
+&lt;p&gt;### &lt;/p&gt;
+
+&lt;h1 id=&quot;gltail&quot;&gt;Gltail&lt;/h1&gt;
+&lt;p&gt;## Summary
+Built on ruby makes this project a little easier to install. It helps if you have the &lt;a href=&quot;http://rvm.io&quot;&gt;RVM&lt;/a&gt; manager installed because there is a &lt;code&gt;.rvm&lt;/code&gt; folder inside the main directory of gltail. The &lt;code&gt;.rvm&lt;/code&gt; folder switches over to Ruby 1.9.2-p290 when changing directories. Its really great when that all works out after you are prompted to trust the &lt;code&gt;.rvm&lt;/code&gt; folder. Features about this visualizer is its customization, pulling from multiple log files from multiple hosts, defining the layout, and visual attributes. Its very similar to logstalgia, but with greater configuration.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-on-mac-os-x-1&quot;&gt;Installing on Mac OS X&lt;/h2&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/monitoring-log-files-visually/&quot;&gt;Monitoring log files visually with logstalgia or gltail&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on May 30, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Removing wp-admin directory]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/wordpress-without-wp-admin/" />
+  <id>http://localhost:4000/articles/wordpress-without-wp-admin</id>
+  <published>2013-05-08T00:00:00-07:00</published>
+  <updated>2013-05-08T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;removing-wp-admin-directory&quot;&gt;Removing wp-admin directory&lt;/h1&gt;
+
+&lt;p&gt;While having the wp-admin directory is helpful, on a production environment there is no need to have these files available by the web server. So I started to move the files out. &lt;/p&gt;
+
+&lt;h2 id=&quot;what-happened-first&quot;&gt;What happened first&lt;/h2&gt;
+
+&lt;p&gt;When I moved the folder wp-admin out of the Wordpress folder the entire site went blank. Not a good start.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-wp-adminincludes-folder&quot;&gt;The ‘./wp-admin/includes’ folder&lt;/h2&gt;
+
+&lt;p&gt;While looking around the wp-admin directory I noticed the ‘includes’ folder. So I made a folder structure of ‘./wp-admin/includes/’ and I moved all of the files that were in the includes directory back into the proper place. When I refreshed the site, it came back!&lt;/p&gt;
+
+&lt;h2 id=&quot;now-what-files-do-you-need&quot;&gt;Now, what files do you need?&lt;/h2&gt;
+
+&lt;p&gt;After moving the files out of the includes directory, I was able to find 4 key files that seemed to be required.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;class-wp-list-table.php&lt;/li&gt;
+  &lt;li&gt;class-wp-media-list-table.php&lt;/li&gt;
+  &lt;li&gt;class-wp-ms-sites-list-table.php&lt;/li&gt;
+  &lt;li&gt;class-wp-ms-themes-list-table.php&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/wordpress-without-wp-admin/&quot;&gt;Removing wp-admin directory&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on May 08, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Using Ruby to check redirects]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/verify-redirects-with-ruby/" />
+  <id>http://localhost:4000/articles/verify-redirects-with-ruby</id>
+  <published>2013-05-08T00:00:00-07:00</published>
+  <updated>2013-05-08T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;using-ruby-to-check-redirects&quot;&gt;Using Ruby to check redirects&lt;/h1&gt;
+
+&lt;p&gt;While writing the script, I first stared out with net/http. This was going pretty slow and when I had 1900+ urls to verify, I calculated it would take approximately 2 hours to complete. While that was acceptable I found out that a lot of links were broken which translated into running this script more than 10 times to re-verify. So I did some searching around and found the gem “typhoeus”. Very cool gem indeed. This made things go much faster. I included both snippets of code in my script to show progression and for note gathering.&lt;/p&gt;
+
+&lt;p&gt;Here is my code:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;uri&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;net/http&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;csv&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;typhoeus&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =====================================================================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = Check_Redirection.rb =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; &lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Verify urls for redirection by comparing the old url to the new url&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; CSV format:&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; old_url,new_url&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; &lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Expected output:&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; status,old_url,new_url&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =====================================================================&lt;/span&gt;
+
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =======================================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The new way with typhoeus and hydra =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =======================================&lt;/span&gt;
+hydra &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Hydra&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;max_concurrency&lt;/span&gt; =&amp;gt; &lt;span class=&quot;Number&quot;&gt;5&lt;/span&gt;)
+
+&lt;span class=&quot;Variable&quot;&gt;CSV&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;redirects.csv&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;row&lt;/span&gt;|
+&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; by using followlocation, we can use the response_code to validate the redirect&lt;/span&gt;
+  request &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Request&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;(row[&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;], followlocation: &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;)
+  
+  request.&lt;span class=&quot;FunctionName&quot;&gt;on_complete&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;response&lt;/span&gt;|
+    &lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; response.&lt;span class=&quot;FunctionName&quot;&gt;response_code&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;200&lt;/span&gt;
+      puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Working,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
+      puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Broken,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;  
+  hydra.&lt;span class=&quot;FunctionName&quot;&gt;queue&lt;/span&gt;(request)
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+
+hydra.&lt;span class=&quot;FunctionName&quot;&gt;run&lt;/span&gt;
+
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; ==========================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The test with typhoeus =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; ==========================&lt;/span&gt;
+results &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Request&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;get&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;http://google.com&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)
+puts results.&lt;span class=&quot;FunctionName&quot;&gt;response_code&lt;/span&gt;
+
+&lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; results.&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;http://google.com&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+  puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;GOOD - should be &lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;results&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
+  puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;BAD - should be &lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;results&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =============================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The old way with net/http =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =============================&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(&lt;span class=&quot;FunctionParameter&quot;&gt;uri_str&lt;span class=&quot;FunctionParameter&quot;&gt;,&lt;/span&gt; limit &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;10&lt;/span&gt;&lt;/span&gt;)
+&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; You should choose a better exception.&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;Variable&quot;&gt;ArgumentError&lt;/span&gt;, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;too many HTTP redirects&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; limit &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;
+  response &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTP&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;get_response&lt;/span&gt;(&lt;span class=&quot;Variable&quot;&gt;URI&lt;/span&gt;(uri_str))
+  &lt;span class=&quot;Keyword&quot;&gt;case&lt;/span&gt; response
+  &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPSuccess&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;then&lt;/span&gt;
+    response
+  &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPRedirection&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;then&lt;/span&gt;
+    location &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; response[&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;location&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;]
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; print redirect&lt;/span&gt;
+    redirected_to &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; location
+    &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(location, limit &lt;span class=&quot;Keyword&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;)
+    &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; redirected_to
+  &lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
+    response.&lt;span class=&quot;FunctionName&quot;&gt;value&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; test one url&lt;/span&gt;
+print &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;http://www.ruby-lang.org&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;)
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; test urls from csv file&lt;/span&gt;
+&lt;span class=&quot;Variable&quot;&gt;CSV&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;redirects.csv&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;row&lt;/span&gt;|
+  &lt;span class=&quot;Keyword&quot;&gt;begin&lt;/span&gt;
+    fetching &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+    redirected_to &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(row[&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;])
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; if redirected_to == row[1]&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;   puts &amp;quot;Working,#{fetching}&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; end&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPServerException&lt;/span&gt;
+    puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Broken,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;fetching&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/verify-redirects-with-ruby/&quot;&gt;Using Ruby to check redirects&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on May 08, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apache compression]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/apache-deflating-my-brain/" />
+  <id>http://localhost:4000/articles/apache-deflating-my-brain</id>
+  <published>2013-04-30T00:00:00-07:00</published>
+  <updated>2013-04-30T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Small example of how to enable compression in Apache while excluding the IE browser for those times when Microsoft decides to do things differently.&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;MarkupNameOfTag&quot;&gt;LocationMatch&lt;/span&gt; &lt;span class=&quot;MarkupTag&quot;&gt;&amp;quot;^/.*&amp;quot;&lt;/span&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;MarkupTag&quot;&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;MarkupNameOfTag&quot;&gt;IfModule&lt;/span&gt; mod_deflate.c&lt;span class=&quot;MarkupTag&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; place filter &amp;#39;DEFLATE&amp;#39; on all outgoing content&lt;/span&gt;
+    &lt;span class=&quot;LibraryConstant&quot;&gt;SetOutputFilter&lt;/span&gt; DEFLATE
+    &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; add additional filters by file mimetype&lt;/span&gt;
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/plain
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/xml
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/xhtml+xml
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/css
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/xml
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE image/svg+xml
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/rss+xml
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/atom_xml
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-javascript
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-httpd-php
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-httpd-fastphp
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-httpd-eruby
+    &lt;span class=&quot;LibraryConstant&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/html
+    &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; only for ie&lt;/span&gt;
+    &lt;span class=&quot;LibraryConstant&quot;&gt;BrowserMatch&lt;/span&gt; \bMSIE no-gzip gzip-only-text/html
+    &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; exclude uncompressible content via file type&lt;/span&gt;
+    &lt;span class=&quot;LibraryConstant&quot;&gt;SetEnvIfNoCase&lt;/span&gt; Request_URI \.(?:gif|jpe?g|png|rar|zip)$ no-gzip dont-vary
+    &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&amp;lt;IfModule mod_headers.c&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; properly handle requests coming from behind proxies&lt;/span&gt;
+      &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;Header append Vary User-Agent&lt;/span&gt;
+   &lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&amp;lt;/IfModule&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;MarkupTag&quot;&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;MarkupNameOfTag&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;MarkupTag&quot;&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;MarkupNameOfTag&quot;&gt;LocationMatch&lt;/span&gt;&lt;span class=&quot;MarkupTag&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/apache-deflating-my-brain/&quot;&gt;Apache compression&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on April 30, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Git Cheat Sheet]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/git-cheat-sheet/" />
+  <id>http://localhost:4000/articles/git-cheat-sheet</id>
+  <published>2013-04-18T00:00:00-07:00</published>
+  <updated>2013-04-18T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Flags: draft&lt;/p&gt;
+
+&lt;h1 id=&quot;git-cheat-sheet&quot;&gt;Git Cheat Sheet&lt;/h1&gt;
+
+&lt;h2 id=&quot;resetting-changes&quot;&gt;Resetting changes&lt;/h2&gt;
+
+&lt;p&gt;Sometimes I have made an upgrade to a set of files which include adding new files and I want to undo all modifications to files and remove all new files. The following command help:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git reset
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After running this command I have noticed there could be some files left over that are not under git control. Instead of removing these files manually, I found the following command to help with clearing them out:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clear -fd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;listing-branches-or-tags&quot;&gt;Listing branches or tags&lt;/h2&gt;
+
+&lt;p&gt;To get a listing of the branches or tags you can use these commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git tag -l
+git branch -a
+&lt;/code&gt;&lt;/pre&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/git-cheat-sheet/&quot;&gt;Git Cheat Sheet&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on April 18, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Markdown Cheat Sheet]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/markdown-syntax/" />
+  <id>http://localhost:4000/articles/markdown-syntax</id>
+  <published>2013-04-17T00:00:00-07:00</published>
+  <updated>2013-04-17T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;markdown-cheat-sheet&quot;&gt;Markdown Cheat Sheet&lt;/h1&gt;
+
+&lt;h2 id=&quot;headers&quot;&gt;Headers&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;# This is an H1
+## This is an H2
+###### This is an H6
+
+# This is an H1 #
+## This is an H2 ##
+### This is an H3 ######
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;block-quotes&quot;&gt;Block quotes&lt;/h2&gt;
+
+&lt;h3 id=&quot;block-quote&quot;&gt;Block quote&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+&amp;gt; 
+&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+&amp;gt; id sem consectetuer libero luctus adipiscing.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;block-quote-with-large-paragraph&quot;&gt;Block quote with large paragraph&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;block-quote-nested&quot;&gt;Block quote nested&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is the first level of quoting.
+&amp;gt;
+&amp;gt; &amp;gt; This is nested blockquote.
+&amp;gt;
+&amp;gt; Back to the first level.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;block-quote-with-mixed-styling&quot;&gt;Block quote with mixed styling&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; ## This is a header.
+&amp;gt; 
+&amp;gt; 1.   This is the first list item.
+&amp;gt; 2.   This is the second list item.
+&amp;gt; 
+&amp;gt; Here&#39;s some example code:
+&amp;gt; 
+&amp;gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
+
+&lt;h3 id=&quot;unordered-list&quot;&gt;Unordered List&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;*   Red
+*   Green
+*   Blue
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;same as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+   Red
++   Green
++   Blue
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and same as &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-   Red
+-   Green
+-   Blue
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered lists&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;1.  Bird
+2.  McHale
+3.  Parish
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;makes this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Bird&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;McHale&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Parish&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;all of these will produce the same list&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1.  Bird
+1.  McHale
+1.  Parish
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;3. Bird
+1. McHale
+8. Parish
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;lists-with-hanging-elements&quot;&gt;Lists with hanging elements&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    Suspendisse id sem consectetuer libero luctus adipiscing.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or you can be lazy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;lists-with-p-elements&quot;&gt;Lists with p elements&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;*   Bird
+
+*   Magic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will turn into this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Bird&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Magic&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;lists-with-multiple-paragraphs&quot;&gt;Lists with multiple paragraphs&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or you can be lazy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*   This is a list item with two paragraphs.
+
+    This is the second paragraph in the list item. You&#39;re
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.
+
+*   Another item in the same list.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;list-with-block-quote&quot;&gt;List with block quote&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;*   A list item with a blockquote:
+
+    &amp;gt; This is a blockquote
+    &amp;gt; inside a list item.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;list-with-code&quot;&gt;List with code&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;*   A list item with a code block:
+
+        &amp;lt;code goes here&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;when-you-dont-want-a-list&quot;&gt;When you don’t want a list&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;1986\. What a great season.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;code-blocks&quot;&gt;Code blocks&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;This is a normal paragraph:
+
+    This is a code block.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;code-blocks-with-coloring&quot;&gt;Code blocks with coloring&lt;/h2&gt;
+
+&lt;p&gt;color like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;This is a normal paragraph:
+    
+    :::ruby
+    def foo
+      print &quot;foo&quot;
+    end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and you should get this:&lt;/p&gt;
+
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+def foo
+  print &quot;foo&quot;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;horizontal-rules&quot;&gt;Horizontal rules&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;span-elements&quot;&gt;Span elements&lt;/h2&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+
+&lt;p&gt;Making a link like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will make this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;This is &amp;lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&amp;gt;
+an example&amp;lt;/a&amp;gt; inline link.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&quot;http://example.net/&quot;&amp;gt;This link&amp;lt;/a&amp;gt; has no
+title attribute.&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;links-on-the-local-source&quot;&gt;Links on the local source&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;See my [About](/about/) page for details.   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;reference-style&quot;&gt;Reference style&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;This is [an example][id] reference-style link.
+This is [an example] [id] reference-style link.
+
+[id]: http://example.com/  &quot;Optional Title Here&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;all are accepted:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[foo]: http://example.com/  &quot;Optional Title Here&quot;
+[foo]: http://example.com/  &#39;Optional Title Here&#39;
+[foo]: http://example.com/  (Optional Title Here)
+[foo]: &amp;lt;http://example.com/&amp;gt;  &quot;Optional Title Here&quot;
+[foo]: http://example.com/longish/path/to/resource/here
+  &quot;Optional Title Here&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;link-definitions&quot;&gt;Link definitions&lt;/h3&gt;
+
+&lt;p&gt;put the link inside your text&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Visit [Daring Fireball][] for more information.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then define the link with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Daring Fireball]: http://daringfireball.net/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+
+un*frigging*believable in the middle of words
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;if-you-really-want-a-&quot;&gt;If you really want a *&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;\*this text is surrounded by literal asterisks\*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
+
+&lt;p&gt;use this in your text&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![Alt text][id]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and then define with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+
+[id]: url/to/image  &quot;Optional title attribute&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;backslash-escapes&quot;&gt;Backslash escapes&lt;/h2&gt;
+
+&lt;p&gt;a backslash will escape the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/markdown-syntax/&quot;&gt;Markdown Cheat Sheet&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on April 17, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Installing Redmine with various methods]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/redmine-installation-methods/" />
+  <id>http://localhost:4000/articles/redmine-installation-methods</id>
+  <published>2013-04-12T00:00:00-07:00</published>
+  <updated>2013-04-12T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Flag: draft&lt;/p&gt;
+
+&lt;h1 id=&quot;installing-redmine-with-various-methods&quot;&gt;Installing Redmine with various methods&lt;/h1&gt;
+
+&lt;h2 id=&quot;the-root-directory-method&quot;&gt;The root directory method&lt;/h2&gt;
+
+&lt;p&gt;Allowing your redmine instance to take over the entire domain! Here are the steps you will need to continue with this task:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make your apps directory where your various redmine versions will be stored&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ mkdir /apps
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Uncompress redmine into the apps directory&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ tar zxvf redmine.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install dependencies&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ cd /apps/redmine
+ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a symlink in /var/www that points to the redmine public directory&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ cd /apps
+ ln -s /apps/redmine/public /var/www/redmine
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a virtual host with the following basic config:&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::apache-config
+ &amp;lt;VirtualHost *:80&amp;gt;
+     ServerName red.example.com
+     DocumentRoot /var/www/
+     &amp;lt;Directory /&amp;gt;
+         Options FollowSymLinks
+         Allowoverride None
+         RailsBaseURI /redmine-2.3.0
+         PassengerResolveSymlinksInDocumentRoot on
+
+         ### (optional) redirect to https
+         #RewriteEngine On
+ 		 	#RewriteCond %{HTTPS} off
+&lt;/code&gt;&lt;/pre&gt;
+
+   			### exception for the email handler to not rewrite to https
+   			#RewriteCond %{REMOTE_ADDR} !###.###.###.###
+   			#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+    &lt;pre&gt;&lt;code&gt;     &amp;lt;/Directory&amp;gt;
+
+
+     ErrorLog ${APACHE_LOG_DIR}/red.example.org-error.log
+&lt;/code&gt;&lt;/pre&gt;
+
+   		# Possible values include: debug, info, notice, warn, error, crit,
+   		# alert, emerg.
+   		LogLevel warn
+   		CustomLog ${APACHE_LOG_DIR}/redmine.example.org-access.log combined
+    &lt;pre&gt;&lt;code&gt; &amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;the-sub-directory-method&quot;&gt;The sub-directory method&lt;/h2&gt;
+
+&lt;p&gt;When you want to have your Redmine application be hosted under a custom directory and not in the root of your entire domain, use the instructions be below to get started.&lt;/p&gt;
+
+&lt;h3 id=&quot;steps-to-the-sub-directory&quot;&gt;Steps to the sub-directory&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;	:::apache-config
+	&amp;lt;VirtualHost *:80&amp;gt;
+		ServerName red.example.com
+		DocumentRoot /var/www/
+		&amp;lt;Directory /&amp;gt;
+			Allow from all
+		&amp;lt;/Directory&amp;gt;
+		
+		RailsBaseURI /redmine
+		&amp;lt;Directory /var/www/redmine&amp;gt;
+			Options -MultiViews
+		&amp;lt;/Directory&amp;gt;
+
+		ErrorLog ${APACHE_LOG_DIR}/redmine.example.org-error.log
+
+  # Possible values include: debug, info, notice, warn, error, crit,
+  # alert, emerg.
+  LogLevel warn
+  CustomLog ${APACHE_LOG_DIR}/redmine.example.org-access.log combined
+	&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;after-configuring-the-website-continue-to-configure-redmine-with-these-steps&quot;&gt;After configuring the website, continue to configure redmine with these steps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modify your /etc/hosts file to access the newly created site&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ echo &quot;127.0.0.1 redmine redmine.example.com&quot; &amp;gt;&amp;gt; /etc/hosts
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy and edit config/database.yml to your needs&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run database migrations&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ rake db:migrate
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generate secret token&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ rake generate_secret_token
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Start up apache and login!&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; :::shell
+ username: admin
+ password: admin
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/redmine-installation-methods/&quot;&gt;Installing Redmine with various methods&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on April 12, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Remove a submodule from a git project]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/git-remove-submodule-from-project/" />
+  <id>http://localhost:4000/articles/git-remove-submodule-from-project</id>
+  <published>2013-04-12T00:00:00-07:00</published>
+  <updated>2013-04-12T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;remove-a-submodule-from-a-git-project&quot;&gt;Remove a submodule from a git project&lt;/h1&gt;
+
+&lt;p&gt;Within your project directory follow these steps to remove the submodule:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Delete the relevant section from the &lt;code&gt;.gitmodules&lt;/code&gt; file&lt;/li&gt;
+  &lt;li&gt;Delete the relevant section from &lt;code&gt;.git/config&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Run with no trailing slash &lt;code&gt;git rm --cached path_to_submodule&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Commit&lt;/li&gt;
+  &lt;li&gt;Delete the now untracked submodule files &lt;code&gt;rm -rf path_to_submodule&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/git-remove-submodule-from-project/&quot;&gt;Remove a submodule from a git project&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on April 12, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[RVM with OS X Mountain Lion]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/rvm-ruby-and-osx/" />
+  <id>http://localhost:4000/articles/rvm-ruby-and-osx</id>
+  <published>2013-04-11T00:00:00-07:00</published>
+  <updated>2013-04-11T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;rvm-with-os-x-mountain-lion&quot;&gt;RVM with OS X Mountain Lion&lt;/h1&gt;
+
+&lt;p&gt;When installing RVM, I found some issues after resetting my environment. Most of (if not all) of my problems had to do with Brew not having the necessary links.&lt;/p&gt;
+
+&lt;p&gt;Most of the time the problem had to do with an libssl package not being loaded. To fix the problem, I ran the following programs below to relink the libraries.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew unlink (package complaining)
+brew link (package complaining)
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/rvm-ruby-and-osx/&quot;&gt;RVM with OS X Mountain Lion&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on April 11, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Howto install munin version 2.0.8 with dynamic graphs on Centos 6]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/centos-install-munin-with-dynamic-graphs/" />
+  <id>http://localhost:4000/articles/centos-install-munin-with-dynamic-graphs</id>
+  <published>2013-01-04T00:00:00-08:00</published>
+  <updated>2013-01-04T00:00:00-08:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;howto-install-munin-version-208-with-dynamic-graphs-on-centos-6&quot;&gt;Howto install munin version 2.0.8 with dynamic graphs on Centos 6&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Update 10 April, 2013:&lt;/em&gt; Munin version 2.0.10 now includes better support for dynamic zooming out of the box.&lt;/p&gt;
+
+&lt;p&gt;This took longer than it should have to get setup. For some reason, I could not find any references on how to get the dynamic zooming of munin to work. The documentation was not very helpful from the example provide (because it did not work) nor in ascertaining how to solve the problem. Anyways, here is my journey and configuration that will help me out the the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;h3 id=&quot;yum-installing&quot;&gt;Yum installing&lt;/h3&gt;
+
+&lt;p&gt;Because this was a vmware server on my laptop for testing munin, I went with both the node and the server installation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+yum install munin munin-node
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This provide you with some files, directories, and programs to get munin up and running. &lt;/p&gt;
+
+&lt;h3 id=&quot;directory-permissions&quot;&gt;Directory permissions&lt;/h3&gt;
+
+&lt;p&gt;First thing you have to do is check to make sure the temp directories are allowed for writing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+mkdir /var/lib/munin/cgi-tmp
+mkdir /var/lib/munin/cgi-tmp/munin-cgi-graph
+chmod 777 /var/lib/munin/cgi-tmp
+chmod 775 /var/lib/munin/cgi-tmp/munin-cgi-graph
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;/h2&gt;
+
+&lt;h3 id=&quot;muninconf&quot;&gt;Munin.conf&lt;/h3&gt;
+
+&lt;p&gt;Next ensure you have the following in your /etc/munin/munin.conf file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::plain
+dbdir /var/lib/munin
+htmldir /var/www/html/munin
+logdir /var/log/munin
+rundir  /var/run/munin
+
+# Where to look for the HTML templates
+#
+tmpldir /etc/munin/templates
+
+# Where to look for the static www files
+#
+staticdir /etc/munin/static
+
+# temporary cgi files are here. note that it has to be writable by 
+# the cgi user (usually nobody or httpd).
+#
+cgitmpdir /var/lib/munin/cgi-tmp
+
+# (Exactly one) directory to include all files from.
+includedir /etc/munin/conf.d
+
+graph_strategy cgi
+html_strategy cgi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;apache-virtualhost&quot;&gt;Apache VirtualHost&lt;/h3&gt;
+
+&lt;p&gt;Now comes the part where most of my time was wasted away by testing, debugging, then testing again. The Apache VirtualHost configuration for allowing dynamic zoom to work:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::apache-config
+&amp;lt;VirtualHost *:80&amp;gt;
+    ServerAdmin webmaster@dev.example.com
+    DocumentRoot /var/www/html/munin
+    ServerName munin.example.com
+    ErrorLog logs/munin-error.log
+    CustomLog logs/munin-access_log common
+    RewriteLog logs/munin-rewrite.log
+    RewriteLogLevel 5
+    ServerSignature Off
+
+    # Rewrites
+    RewriteEngine On
+
+    # Static content in /static
+    RewriteRule ^/favicon.ico /etc/munin/static/favicon.ico [L]
+    RewriteRule ^/static/(.*) /etc/munin/static/$1          [L]
+    # If it has the word static in the path, send to the static dir
+    RewriteRule ^/.*/static/(.*) /etc/munin/static/$1          [L]
+
+    # HTML
+    RewriteCond %{REQUEST_URI} .html$ [or]
+    RewriteCond %{REQUEST_URI} =/
+    RewriteRule ^/(.*)          /var/www/cgi-bin/munin-cgi-html/$1 [L]
+
+    # Images
+    RewriteRule ^/(.*) /var/www/cgi-bin/munin-cgi-graph/$1 [L]
+
+    # Ensure we can run (fast)cgi scripts
+    &amp;lt;Directory &quot;/var/www/cgi-bin&quot;&amp;gt;
+        Options +ExecCGI
+        &amp;lt;IfModule mod_fcgid.c&amp;gt;
+            SetHandler fcgid-script
+        &amp;lt;/IfModule&amp;gt;
+        &amp;lt;IfModule !mod_fcgid.c&amp;gt;
+            SetHandler cgi-script
+        &amp;lt;/IfModule&amp;gt;
+    &amp;lt;/Directory&amp;gt;
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/centos-install-munin-with-dynamic-graphs/&quot;&gt;Howto install munin version 2.0.8 with dynamic graphs on Centos 6&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on January 04, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Escaping string for sending to command line or shell (and other uses)]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/using-shellwords-with-system-calls/" />
+  <id>http://localhost:4000/articles/using-shellwords-with-system-calls</id>
+  <published>2012-10-19T00:00:00-07:00</published>
+  <updated>2012-10-19T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;escaping-string-for-sending-to-command-line-or-shell-and-other-uses&quot;&gt;Escaping string for sending to command line or shell (and other uses)&lt;/h1&gt;
+
+&lt;p&gt;In Ruby 1.9 the library &lt;a href=&quot;http://www.ruby-doc.org/stdlib-1.9.3/libdoc/shellwords/rdoc/Shellwords.html&quot;&gt;Shellwords&lt;/a&gt; has some useful methods to help translate between the program and the command line interface. When sending strings to the cli, some characters are not well received as they are reserved for use by the shell program. To use the characters, you must escape them. This is where the &lt;a href=&quot;http://www.ruby-doc.org/stdlib-1.9.3/libdoc/shellwords/rdoc/Shellwords.html&quot;&gt;Shellwords&lt;/a&gt; becomes useful.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-to-escape-command-with-arguments&quot;&gt;Example to escape command with arguments&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+require &#39;shellwords&#39;
+
+
+open(&#39;|&#39; + [&#39;grep&#39;, pattern, *files].shelljoin) { |pipe|
+  # ...
+}
+
+# or
+
+open(&#39;|&#39; + Shellwords.join([&#39;grep&#39;, pattern, *files])) { |pipe|
+  # ...
+}
+
+# or
+
+url = &quot;http://domain.com/path/to/page.html&quot;
+filename = &quot;output.cfm&quot;
+
+command = [&#39;/opt/local/bin/wget&#39;, url, &#39;-O&#39;, filename].shelljoin
+system(command)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;example-of-splitting-string-with-quotes-embedded&quot;&gt;Example of splitting string with quotes embedded&lt;/h2&gt;
+
+&lt;p&gt;This is pretty cool as I could see this being useful for just making an array from a string that contains a mix of text and quoted text&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+require &#39;shellwords&#39;
+
+argv = Shellwords.split(&#39;here are &quot;two words&quot;&#39;)
+argv #=&amp;gt; [&quot;here&quot;, &quot;are&quot;, &quot;two words&quot;]
+
+or
+
+argv = &#39;here are &quot;two words&quot;&#39;.shellsplit
+argv #=&amp;gt; [&quot;here&quot;, &quot;are&quot;, &quot;two words&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/using-shellwords-with-system-calls/&quot;&gt;Escaping string for sending to command line or shell (and other uses)&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on October 19, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Identify duplicate entries in array and append a number to create uniqueness]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/ruby-append-text-to-duplicate-items-in-array/" />
+  <id>http://localhost:4000/articles/ruby-append-text-to-duplicate-items-in-array</id>
+  <published>2012-10-18T00:00:00-07:00</published>
+  <updated>2012-10-18T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;identify-duplicate-entries-in-array-and-append-a-number-to-create-uniqueness&quot;&gt;Identify duplicate entries in array and append a number to create uniqueness&lt;/h1&gt;
+
+&lt;p&gt;When faced with an array with duplicate items and the output needs to be unique, the following code loops through the items and addes it to the h hash with a value being the count of duplicates. Next, the each loop adds a number at the end making the items become unique.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+@items = [
+  &quot;topic number one&quot;,
+  &quot;topic number two&quot;,
+  &quot;topic number two&quot;,
+  &quot;topic number three&quot;,
+  ]
+
+h ={}
+
+puts @items.each{|e| h[e] = h[e].nil? ? 1 : h[e]+1}
+
+puts h.inspect
+
+@counter = 0
+@items.each do |item|
+
+  if h[item] &amp;gt; 1
+    p &quot;#{item}-p#{@counter += 1}of#{h[item]}&quot;
+  else
+    p &quot;#{item}&quot;
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/ruby-append-text-to-duplicate-items-in-array/&quot;&gt;Identify duplicate entries in array and append a number to create uniqueness&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on October 18, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Cloning your git repository from one server to another]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/articles/copy-git-repo-to-another/" />
+  <id>http://localhost:4000/articles/copy-git-repo-to-another</id>
+  <published>2012-10-16T00:00:00-07:00</published>
+  <updated>2012-10-16T00:00:00-07:00</updated>
+  <author>
+    <name>Aaron Addleman</name>
+    <uri>http://localhost:4000</uri>
+    <email>aaronaddleman@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;cloning-your-git-repository-from-one-server-to-another&quot;&gt;Cloning your git repository from one server to another&lt;/h1&gt;
+
+&lt;h2 id=&quot;update---april-10-2013&quot;&gt;Update - April 10, 2013&lt;/h2&gt;
+
+&lt;p&gt;Using &lt;code&gt;rsync&lt;/code&gt; is much easier if you have that option. I have not seen a down side after doing the copy 5 days ago but after copying 8 repositories over to a new server all seems to be working great. Below is a method to use if &lt;code&gt;rsync&lt;/code&gt; is not available.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-short-answer&quot;&gt;The short answer&lt;/h2&gt;
+
+&lt;p&gt;To clone your repository from one location to another the following steps can be used in your terminal prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+git clone --bare https://github.com/exampleuser/old-repo.git
+# Make a bare clone of the repo
+
+cd old-repo.git
+$ git push --mirror https://newserver.com/exampleuser/new-repo.git
+# Mirror-push to the new repo
+
+cd ..
+$ rm -rf old-repo.git
+# Remove our temporary local repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;the-long-answer&quot;&gt;The long answer&lt;/h2&gt;
+
+&lt;p&gt;Why do we use the –bare option? According to the help text, the –bare option does not put the administrative files in &lt;directory&gt;/.git it puts the admin files in the &lt;directory&gt;. In addition, there is also no checkout of HEAD after the clone is completed.&lt;/directory&gt;&lt;/directory&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/copy-git-repo-to-another/&quot;&gt;Cloning your git repository from one server to another&lt;/a&gt; was originally published by Aaron Addleman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Aaron Addleman&lt;/a&gt; on October 16, 2012.&lt;/p&gt;</content>
+</entry>
+
+</feed>
