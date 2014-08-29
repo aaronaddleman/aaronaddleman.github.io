@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Markdown Cheat Sheet
-
 ## Headers
 
     # This is an H1
@@ -188,19 +186,15 @@ color like this
 
     This is a normal paragraph:
         
-        :::ruby
+        {% raw %}
+        {% highlight ruby %}
         def foo
           print "foo"
         end
+        {% endhighlight %}
+        {% endraw }
 
 and you should get this:
-
-This is a normal paragraph:
-    
-    :::ruby
-    def foo
-      print "foo"
-    end
 
 
 ## Horizontal rules

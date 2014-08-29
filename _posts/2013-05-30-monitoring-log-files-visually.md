@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Monitoring log files visually with logstalgia or gltail
-
 Log files can sometimes get boring. But monitoring them visually can make them awesome. There are two tools that I have found which provide a visual look at log files: **[logstalgia][logstalgia_link]** or **[gltail][gltail_link]**.
 
 # Logstalgia
@@ -31,7 +29,7 @@ Here are the steps necessary for building [logstalgia][logstalgia_link]
 
 ### Straight up commands (after installing brew)
 
-    :::shell
+    {% highlight bash %}
     (cd to the logstalgia source directory)
     brew install ftgl
     brew install sdl
@@ -42,6 +40,7 @@ Here are the steps necessary for building [logstalgia][logstalgia_link]
     ./configure
     make
     ./logstalgia data/example.log
+    {% endhighlight %}
 
 ## Running logstalgia
 ### 

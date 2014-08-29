@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Removing wp-admin directory
-
 While having the wp-admin directory is helpful, on a production environment there is no need to have these files available by the web server. So I started to move the files out. 
 
 ## What happened first

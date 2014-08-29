@@ -10,11 +10,9 @@ comments: true
 share: true
 ---
 
-# Identify duplicate entries in array and append a number to create uniqueness
-
 When faced with an array with duplicate items and the output needs to be unique, the following code loops through the items and addes it to the h hash with a value being the count of duplicates. Next, the each loop adds a number at the end making the items become unique.
 
-    :::ruby
+    {% highlight ruby %}
     @items = [
       "topic number one",
       "topic number two",
@@ -37,3 +35,4 @@ When faced with an array with duplicate items and the output needs to be unique,
         p "#{item}"
       end
     end
+    {% endhighlight %}

@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Cloning your git repository from one server to another
-
 ## Update - April 10, 2013
 
 Using `rsync` is much easier if you have that option. I have not seen a down side after doing the copy 5 days ago but after copying 8 repositories over to a new server all seems to be working great. Below is a method to use if `rsync` is not available.
@@ -20,7 +18,7 @@ Using `rsync` is much easier if you have that option. I have not seen a down sid
 
 To clone your repository from one location to another the following steps can be used in your terminal prompt:
 
-    :::shell
+    {% highlight bash %}
     git clone --bare https://github.com/exampleuser/old-repo.git
     # Make a bare clone of the repo
 
@@ -31,6 +29,7 @@ To clone your repository from one location to another the following steps can be
     cd ..
     $ rm -rf old-repo.git
     # Remove our temporary local repo
+    {% endhighlight %}
     
 ## The long answer
 

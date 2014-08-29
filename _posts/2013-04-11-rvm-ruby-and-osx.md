@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# RVM with OS X Mountain Lion
-
 When installing RVM, I found some issues after resetting my environment. Most of (if not all) of my problems had to do with Brew not having the necessary links.
 
 Most of the time the problem had to do with an libssl package not being loaded. To fix the problem, I ran the following programs below to relink the libraries.

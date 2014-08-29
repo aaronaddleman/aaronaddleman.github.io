@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Howto install munin version 2.0.8 with dynamic graphs on Centos 6
-
 *Update 10 April, 2013:* Munin version 2.0.10 now includes better support for dynamic zooming out of the box.
 
 This took longer than it should have to get setup. For some reason, I could not find any references on how to get the dynamic zooming of munin to work. The documentation was not very helpful from the example provide (because it did not work) nor in ascertaining how to solve the problem. Anyways, here is my journey and configuration that will help me out the the future.
@@ -22,8 +20,9 @@ This took longer than it should have to get setup. For some reason, I could not 
 
 Because this was a vmware server on my laptop for testing munin, I went with both the node and the server installation.
 
-    :::shell
+    {% highlight bash %}
     yum install munin munin-node
+    {% endhighlight %}
 
 This provide you with some files, directories, and programs to get munin up and running. 
 
@@ -31,11 +30,12 @@ This provide you with some files, directories, and programs to get munin up and 
 
 First thing you have to do is check to make sure the temp directories are allowed for writing:
 
-    :::shell
+    {% highlight bash %}
     mkdir /var/lib/munin/cgi-tmp
     mkdir /var/lib/munin/cgi-tmp/munin-cgi-graph
     chmod 777 /var/lib/munin/cgi-tmp
     chmod 775 /var/lib/munin/cgi-tmp/munin-cgi-graph
+    {% endhighlight %}
 
 ## Configuration
 
@@ -43,7 +43,7 @@ First thing you have to do is check to make sure the temp directories are allowe
 
 Next ensure you have the following in your /etc/munin/munin.conf file:
 
-    :::plain
+    {% highlight bash %}
     dbdir /var/lib/munin
     htmldir /var/www/html/munin
     logdir /var/log/munin
@@ -67,12 +67,13 @@ Next ensure you have the following in your /etc/munin/munin.conf file:
 
     graph_strategy cgi
     html_strategy cgi
+    {% endhighlight %}
 
 ### Apache VirtualHost
 
 Now comes the part where most of my time was wasted away by testing, debugging, then testing again. The Apache VirtualHost configuration for allowing dynamic zoom to work:
 
-    :::apache-config
+    {% highlight apache %}
     <VirtualHost *:80>
         ServerAdmin webmaster@dev.example.com
         DocumentRoot /var/www/html/munin
@@ -111,3 +112,4 @@ Now comes the part where most of my time was wasted away by testing, debugging, 
             </IfModule>
         </Directory>
     </VirtualHost>
+    {% endhighlight %}

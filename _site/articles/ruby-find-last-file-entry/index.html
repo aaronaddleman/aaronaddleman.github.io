@@ -148,11 +148,9 @@
     <div class="entry-content">
       <h1 id="find-latest-file-ending-with-a-number-with-ruby">Find latest file ending with a number with Ruby</h1>
 
-<pre><code>:::ruby
-Dir.entries(shared_path + '/database_dumps').drop(2).sort_by |s|
-  s.scan(/\d+/).map{|s| s.to_i}.last
-end
-</code></pre>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="o">.</span><span class="n">entries</span><span class="p">(</span><span class="n">shared_path</span> <span class="o">+</span> <span class="s1">&#39;/database_dumps&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sort_by</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/\d+/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="o">.</span><span class="n">to_i</span><span class="p">}</span><span class="o">.</span><span class="n">last</span>
+    <span class="k">end</span></code></pre></div>
 
 <h1 id="broken-down-in-english">Broken down in english</h1>
 

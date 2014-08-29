@@ -9,12 +9,10 @@ image:
 comments: true
 share: true
 ---
-Flag: draft
 
-# VMWare Fusion and the HGFS permissions
 While working with VMware Fusion on my Mac I noticed a problem with the permissions. In summary (rest of my notes are below) I modified the start script of the vmware tools to mount the `hgfs` directory with the permissions I wanted for my project.
 
-    :::shell
+    {% highlight bash %}
     # Mount all hgfs filesystems
     vmware_mount_vmhgfs() {
       if [ "`is_vmhgfs_mounted`" = "no" ]; then
@@ -22,5 +20,6 @@ While working with VMware Fusion on my Mac I noticed a problem with the permissi
         vmware_exec_selinux "mount -o uid=48,gid=48 -t vmhgfs .host:/ $vmhgfs_mnt"
       fi
     }
+    {% endhighlight %}
 
 Might be a good idea to have these numbers be the same as my Mac operating system.

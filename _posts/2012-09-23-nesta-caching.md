@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# How to enable caching in Nestacms 0.9.13
-
 ## Summary
 
 I wanted to turn on caching but got a bad error message (along the lines of "calling to a private method 'public' is not allowed") so I decided to try a test of renaming the method to one that is allowed. So after investigating around in the Nesta gem of files I made the following changes in the cache.rb file:
@@ -20,7 +18,7 @@ I wanted to turn on caching but got a bad error message (along the lines of "cal
 
 ### old block
 
-    :::ruby
+    {% highlight ruby %}
     def cache_page_path(path,opts={})
       # test if given a full path rather than relative path, otherwise join the public path to cache_dir 
       # and ensure it is a full path
@@ -29,10 +27,11 @@ I wanted to turn on caching but got a bad error message (along the lines of "cal
       cache_dir = cache_dir[0..-2] if cache_dir[-1,1] == '/'
       "#{cache_dir}/#{cache_file_name(path,opts)}"
     end
+    {% endhighlight %}
 
 ### new block
 
-    :::ruby
+    {% highlight ruby %}
     def cache_page_path(path,opts={})
       # test if given a full path rather than relative path, otherwise join the public path to cache_dir 
       # and ensure it is a full path
@@ -41,13 +40,14 @@ I wanted to turn on caching but got a bad error message (along the lines of "cal
       cache_dir = cache_dir[0..-2] if cache_dir[-1,1] == '/'
       "#{cache_dir}/#{cache_file_name(path,opts)}"
     end
+    {% endhighlight %}
 
 
 ## change #2
 
 At the bottom of the cache.rb file, add the two new lines:
 
-    :::ruby
+    {% highlight ruby %}
     def self.registered(app)
       app.helpers(Cache::Helpers)
       app.set :cache_enabled, true
@@ -57,3 +57,4 @@ At the bottom of the cache.rb file, add the two new lines:
       app.set :cache_logging, true
       app.set :cache_logging_level, :debug
     end
+    {% endhighlight %}

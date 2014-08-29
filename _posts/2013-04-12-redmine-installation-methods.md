@@ -9,9 +9,6 @@ image:
 comments: true
 share: true
 ---
-Flag: draft
-
-# Installing Redmine with various methods
 
 ## The root directory method
 
@@ -21,29 +18,33 @@ Allowing your redmine instance to take over the entire domain! Here are the step
 
 1. Make your apps directory where your various redmine versions will be stored
 
-		:::shell
+		{% highlight bash %}
 		mkdir /apps
+    {% endhighlight %}
 
 1. Uncompress redmine into the apps directory
 
-	    :::shell
+	    {% highlight bash %}
 	    tar zxvf redmine.tar.gz
+      {% endhighlight %}
 
 1. Install dependencies
 
-		:::shell
+		{% highlight bash %}
 		cd /apps/redmine
 		bundle install
+    {% endhighlight %}
 
 1. Create a symlink in /var/www that points to the redmine public directory
 
-		:::shell
+		{% highlight bash %}
 		cd /apps
 		ln -s /apps/redmine/public /var/www/redmine
+    {% endhighlight %}
 
 1. Create a virtual host with the following basic config:
 
-		:::apache-config
+		{% highlight apache %}
 		<VirtualHost *:80>
 			ServerName red.example.com
 			DocumentRoot /var/www/
@@ -63,13 +64,14 @@ Allowing your redmine instance to take over the entire domain! Here are the step
 			</Directory>
 
 
-			ErrorLog ${APACHE_LOG_DIR}/red.example.org-error.log
+      ErrorLog ${APACHE_LOG_DIR}/red.example.org-error.log
 
-      		# Possible values include: debug, info, notice, warn, error, crit,
-      		# alert, emerg.
-      		LogLevel warn
-      		CustomLog ${APACHE_LOG_DIR}/redmine.example.org-access.log combined
-		</VirtualHost>
+          # Possible values include: debug, info, notice, warn, error, crit,
+          # alert, emerg.
+          LogLevel warn
+          CustomLog ${APACHE_LOG_DIR}/redmine.example.org-access.log combined
+    </VirtualHost>
+    {% endhighlight %}
 
 
 ## The sub-directory method
@@ -78,7 +80,7 @@ When you want to have your Redmine application be hosted under a custom director
 
 ### Steps to the sub-directory
 
-		:::apache-config
+		{% highlight apache %}
 		<VirtualHost *:80>
 			ServerName red.example.com
 			DocumentRoot /var/www/
@@ -98,6 +100,7 @@ When you want to have your Redmine application be hosted under a custom director
       LogLevel warn
       CustomLog ${APACHE_LOG_DIR}/redmine.example.org-access.log combined
 		</VirtualHost>
+    {% endhighlight %}
 
 
 
@@ -106,24 +109,28 @@ When you want to have your Redmine application be hosted under a custom director
 
 1. Modify your /etc/hosts file to access the newly created site
 
-		:::shell
+		{% highlight bash %}
 		echo "127.0.0.1 redmine redmine.example.com" >> /etc/hosts
+    {% endhighlight %}
 
 1. Copy and edit config/database.yml to your needs
 
 1. Run database migrations
 
-		:::shell
+		{% highlight bash %}
 		rake db:migrate
+    {% endhighlight %}
 
 1. Generate secret token
 
-		:::shell
+		{% highlight bash %}
 		rake generate_secret_token
+    {% endhighlight %}
 
 1. Start up apache and login!
 
-		:::shell
+		{% highlight bash %}
 		username: admin
 		password: admin
+    {% endhighlight %}
 

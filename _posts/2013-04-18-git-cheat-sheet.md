@@ -9,9 +9,6 @@ image:
 comments: true
 share: true
 ---
-Flags: draft
-
-# Git Cheat Sheet
 
 ## Resetting changes
 

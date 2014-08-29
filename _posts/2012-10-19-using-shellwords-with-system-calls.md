@@ -16,7 +16,7 @@ In Ruby 1.9 the library [Shellwords][1] has some useful methods to help translat
 
 ## Example to escape command with arguments
 
-    :::ruby
+    {% highlight ruby %}
     require 'shellwords'
     
     
@@ -37,12 +37,13 @@ In Ruby 1.9 the library [Shellwords][1] has some useful methods to help translat
 
     command = ['/opt/local/bin/wget', url, '-O', filename].shelljoin
     system(command)
+    {% endhighlight %}
 
 ## Example of splitting string with quotes embedded
 
 This is pretty cool as I could see this being useful for just making an array from a string that contains a mix of text and quoted text
 
-    :::ruby
+    {% highlight ruby %}
     require 'shellwords'
     
     argv = Shellwords.split('here are "two words"')
@@ -52,5 +53,6 @@ This is pretty cool as I could see this being useful for just making an array fr
     
     argv = 'here are "two words"'.shellsplit
     argv #=> ["here", "are", "two words"]
+    {% endhighlight %}
 
 [1]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/shellwords/rdoc/Shellwords.html

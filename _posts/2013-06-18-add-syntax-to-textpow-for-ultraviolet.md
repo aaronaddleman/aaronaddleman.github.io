@@ -9,9 +9,6 @@ image:
 comments: true
 share: true
 ---
-Flags: draft
-
-# Add new syntax into Nestacms for use with Ultraviolet and Textpow
 
 ## How to start
 

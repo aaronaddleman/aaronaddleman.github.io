@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Multiple Line Editing with Sublime Text 2
-
 This morning I almost yelled out "that is so @#%*ing awesome" at work because the multiple line editing in Sublime Text 2 is so cool. Below are the notes of what I found out about this amazing setup.
 
 ## The situation

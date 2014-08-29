@@ -12,10 +12,11 @@ share: true
 
 # Find latest file ending with a number with Ruby
 
-    :::ruby
+    {% highlight ruby %}
     Dir.entries(shared_path + '/database_dumps').drop(2).sort_by |s|
       s.scan(/\d+/).map{|s| s.to_i}.last
     end
+    {% endhighlight %}
 
 
 # Broken down in english

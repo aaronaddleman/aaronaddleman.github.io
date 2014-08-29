@@ -9,9 +9,5 @@ image:
 comments: true
 share: true
 ---
-Flags: draft
-<!-- Read more: Read more -->
-
-# OpenLDAP and ppolicy
 
 After installing OpenLDAP and having Apache2 authenticate to OpenLDAP, it was time to bring in password policy. First up is getting the slapd.conf file to be like the following:

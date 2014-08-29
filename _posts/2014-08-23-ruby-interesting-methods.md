@@ -10,11 +10,11 @@ comments: true
 share: true
 ---
 
-# Why
+## Why
 
 When using Ruby's IRB tool to investigate some code you have the power to list of the methods that are available on objects. You can do this by typing the object's name followed by a "." and then hitting the tab button. While this is nice, it happens to list all of the methods. Below is a nice way of removing the methods from the object called Object and then you are showed only the "interesting_methods" that might be relevent.
 
-# How
+## How
 
 Here is how to create the method into the class of Object:
 
