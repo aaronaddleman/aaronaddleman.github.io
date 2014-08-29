@@ -20,25 +20,25 @@ To get some information on what is going on in Varnish, I have used the followin
 
 It's nice to view the headers of the page or resource to determain some fields that may have been set from Varnish to help with troublesooting. Or to show which cookies you might need to remove.
 
-{% uvhighlight lang=shell %}
+{% highlight bash %}
 # install the GET program to help with diagnostics
 yum install perl-libwww-perl
 # install firefox addon to help view http headers
 https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/
-{% enduvhighlight %}
+{% endhighlight %}
 
 ### ULRs hitting the backend and not getting cached
 
 If you need to view the requests that are not getting cached, this command helps. There are two ways to view this list, one that is constantly updating, and the other that prints out the top entries and then exits.
 
-{% uvhighlight lang=shell %}
+{% highlight bash %}
 # looking for urls that are hitting the backend
 varnishtop -i txurl
 # looking for urls that are hitting the backend, print out and exit
 varnishtop -1 -i txurl
 # after finding the heavy hitter, examine the log entries of the url /foo/bar
 varnishlog -c -m 'RxURL:^/foo/bar
-{% enduvhighlight %}
+{% endhighlight %}
 
 
 ### Test varnish configuration script for errors
@@ -51,6 +51,6 @@ Sometimes making changes to the VCL configuration can results in error. Find out
 
 ### Example of adding a ban using `telnet localhost 6082`
 
-{% uvhighlight lang=vcl %}
+{% highlight apache %}
 ban.url req.http.host ~ "www.website.com" && req.url ~ "/directory/of/path/"
-{% enduvhighlight %}
+{% endhighlight %}

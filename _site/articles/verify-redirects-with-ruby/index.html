@@ -152,96 +152,96 @@
 
 <p>Here is my code:</p>
 
-<pre class="eiffel"><span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>uri<span class="String">&#39;</span></span>
-<span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>net/http<span class="String">&#39;</span></span>
-<span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>csv<span class="String">&#39;</span></span>
-<span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>typhoeus<span class="String">&#39;</span></span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;uri&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;typhoeus&#39;</span>
 
-<span class="Comment"><span class="Comment">#</span> =====================================================================</span>
-<span class="Comment"><span class="Comment">#</span> = Check_Redirection.rb =</span>
-<span class="Comment"><span class="Comment">#</span> </span>
-<span class="Comment"><span class="Comment">#</span> Verify urls for redirection by comparing the old url to the new url</span>
-<span class="Comment"><span class="Comment">#</span></span>
-<span class="Comment"><span class="Comment">#</span></span>
-<span class="Comment"><span class="Comment">#</span> CSV format:</span>
-<span class="Comment"><span class="Comment">#</span> old_url,new_url</span>
-<span class="Comment"><span class="Comment">#</span> </span>
-<span class="Comment"><span class="Comment">#</span> Expected output:</span>
-<span class="Comment"><span class="Comment">#</span> status,old_url,new_url</span>
-<span class="Comment"><span class="Comment">#</span> =====================================================================</span>
+<span class="c1"># =====================================================================</span>
+<span class="c1"># = Check_Redirection.rb =</span>
+<span class="c1"># </span>
+<span class="c1"># Verify urls for redirection by comparing the old url to the new url</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># CSV format:</span>
+<span class="c1"># old_url,new_url</span>
+<span class="c1"># </span>
+<span class="c1"># Expected output:</span>
+<span class="c1"># status,old_url,new_url</span>
+<span class="c1"># =====================================================================</span>
 
 
-<span class="Comment"><span class="Comment">#</span> =======================================</span>
-<span class="Comment"><span class="Comment">#</span> = The new way with typhoeus and hydra =</span>
-<span class="Comment"><span class="Comment">#</span> =======================================</span>
-hydra <span class="Keyword">=</span> <span class="LibraryObject">Typhoeus</span>::<span class="FunctionName">Hydra</span>.<span class="FunctionName">new</span>(<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>max_concurrency</span> =&gt; <span class="Number">5</span>)
+<span class="c1"># =======================================</span>
+<span class="c1"># = The new way with typhoeus and hydra =</span>
+<span class="c1"># =======================================</span>
+<span class="n">hydra</span> <span class="o">=</span> <span class="no">Typhoeus</span><span class="o">::</span><span class="no">Hydra</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:max_concurrency</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">)</span>
 
-<span class="Variable">CSV</span>.<span class="FunctionName">open</span>(<span class="String"><span class="String">&quot;</span>redirects.csv<span class="String">&quot;</span></span>).<span class="FunctionName">each</span> <span class="Keyword">do </span>|<span class="Variable">row</span>|
-<span class="Comment">  <span class="Comment">#</span> by using followlocation, we can use the response_code to validate the redirect</span>
-  request <span class="Keyword">=</span> <span class="LibraryObject">Typhoeus</span>::<span class="FunctionName">Request</span>.<span class="FunctionName">new</span>(row[<span class="Number">0</span>], followlocation: <span class="BuiltInConstant">true</span>)
+<span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;redirects.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="c1"># by using followlocation, we can use the response_code to validate the redirect</span>
+  <span class="n">request</span> <span class="o">=</span> <span class="no">Typhoeus</span><span class="o">::</span><span class="no">Request</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="ss">followlocation</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span>
   
-  request.<span class="FunctionName">on_complete</span> <span class="Keyword">do </span>|<span class="Variable">response</span>|
-    <span class="Keyword">if</span> response.<span class="FunctionName">response_code</span> <span class="Keyword">==</span> <span class="Number">200</span>
-      puts <span class="String"><span class="String">&quot;</span>Working,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">0</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span>,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">1</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-    <span class="Keyword">else</span>
-      puts <span class="String"><span class="String">&quot;</span>Broken,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">0</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span>,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">1</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-    <span class="Keyword">end</span>
-  <span class="Keyword">end</span>  
-  hydra.<span class="FunctionName">queue</span>(request)
-<span class="Keyword">end</span>
+  <span class="n">request</span><span class="o">.</span><span class="n">on_complete</span> <span class="k">do</span> <span class="o">|</span><span class="n">response</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">response_code</span> <span class="o">==</span> <span class="mi">200</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Working,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Broken,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>  
+  <span class="n">hydra</span><span class="o">.</span><span class="n">queue</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="k">end</span>
 
-hydra.<span class="FunctionName">run</span>
-
-
-<span class="Comment"><span class="Comment">#</span> ==========================</span>
-<span class="Comment"><span class="Comment">#</span> = The test with typhoeus =</span>
-<span class="Comment"><span class="Comment">#</span> ==========================</span>
-results <span class="Keyword">=</span> <span class="LibraryObject">Typhoeus</span>::<span class="FunctionName">Request</span>.<span class="FunctionName">get</span>(<span class="String"><span class="String">&quot;</span>http://google.com<span class="String">&quot;</span></span>)
-puts results.<span class="FunctionName">response_code</span>
-
-<span class="Keyword">if</span> results.<span class="FunctionName">effective_url</span> <span class="Keyword">==</span> <span class="String"><span class="String">&quot;</span>http://google.com<span class="String">&quot;</span></span>
-  puts <span class="String"><span class="String">&quot;</span>GOOD - should be <span class="StringInterpolation"><span class="StringInterpolation">#{</span>results<span class="StringInterpolation"><span class="StringInterpolation">.</span><span class="FunctionName">effective_url</span></span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-<span class="Keyword">else</span>
-  puts <span class="String"><span class="String">&quot;</span>BAD - should be <span class="StringInterpolation"><span class="StringInterpolation">#{</span>results<span class="StringInterpolation"><span class="StringInterpolation">.</span><span class="FunctionName">effective_url</span></span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-<span class="Keyword">end</span>
+<span class="n">hydra</span><span class="o">.</span><span class="n">run</span>
 
 
-<span class="Comment"><span class="Comment">#</span> =============================</span>
-<span class="Comment"><span class="Comment">#</span> = The old way with net/http =</span>
-<span class="Comment"><span class="Comment">#</span> =============================</span>
-<span class="Keyword">def</span> <span class="FunctionName">fetch</span>(<span class="FunctionParameter">uri_str<span class="FunctionParameter">,</span> limit <span class="Keyword">=</span> <span class="Number">10</span></span>)
-<span class="Comment">  <span class="Comment">#</span> You should choose a better exception.</span>
-  <span class="Keyword">raise</span> <span class="Variable">ArgumentError</span>, <span class="String"><span class="String">&#39;</span>too many HTTP redirects<span class="String">&#39;</span></span> <span class="Keyword">if</span> limit <span class="Keyword">==</span> <span class="Number">0</span>
-  response <span class="Keyword">=</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTP</span>.<span class="FunctionName">get_response</span>(<span class="Variable">URI</span>(uri_str))
-  <span class="Keyword">case</span> response
-  <span class="Keyword">when</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTPSuccess</span> <span class="Keyword">then</span>
-    response
-  <span class="Keyword">when</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTPRedirection</span> <span class="Keyword">then</span>
-    location <span class="Keyword">=</span> response[<span class="String"><span class="String">&#39;</span>location<span class="String">&#39;</span></span>]
-<span class="Comment">    <span class="Comment">#</span> print redirect</span>
-    redirected_to <span class="Keyword">=</span> location
-    <span class="FunctionName">fetch</span>(location, limit <span class="Keyword">-</span> <span class="Number">1</span>)
-    <span class="Keyword">return</span> redirected_to
-  <span class="Keyword">else</span>
-    response.<span class="FunctionName">value</span>
-  <span class="Keyword">end</span>
-<span class="Keyword">end</span>
+<span class="c1"># ==========================</span>
+<span class="c1"># = The test with typhoeus =</span>
+<span class="c1"># ==========================</span>
+<span class="n">results</span> <span class="o">=</span> <span class="no">Typhoeus</span><span class="o">::</span><span class="no">Request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://google.com&quot;</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">results</span><span class="o">.</span><span class="n">response_code</span>
 
-<span class="Comment"><span class="Comment">#</span> test one url</span>
-print <span class="FunctionName">fetch</span>(<span class="String"><span class="String">&#39;</span>http://www.ruby-lang.org<span class="String">&#39;</span></span>)
+<span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">effective_url</span> <span class="o">==</span> <span class="s2">&quot;http://google.com&quot;</span>
+  <span class="nb">puts</span> <span class="s2">&quot;GOOD - should be </span><span class="si">#{</span><span class="n">results</span><span class="o">.</span><span class="n">effective_url</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="s2">&quot;BAD - should be </span><span class="si">#{</span><span class="n">results</span><span class="o">.</span><span class="n">effective_url</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
 
-<span class="Comment"><span class="Comment">#</span> test urls from csv file</span>
-<span class="Variable">CSV</span>.<span class="FunctionName">open</span>(<span class="String"><span class="String">&quot;</span>redirects.csv<span class="String">&quot;</span></span>).<span class="FunctionName">each</span> <span class="Keyword">do </span>|<span class="Variable">row</span>|
-  <span class="Keyword">begin</span>
-    fetching <span class="Keyword">=</span> <span class="String"><span class="String">&quot;</span><span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">0</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span>,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">1</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-    redirected_to <span class="Keyword">=</span> <span class="FunctionName">fetch</span>(row[<span class="Number">0</span>])
-<span class="Comment">    <span class="Comment">#</span> if redirected_to == row[1]</span>
-<span class="Comment">    <span class="Comment">#</span>   puts &quot;Working,#{fetching}&quot;</span>
-<span class="Comment">    <span class="Comment">#</span> end</span>
-  <span class="Keyword">rescue</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTPServerException</span>
-    puts <span class="String"><span class="String">&quot;</span>Broken,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>fetching<span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-  <span class="Keyword">end</span>
-<span class="Keyword">end</span></pre>
+
+<span class="c1"># =============================</span>
+<span class="c1"># = The old way with net/http =</span>
+<span class="c1"># =============================</span>
+<span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">uri_str</span><span class="p">,</span> <span class="n">limit</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+  <span class="c1"># You should choose a better exception.</span>
+  <span class="k">raise</span> <span class="no">ArgumentError</span><span class="p">,</span> <span class="s1">&#39;too many HTTP redirects&#39;</span> <span class="k">if</span> <span class="n">limit</span> <span class="o">==</span> <span class="mi">0</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="no">URI</span><span class="p">(</span><span class="n">uri_str</span><span class="p">))</span>
+  <span class="k">case</span> <span class="n">response</span>
+  <span class="k">when</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTPSuccess</span> <span class="k">then</span>
+    <span class="n">response</span>
+  <span class="k">when</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTPRedirection</span> <span class="k">then</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">response</span><span class="o">[</span><span class="s1">&#39;location&#39;</span><span class="o">]</span>
+    <span class="c1"># print redirect</span>
+    <span class="n">redirected_to</span> <span class="o">=</span> <span class="n">location</span>
+    <span class="n">fetch</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">limit</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirected_to</span>
+  <span class="k">else</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">value</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># test one url</span>
+<span class="nb">print</span> <span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;http://www.ruby-lang.org&#39;</span><span class="p">)</span>
+
+<span class="c1"># test urls from csv file</span>
+<span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;redirects.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="k">begin</span>
+    <span class="n">fetching</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">redirected_to</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span>
+    <span class="c1"># if redirected_to == row[1]</span>
+    <span class="c1">#   puts &quot;Working,#{fetching}&quot;</span>
+    <span class="c1"># end</span>
+  <span class="k">rescue</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTPServerException</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Broken,</span><span class="si">#{</span><span class="n">fetching</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
       <footer class="entry-meta">

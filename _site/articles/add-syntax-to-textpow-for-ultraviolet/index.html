@@ -158,62 +158,58 @@
 
 <p>Download the bundle (usually from a github respository) to get ready for conversion. Once you have the <code>Language.tmLanguage</code> convert the language file to a yaml file which should end up with a file name like <code>source.Language.syntax</code> by using this command:</p>
 
-<pre class="eiffel">plist2yaml Language.tmLanguage <span class="Keyword">&gt;</span> source.Language.syntax</pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">plist2yaml Language.tmLanguage &gt; source.Language.syntax</code></pre></div>
 
 <p>If you get an error like the following you need to be inside the <code>Language.tmbundle/Syntaxes</code> directory where the <code>.tmLanuage</code> file is located:</p>
 
-<pre class="eiffel">/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:<span class="Keyword">in</span> <span class="String"><span class="String">`</span>read&#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)</span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in <span class="String">`</span></span>initialize<span class="String"><span class="String">&#39;</span></span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `new<span class="String">&#39;</span></span>
-      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:<span class="Keyword">in</span> <span class="String"><span class="String">`</span>parse_xml&#39;</span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in <span class="String">`</span></span><span class="Keyword">&lt;</span>top (required)<span class="Keyword">&gt;</span><span class="String"><span class="String">&#39;</span></span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load<span class="String">&#39;</span></span>
-      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:<span class="Keyword">in</span> <span class="String"><span class="String">`</span>&lt;main&gt;&#39;</span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in <span class="String">`</span></span>eval<span class="String"><span class="String">&#39;</span></span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `&lt;main&gt;<span class="String">&#39;</span></span></pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in <span class="sb">`</span><span class="nb">read</span><span class="s1">&#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in `initialize&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in <span class="sb">`</span>new<span class="s1">&#39;</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `parse_xml&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in <span class="sb">`</span>&lt;top <span class="o">(</span>required<span class="o">)</span>&gt;<span class="s1">&#39;</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in <span class="sb">`</span>&lt;main&gt;<span class="s1">&#39;</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `eval&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in <span class="sb">`</span>&lt;main&gt;<span class="err">&#39;</span></code></pre></div>
 
 <h2 id="load-the-syntax-file-into-nestacms">Load the syntax file into Nestacms</h2>
 
 <p>By adding the following code into your app.rb file the syntax will be available:</p>
 
-<pre class="eiffel"><span class="LibraryObject">Textpow</span>::<span class="FunctionName">SyntaxNode</span>.<span class="FunctionName">load</span>(<span class="LibraryObject">File</span>.<span class="FunctionName">expand_path</span>(<span class="String"><span class="String">&#39;</span>public/syntaxes/source.vcl.syntax<span class="String">&#39;</span></span>, <span class="LibraryObject">Nesta</span>::<span class="FunctionName">App</span>.<span class="FunctionName">root</span>))</pre>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Textpow</span><span class="o">::</span><span class="no">SyntaxNode</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s1">&#39;public/syntaxes/source.vcl.syntax&#39;</span><span class="p">,</span> <span class="no">Nesta</span><span class="o">::</span><span class="no">App</span><span class="o">.</span><span class="n">root</span><span class="p">))</span></code></pre></div>
 
 <h2 id="use-the-syntax-on-you-files">Use the syntax on you files</h2>
 
 <p>To apply the syntax I came up with some code for printing code from the <code>app.rb</code> file by making this method:</p>
 
-<pre class="eiffel"><span class="Comment"><span class="Comment">#</span> load custom syntaxes</span>
-    <span class="LibraryObject">Textpow</span>::<span class="FunctionName">SyntaxNode</span>.<span class="FunctionName">load</span>(<span class="LibraryObject">File</span>.<span class="FunctionName">expand_path</span>(<span class="String"><span class="String">&#39;</span>public/syntaxes/source.vcl.syntax<span class="String">&#39;</span></span>, <span class="LibraryObject">Nesta</span>::<span class="FunctionName">App</span>.<span class="FunctionName">root</span>))
-
-    <span class="Keyword">def</span> <span class="FunctionName">print_code</span>(<span class="FunctionParameter">opt<span class="Keyword">=</span><span class="FunctionParameter">{</span><span class="FunctionParameter">}</span></span>)
-      filename <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>filename</span>]
-      theme <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>theme</span>] <span class="Keyword">||</span> <span class="String"><span class="String">&quot;</span>brilliance_black<span class="String">&quot;</span></span>
-      syntax <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>syntax</span>]
-      show_code <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>show_code</span>] <span class="Keyword">||</span> <span class="BuiltInConstant">true</span>
-
-      text <span class="Keyword">=</span> <span class="LibraryObject">File</span>.<span class="FunctionName">read</span>(<span class="LibraryObject">Dir</span>.<span class="FunctionName">pwd</span> <span class="Keyword">+</span> <span class="String"><span class="String">&#39;</span>/public/<span class="String">&#39;</span></span> <span class="Keyword">+</span> filename)
-      processor <span class="Keyword">=</span> <span class="LibraryObject">Textpow</span>::<span class="FunctionName">RecordingProcessor</span>.<span class="FunctionName">new</span>
-      result <span class="Keyword">=</span> <span class="LibraryObject">Uv</span>.<span class="FunctionName">parse</span>( text, <span class="String"><span class="String">&quot;</span>xhtml<span class="String">&quot;</span></span>, syntax, <span class="BuiltInConstant">false</span>, <span class="String"><span class="String">&quot;</span>eiffel<span class="String">&quot;</span></span>)
-
-      <span class="FunctionName">haml</span>(<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>print_code</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>layout</span> =&gt; <span class="BuiltInConstant">false</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>locals</span> =&gt; { <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>code</span> =&gt; result, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>filename</span> =&gt; filename })
-
-      <span class="Keyword">case</span> show_code
-      <span class="Keyword">when</span> <span class="BuiltInConstant">true</span>
-        <span class="Keyword">return</span> <span class="FunctionName">haml</span>(<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>print_code</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>layout</span> =&gt; <span class="BuiltInConstant">false</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>locals</span> =&gt; { <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>code</span> =&gt; result, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>filename</span> =&gt; filename })
-      <span class="Keyword">when</span> <span class="BuiltInConstant">false</span>
-        <span class="Keyword">return</span> download_link
-      <span class="Keyword">end</span>
-    <span class="Keyword">end</span></pre>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># load custom syntaxes</span>
+<span class="no">Textpow</span><span class="o">::</span><span class="no">SyntaxNode</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s1">&#39;public/syntaxes/source.vcl.syntax&#39;</span><span class="p">,</span> <span class="no">Nesta</span><span class="o">::</span><span class="no">App</span><span class="o">.</span><span class="n">root</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">print_code</span><span class="p">(</span><span class="n">opt</span><span class="o">=</span><span class="p">{})</span>
+  <span class="n">filename</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:filename</span><span class="o">]</span>
+  <span class="n">theme</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:theme</span><span class="o">]</span> <span class="o">||</span> <span class="s2">&quot;brilliance_black&quot;</span>
+  <span class="n">syntax</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:syntax</span><span class="o">]</span>
+  <span class="n">show_code</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:show_code</span><span class="o">]</span> <span class="o">||</span> <span class="kp">true</span>
+  <span class="n">text</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="no">Dir</span><span class="o">.</span><span class="n">pwd</span> <span class="o">+</span> <span class="s1">&#39;/public/&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+  <span class="n">processor</span> <span class="o">=</span> <span class="no">Textpow</span><span class="o">::</span><span class="no">RecordingProcessor</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="no">Uv</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="s2">&quot;xhtml&quot;</span><span class="p">,</span> <span class="n">syntax</span><span class="p">,</span> <span class="kp">false</span><span class="p">,</span> <span class="s2">&quot;eiffel&quot;</span><span class="p">)</span>
+  <span class="n">haml</span><span class="p">(</span><span class="ss">:print_code</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span> <span class="ss">:locals</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:code</span> <span class="o">=&gt;</span> <span class="n">result</span><span class="p">,</span> <span class="ss">:filename</span> <span class="o">=&gt;</span> <span class="n">filename</span> <span class="p">})</span>
+  <span class="k">case</span> <span class="n">show_code</span>
+  <span class="k">when</span> <span class="kp">true</span>
+    <span class="k">return</span> <span class="n">haml</span><span class="p">(</span><span class="ss">:print_code</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span> <span class="ss">:locals</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:code</span> <span class="o">=&gt;</span> <span class="n">result</span><span class="p">,</span> <span class="ss">:filename</span> <span class="o">=&gt;</span> <span class="n">filename</span> <span class="p">})</span>
+  <span class="k">when</span> <span class="kp">false</span>
+    <span class="k">return</span> <span class="n">download_link</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 <p>Now when you want to call some code, make a <code>haml</code> file and include the file with the following:</p>
 
-<pre class="eiffel">= print_code(<span class="String"><span class="String">&quot;</span>file_with_language.vcl<span class="String">&quot;</span></span>)</pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">=</span> print_code<span class="o">(</span><span class="s2">&quot;file_with_language.vcl&quot;</span><span class="o">)</span></code></pre></div>
 
 <h1 id="notes">Notes</h1>
 
 <p>To list the availble syntaxes:</p>
 
-<pre class="eiffel">uv --list syntaxes</pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">uv --list syntaxes</code></pre></div>
 
 
       <footer class="entry-meta">

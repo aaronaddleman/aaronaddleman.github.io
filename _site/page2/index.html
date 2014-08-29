@@ -163,21 +163,21 @@
 
 <p>It’s nice to view the headers of the page or resource to determain some fields that may have been set from Varnish to help with troublesooting. Or to show which cookies you might need to remove.</p>
 
-<pre class="eiffel"><span class="Comment"><span class="Comment">#</span> install the GET program to help with diagnostics</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># install the GET program to help with diagnostics</span>
 yum install perl-libwww-perl
-<span class="Comment"><span class="Comment">#</span> install firefox addon to help view http headers</span>
-https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/</pre>
+<span class="c"># install firefox addon to help view http headers</span>
+https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/</code></pre></div>
 
 <h3 id="ulrs-hitting-the-backend-and-not-getting-cached">ULRs hitting the backend and not getting cached</h3>
 
 <p>If you need to view the requests that are not getting cached, this command helps. There are two ways to view this list, one that is constantly updating, and the other that prints out the top entries and then exits.</p>
 
-<pre class="eiffel"><span class="Comment"><span class="Comment">#</span> looking for urls that are hitting the backend</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># looking for urls that are hitting the backend</span>
 varnishtop -i txurl
-<span class="Comment"><span class="Comment">#</span> looking for urls that are hitting the backend, print out and exit</span>
+<span class="c"># looking for urls that are hitting the backend, print out and exit</span>
 varnishtop -1 -i txurl
-<span class="Comment"><span class="Comment">#</span> after finding the heavy hitter, examine the log entries of the url /foo/bar</span>
-varnishlog -c -m <span class="String"><span class="String">&#39;</span>RxURL:^/foo/bar</span></pre>
+<span class="c"># after finding the heavy hitter, examine the log entries of the url /foo/bar</span>
+varnishlog -c -m <span class="err">&#39;</span>RxURL:^/foo/bar</code></pre></div>
 
 <h3 id="test-varnish-configuration-script-for-errors">Test varnish configuration script for errors</h3>
 
@@ -189,7 +189,7 @@ varnishlog -c -m <span class="String"><span class="String">&#39;</span>RxURL:^/f
 
 <h3 id="example-of-adding-a-ban-using-telnet-localhost-6082">Example of adding a ban using <code>telnet localhost 6082</code></h3>
 
-<pre class="eiffel">ban.url req.http.host ~ &quot;www.website.com&quot; &amp;&amp; req.url ~ &quot;/directory/of/path/&quot;</pre>
+<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="err">ban</span>.<span class="nb">url</span> req.http.host ~ <span class="s2">&quot;www.website.com&quot;</span> &amp;&amp; req.url ~ <span class="s2">&quot;/directory/of/path/&quot;</span></code></pre></div>
 
 
   </div><!-- /.entry-content -->
@@ -224,62 +224,58 @@ varnishlog -c -m <span class="String"><span class="String">&#39;</span>RxURL:^/f
 
 <p>Download the bundle (usually from a github respository) to get ready for conversion. Once you have the <code>Language.tmLanguage</code> convert the language file to a yaml file which should end up with a file name like <code>source.Language.syntax</code> by using this command:</p>
 
-<pre class="eiffel">plist2yaml Language.tmLanguage <span class="Keyword">&gt;</span> source.Language.syntax</pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">plist2yaml Language.tmLanguage &gt; source.Language.syntax</code></pre></div>
 
 <p>If you get an error like the following you need to be inside the <code>Language.tmbundle/Syntaxes</code> directory where the <code>.tmLanuage</code> file is located:</p>
 
-<pre class="eiffel">/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:<span class="Keyword">in</span> <span class="String"><span class="String">`</span>read&#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)</span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in <span class="String">`</span></span>initialize<span class="String"><span class="String">&#39;</span></span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `new<span class="String">&#39;</span></span>
-      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:<span class="Keyword">in</span> <span class="String"><span class="String">`</span>parse_xml&#39;</span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in <span class="String">`</span></span><span class="Keyword">&lt;</span>top (required)<span class="Keyword">&gt;</span><span class="String"><span class="String">&#39;</span></span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load<span class="String">&#39;</span></span>
-      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:<span class="Keyword">in</span> <span class="String"><span class="String">`</span>&lt;main&gt;&#39;</span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in <span class="String">`</span></span>eval<span class="String"><span class="String">&#39;</span></span>
-<span class="String">      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `&lt;main&gt;<span class="String">&#39;</span></span></pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in <span class="sb">`</span><span class="nb">read</span><span class="s1">&#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in `initialize&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in <span class="sb">`</span>new<span class="s1">&#39;</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `parse_xml&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in <span class="sb">`</span>&lt;top <span class="o">(</span>required<span class="o">)</span>&gt;<span class="s1">&#39;</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in <span class="sb">`</span>&lt;main&gt;<span class="s1">&#39;</span>
+<span class="s1">  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `eval&#39;</span>
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in <span class="sb">`</span>&lt;main&gt;<span class="err">&#39;</span></code></pre></div>
 
 <h2 id="load-the-syntax-file-into-nestacms">Load the syntax file into Nestacms</h2>
 
 <p>By adding the following code into your app.rb file the syntax will be available:</p>
 
-<pre class="eiffel"><span class="LibraryObject">Textpow</span>::<span class="FunctionName">SyntaxNode</span>.<span class="FunctionName">load</span>(<span class="LibraryObject">File</span>.<span class="FunctionName">expand_path</span>(<span class="String"><span class="String">&#39;</span>public/syntaxes/source.vcl.syntax<span class="String">&#39;</span></span>, <span class="LibraryObject">Nesta</span>::<span class="FunctionName">App</span>.<span class="FunctionName">root</span>))</pre>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Textpow</span><span class="o">::</span><span class="no">SyntaxNode</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s1">&#39;public/syntaxes/source.vcl.syntax&#39;</span><span class="p">,</span> <span class="no">Nesta</span><span class="o">::</span><span class="no">App</span><span class="o">.</span><span class="n">root</span><span class="p">))</span></code></pre></div>
 
 <h2 id="use-the-syntax-on-you-files">Use the syntax on you files</h2>
 
 <p>To apply the syntax I came up with some code for printing code from the <code>app.rb</code> file by making this method:</p>
 
-<pre class="eiffel"><span class="Comment"><span class="Comment">#</span> load custom syntaxes</span>
-    <span class="LibraryObject">Textpow</span>::<span class="FunctionName">SyntaxNode</span>.<span class="FunctionName">load</span>(<span class="LibraryObject">File</span>.<span class="FunctionName">expand_path</span>(<span class="String"><span class="String">&#39;</span>public/syntaxes/source.vcl.syntax<span class="String">&#39;</span></span>, <span class="LibraryObject">Nesta</span>::<span class="FunctionName">App</span>.<span class="FunctionName">root</span>))
-
-    <span class="Keyword">def</span> <span class="FunctionName">print_code</span>(<span class="FunctionParameter">opt<span class="Keyword">=</span><span class="FunctionParameter">{</span><span class="FunctionParameter">}</span></span>)
-      filename <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>filename</span>]
-      theme <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>theme</span>] <span class="Keyword">||</span> <span class="String"><span class="String">&quot;</span>brilliance_black<span class="String">&quot;</span></span>
-      syntax <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>syntax</span>]
-      show_code <span class="Keyword">=</span> opt[<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>show_code</span>] <span class="Keyword">||</span> <span class="BuiltInConstant">true</span>
-
-      text <span class="Keyword">=</span> <span class="LibraryObject">File</span>.<span class="FunctionName">read</span>(<span class="LibraryObject">Dir</span>.<span class="FunctionName">pwd</span> <span class="Keyword">+</span> <span class="String"><span class="String">&#39;</span>/public/<span class="String">&#39;</span></span> <span class="Keyword">+</span> filename)
-      processor <span class="Keyword">=</span> <span class="LibraryObject">Textpow</span>::<span class="FunctionName">RecordingProcessor</span>.<span class="FunctionName">new</span>
-      result <span class="Keyword">=</span> <span class="LibraryObject">Uv</span>.<span class="FunctionName">parse</span>( text, <span class="String"><span class="String">&quot;</span>xhtml<span class="String">&quot;</span></span>, syntax, <span class="BuiltInConstant">false</span>, <span class="String"><span class="String">&quot;</span>eiffel<span class="String">&quot;</span></span>)
-
-      <span class="FunctionName">haml</span>(<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>print_code</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>layout</span> =&gt; <span class="BuiltInConstant">false</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>locals</span> =&gt; { <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>code</span> =&gt; result, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>filename</span> =&gt; filename })
-
-      <span class="Keyword">case</span> show_code
-      <span class="Keyword">when</span> <span class="BuiltInConstant">true</span>
-        <span class="Keyword">return</span> <span class="FunctionName">haml</span>(<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>print_code</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>layout</span> =&gt; <span class="BuiltInConstant">false</span>, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>locals</span> =&gt; { <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>code</span> =&gt; result, <span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>filename</span> =&gt; filename })
-      <span class="Keyword">when</span> <span class="BuiltInConstant">false</span>
-        <span class="Keyword">return</span> download_link
-      <span class="Keyword">end</span>
-    <span class="Keyword">end</span></pre>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># load custom syntaxes</span>
+<span class="no">Textpow</span><span class="o">::</span><span class="no">SyntaxNode</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s1">&#39;public/syntaxes/source.vcl.syntax&#39;</span><span class="p">,</span> <span class="no">Nesta</span><span class="o">::</span><span class="no">App</span><span class="o">.</span><span class="n">root</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">print_code</span><span class="p">(</span><span class="n">opt</span><span class="o">=</span><span class="p">{})</span>
+  <span class="n">filename</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:filename</span><span class="o">]</span>
+  <span class="n">theme</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:theme</span><span class="o">]</span> <span class="o">||</span> <span class="s2">&quot;brilliance_black&quot;</span>
+  <span class="n">syntax</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:syntax</span><span class="o">]</span>
+  <span class="n">show_code</span> <span class="o">=</span> <span class="n">opt</span><span class="o">[</span><span class="ss">:show_code</span><span class="o">]</span> <span class="o">||</span> <span class="kp">true</span>
+  <span class="n">text</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="no">Dir</span><span class="o">.</span><span class="n">pwd</span> <span class="o">+</span> <span class="s1">&#39;/public/&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+  <span class="n">processor</span> <span class="o">=</span> <span class="no">Textpow</span><span class="o">::</span><span class="no">RecordingProcessor</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="no">Uv</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="s2">&quot;xhtml&quot;</span><span class="p">,</span> <span class="n">syntax</span><span class="p">,</span> <span class="kp">false</span><span class="p">,</span> <span class="s2">&quot;eiffel&quot;</span><span class="p">)</span>
+  <span class="n">haml</span><span class="p">(</span><span class="ss">:print_code</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span> <span class="ss">:locals</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:code</span> <span class="o">=&gt;</span> <span class="n">result</span><span class="p">,</span> <span class="ss">:filename</span> <span class="o">=&gt;</span> <span class="n">filename</span> <span class="p">})</span>
+  <span class="k">case</span> <span class="n">show_code</span>
+  <span class="k">when</span> <span class="kp">true</span>
+    <span class="k">return</span> <span class="n">haml</span><span class="p">(</span><span class="ss">:print_code</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span> <span class="ss">:locals</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:code</span> <span class="o">=&gt;</span> <span class="n">result</span><span class="p">,</span> <span class="ss">:filename</span> <span class="o">=&gt;</span> <span class="n">filename</span> <span class="p">})</span>
+  <span class="k">when</span> <span class="kp">false</span>
+    <span class="k">return</span> <span class="n">download_link</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 <p>Now when you want to call some code, make a <code>haml</code> file and include the file with the following:</p>
 
-<pre class="eiffel">= print_code(<span class="String"><span class="String">&quot;</span>file_with_language.vcl<span class="String">&quot;</span></span>)</pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">=</span> print_code<span class="o">(</span><span class="s2">&quot;file_with_language.vcl&quot;</span><span class="o">)</span></code></pre></div>
 
 <h1 id="notes">Notes</h1>
 
 <p>To list the availble syntaxes:</p>
 
-<pre class="eiffel">uv --list syntaxes</pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">uv --list syntaxes</code></pre></div>
 
 
   </div><!-- /.entry-content -->
@@ -417,96 +413,96 @@ Built on ruby makes this project a little easier to install. It helps if you hav
 
 <p>Here is my code:</p>
 
-<pre class="eiffel"><span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>uri<span class="String">&#39;</span></span>
-<span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>net/http<span class="String">&#39;</span></span>
-<span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>csv<span class="String">&#39;</span></span>
-<span class="Keyword">require</span> <span class="String"><span class="String">&#39;</span>typhoeus<span class="String">&#39;</span></span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;uri&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;typhoeus&#39;</span>
 
-<span class="Comment"><span class="Comment">#</span> =====================================================================</span>
-<span class="Comment"><span class="Comment">#</span> = Check_Redirection.rb =</span>
-<span class="Comment"><span class="Comment">#</span> </span>
-<span class="Comment"><span class="Comment">#</span> Verify urls for redirection by comparing the old url to the new url</span>
-<span class="Comment"><span class="Comment">#</span></span>
-<span class="Comment"><span class="Comment">#</span></span>
-<span class="Comment"><span class="Comment">#</span> CSV format:</span>
-<span class="Comment"><span class="Comment">#</span> old_url,new_url</span>
-<span class="Comment"><span class="Comment">#</span> </span>
-<span class="Comment"><span class="Comment">#</span> Expected output:</span>
-<span class="Comment"><span class="Comment">#</span> status,old_url,new_url</span>
-<span class="Comment"><span class="Comment">#</span> =====================================================================</span>
+<span class="c1"># =====================================================================</span>
+<span class="c1"># = Check_Redirection.rb =</span>
+<span class="c1"># </span>
+<span class="c1"># Verify urls for redirection by comparing the old url to the new url</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># CSV format:</span>
+<span class="c1"># old_url,new_url</span>
+<span class="c1"># </span>
+<span class="c1"># Expected output:</span>
+<span class="c1"># status,old_url,new_url</span>
+<span class="c1"># =====================================================================</span>
 
 
-<span class="Comment"><span class="Comment">#</span> =======================================</span>
-<span class="Comment"><span class="Comment">#</span> = The new way with typhoeus and hydra =</span>
-<span class="Comment"><span class="Comment">#</span> =======================================</span>
-hydra <span class="Keyword">=</span> <span class="LibraryObject">Typhoeus</span>::<span class="FunctionName">Hydra</span>.<span class="FunctionName">new</span>(<span class="UserDefinedConstant"><span class="UserDefinedConstant">:</span>max_concurrency</span> =&gt; <span class="Number">5</span>)
+<span class="c1"># =======================================</span>
+<span class="c1"># = The new way with typhoeus and hydra =</span>
+<span class="c1"># =======================================</span>
+<span class="n">hydra</span> <span class="o">=</span> <span class="no">Typhoeus</span><span class="o">::</span><span class="no">Hydra</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:max_concurrency</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">)</span>
 
-<span class="Variable">CSV</span>.<span class="FunctionName">open</span>(<span class="String"><span class="String">&quot;</span>redirects.csv<span class="String">&quot;</span></span>).<span class="FunctionName">each</span> <span class="Keyword">do </span>|<span class="Variable">row</span>|
-<span class="Comment">  <span class="Comment">#</span> by using followlocation, we can use the response_code to validate the redirect</span>
-  request <span class="Keyword">=</span> <span class="LibraryObject">Typhoeus</span>::<span class="FunctionName">Request</span>.<span class="FunctionName">new</span>(row[<span class="Number">0</span>], followlocation: <span class="BuiltInConstant">true</span>)
+<span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;redirects.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="c1"># by using followlocation, we can use the response_code to validate the redirect</span>
+  <span class="n">request</span> <span class="o">=</span> <span class="no">Typhoeus</span><span class="o">::</span><span class="no">Request</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="ss">followlocation</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span>
   
-  request.<span class="FunctionName">on_complete</span> <span class="Keyword">do </span>|<span class="Variable">response</span>|
-    <span class="Keyword">if</span> response.<span class="FunctionName">response_code</span> <span class="Keyword">==</span> <span class="Number">200</span>
-      puts <span class="String"><span class="String">&quot;</span>Working,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">0</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span>,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">1</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-    <span class="Keyword">else</span>
-      puts <span class="String"><span class="String">&quot;</span>Broken,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">0</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span>,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">1</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-    <span class="Keyword">end</span>
-  <span class="Keyword">end</span>  
-  hydra.<span class="FunctionName">queue</span>(request)
-<span class="Keyword">end</span>
+  <span class="n">request</span><span class="o">.</span><span class="n">on_complete</span> <span class="k">do</span> <span class="o">|</span><span class="n">response</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">response_code</span> <span class="o">==</span> <span class="mi">200</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Working,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Broken,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>  
+  <span class="n">hydra</span><span class="o">.</span><span class="n">queue</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="k">end</span>
 
-hydra.<span class="FunctionName">run</span>
-
-
-<span class="Comment"><span class="Comment">#</span> ==========================</span>
-<span class="Comment"><span class="Comment">#</span> = The test with typhoeus =</span>
-<span class="Comment"><span class="Comment">#</span> ==========================</span>
-results <span class="Keyword">=</span> <span class="LibraryObject">Typhoeus</span>::<span class="FunctionName">Request</span>.<span class="FunctionName">get</span>(<span class="String"><span class="String">&quot;</span>http://google.com<span class="String">&quot;</span></span>)
-puts results.<span class="FunctionName">response_code</span>
-
-<span class="Keyword">if</span> results.<span class="FunctionName">effective_url</span> <span class="Keyword">==</span> <span class="String"><span class="String">&quot;</span>http://google.com<span class="String">&quot;</span></span>
-  puts <span class="String"><span class="String">&quot;</span>GOOD - should be <span class="StringInterpolation"><span class="StringInterpolation">#{</span>results<span class="StringInterpolation"><span class="StringInterpolation">.</span><span class="FunctionName">effective_url</span></span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-<span class="Keyword">else</span>
-  puts <span class="String"><span class="String">&quot;</span>BAD - should be <span class="StringInterpolation"><span class="StringInterpolation">#{</span>results<span class="StringInterpolation"><span class="StringInterpolation">.</span><span class="FunctionName">effective_url</span></span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-<span class="Keyword">end</span>
+<span class="n">hydra</span><span class="o">.</span><span class="n">run</span>
 
 
-<span class="Comment"><span class="Comment">#</span> =============================</span>
-<span class="Comment"><span class="Comment">#</span> = The old way with net/http =</span>
-<span class="Comment"><span class="Comment">#</span> =============================</span>
-<span class="Keyword">def</span> <span class="FunctionName">fetch</span>(<span class="FunctionParameter">uri_str<span class="FunctionParameter">,</span> limit <span class="Keyword">=</span> <span class="Number">10</span></span>)
-<span class="Comment">  <span class="Comment">#</span> You should choose a better exception.</span>
-  <span class="Keyword">raise</span> <span class="Variable">ArgumentError</span>, <span class="String"><span class="String">&#39;</span>too many HTTP redirects<span class="String">&#39;</span></span> <span class="Keyword">if</span> limit <span class="Keyword">==</span> <span class="Number">0</span>
-  response <span class="Keyword">=</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTP</span>.<span class="FunctionName">get_response</span>(<span class="Variable">URI</span>(uri_str))
-  <span class="Keyword">case</span> response
-  <span class="Keyword">when</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTPSuccess</span> <span class="Keyword">then</span>
-    response
-  <span class="Keyword">when</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTPRedirection</span> <span class="Keyword">then</span>
-    location <span class="Keyword">=</span> response[<span class="String"><span class="String">&#39;</span>location<span class="String">&#39;</span></span>]
-<span class="Comment">    <span class="Comment">#</span> print redirect</span>
-    redirected_to <span class="Keyword">=</span> location
-    <span class="FunctionName">fetch</span>(location, limit <span class="Keyword">-</span> <span class="Number">1</span>)
-    <span class="Keyword">return</span> redirected_to
-  <span class="Keyword">else</span>
-    response.<span class="FunctionName">value</span>
-  <span class="Keyword">end</span>
-<span class="Keyword">end</span>
+<span class="c1"># ==========================</span>
+<span class="c1"># = The test with typhoeus =</span>
+<span class="c1"># ==========================</span>
+<span class="n">results</span> <span class="o">=</span> <span class="no">Typhoeus</span><span class="o">::</span><span class="no">Request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://google.com&quot;</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">results</span><span class="o">.</span><span class="n">response_code</span>
 
-<span class="Comment"><span class="Comment">#</span> test one url</span>
-print <span class="FunctionName">fetch</span>(<span class="String"><span class="String">&#39;</span>http://www.ruby-lang.org<span class="String">&#39;</span></span>)
+<span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">effective_url</span> <span class="o">==</span> <span class="s2">&quot;http://google.com&quot;</span>
+  <span class="nb">puts</span> <span class="s2">&quot;GOOD - should be </span><span class="si">#{</span><span class="n">results</span><span class="o">.</span><span class="n">effective_url</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="s2">&quot;BAD - should be </span><span class="si">#{</span><span class="n">results</span><span class="o">.</span><span class="n">effective_url</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
 
-<span class="Comment"><span class="Comment">#</span> test urls from csv file</span>
-<span class="Variable">CSV</span>.<span class="FunctionName">open</span>(<span class="String"><span class="String">&quot;</span>redirects.csv<span class="String">&quot;</span></span>).<span class="FunctionName">each</span> <span class="Keyword">do </span>|<span class="Variable">row</span>|
-  <span class="Keyword">begin</span>
-    fetching <span class="Keyword">=</span> <span class="String"><span class="String">&quot;</span><span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">0</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span>,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>row<span class="StringInterpolation">[</span><span class="Number">1</span><span class="StringInterpolation">]</span><span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-    redirected_to <span class="Keyword">=</span> <span class="FunctionName">fetch</span>(row[<span class="Number">0</span>])
-<span class="Comment">    <span class="Comment">#</span> if redirected_to == row[1]</span>
-<span class="Comment">    <span class="Comment">#</span>   puts &quot;Working,#{fetching}&quot;</span>
-<span class="Comment">    <span class="Comment">#</span> end</span>
-  <span class="Keyword">rescue</span> <span class="LibraryObject">Net</span>::<span class="FunctionName">HTTPServerException</span>
-    puts <span class="String"><span class="String">&quot;</span>Broken,<span class="StringInterpolation"><span class="StringInterpolation">#{</span>fetching<span class="StringInterpolation">}</span></span><span class="String">&quot;</span></span>
-  <span class="Keyword">end</span>
-<span class="Keyword">end</span></pre>
+
+<span class="c1"># =============================</span>
+<span class="c1"># = The old way with net/http =</span>
+<span class="c1"># =============================</span>
+<span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">uri_str</span><span class="p">,</span> <span class="n">limit</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+  <span class="c1"># You should choose a better exception.</span>
+  <span class="k">raise</span> <span class="no">ArgumentError</span><span class="p">,</span> <span class="s1">&#39;too many HTTP redirects&#39;</span> <span class="k">if</span> <span class="n">limit</span> <span class="o">==</span> <span class="mi">0</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="no">URI</span><span class="p">(</span><span class="n">uri_str</span><span class="p">))</span>
+  <span class="k">case</span> <span class="n">response</span>
+  <span class="k">when</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTPSuccess</span> <span class="k">then</span>
+    <span class="n">response</span>
+  <span class="k">when</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTPRedirection</span> <span class="k">then</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">response</span><span class="o">[</span><span class="s1">&#39;location&#39;</span><span class="o">]</span>
+    <span class="c1"># print redirect</span>
+    <span class="n">redirected_to</span> <span class="o">=</span> <span class="n">location</span>
+    <span class="n">fetch</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">limit</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirected_to</span>
+  <span class="k">else</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">value</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># test one url</span>
+<span class="nb">print</span> <span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;http://www.ruby-lang.org&#39;</span><span class="p">)</span>
+
+<span class="c1"># test urls from csv file</span>
+<span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;redirects.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="k">begin</span>
+    <span class="n">fetching</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">redirected_to</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span>
+    <span class="c1"># if redirected_to == row[1]</span>
+    <span class="c1">#   puts &quot;Working,#{fetching}&quot;</span>
+    <span class="c1"># end</span>
+  <span class="k">rescue</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTPServerException</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Broken,</span><span class="si">#{</span><span class="n">fetching</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
   </div><!-- /.entry-content -->

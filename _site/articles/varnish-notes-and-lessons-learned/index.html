@@ -156,21 +156,21 @@
 
 <p>It’s nice to view the headers of the page or resource to determain some fields that may have been set from Varnish to help with troublesooting. Or to show which cookies you might need to remove.</p>
 
-<pre class="eiffel"><span class="Comment"><span class="Comment">#</span> install the GET program to help with diagnostics</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># install the GET program to help with diagnostics</span>
 yum install perl-libwww-perl
-<span class="Comment"><span class="Comment">#</span> install firefox addon to help view http headers</span>
-https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/</pre>
+<span class="c"># install firefox addon to help view http headers</span>
+https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/</code></pre></div>
 
 <h3 id="ulrs-hitting-the-backend-and-not-getting-cached">ULRs hitting the backend and not getting cached</h3>
 
 <p>If you need to view the requests that are not getting cached, this command helps. There are two ways to view this list, one that is constantly updating, and the other that prints out the top entries and then exits.</p>
 
-<pre class="eiffel"><span class="Comment"><span class="Comment">#</span> looking for urls that are hitting the backend</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># looking for urls that are hitting the backend</span>
 varnishtop -i txurl
-<span class="Comment"><span class="Comment">#</span> looking for urls that are hitting the backend, print out and exit</span>
+<span class="c"># looking for urls that are hitting the backend, print out and exit</span>
 varnishtop -1 -i txurl
-<span class="Comment"><span class="Comment">#</span> after finding the heavy hitter, examine the log entries of the url /foo/bar</span>
-varnishlog -c -m <span class="String"><span class="String">&#39;</span>RxURL:^/foo/bar</span></pre>
+<span class="c"># after finding the heavy hitter, examine the log entries of the url /foo/bar</span>
+varnishlog -c -m <span class="err">&#39;</span>RxURL:^/foo/bar</code></pre></div>
 
 <h3 id="test-varnish-configuration-script-for-errors">Test varnish configuration script for errors</h3>
 
@@ -182,7 +182,7 @@ varnishlog -c -m <span class="String"><span class="String">&#39;</span>RxURL:^/f
 
 <h3 id="example-of-adding-a-ban-using-telnet-localhost-6082">Example of adding a ban using <code>telnet localhost 6082</code></h3>
 
-<pre class="eiffel">ban.url req.http.host ~ &quot;www.website.com&quot; &amp;&amp; req.url ~ &quot;/directory/of/path/&quot;</pre>
+<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="err">ban</span>.<span class="nb">url</span> req.http.host ~ <span class="s2">&quot;www.website.com&quot;</span> &amp;&amp; req.url ~ <span class="s2">&quot;/directory/of/path/&quot;</span></code></pre></div>
 
 
       <footer class="entry-meta">

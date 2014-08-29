@@ -148,34 +148,34 @@
     <div class="entry-content">
       <p>Small example of how to enable compression in Apache while excluding the IE browser for those times when Microsoft decides to do things differently.</p>
 
-<pre class="eiffel"><span class="MarkupTag"><span class="MarkupTag">&lt;</span><span class="MarkupNameOfTag">LocationMatch</span> <span class="MarkupTag">&quot;^/.*&quot;</span><span class="MarkupTag">&gt;</span></span>
-  <span class="MarkupTag"><span class="MarkupTag">&lt;</span><span class="MarkupNameOfTag">IfModule</span> mod_deflate.c<span class="MarkupTag">&gt;</span></span>
-    <span class="Comment"><span class="Comment">#</span> place filter &#39;DEFLATE&#39; on all outgoing content</span>
-    <span class="LibraryConstant">SetOutputFilter</span> DEFLATE
-    <span class="Comment"><span class="Comment">#</span> add additional filters by file mimetype</span>
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE text/plain
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE text/xml
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/xhtml+xml
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE text/css
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/xml
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE image/svg+xml
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/rss+xml
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/atom_xml
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/x-javascript
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/x-httpd-php
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/x-httpd-fastphp
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE application/x-httpd-eruby
-    <span class="LibraryConstant">AddOutputFilterByType</span> DEFLATE text/html
-    <span class="Comment"><span class="Comment">#</span> only for ie</span>
-    <span class="LibraryConstant">BrowserMatch</span> \bMSIE no-gzip gzip-only-text/html
-    <span class="Comment"><span class="Comment">#</span> exclude uncompressible content via file type</span>
-    <span class="LibraryConstant">SetEnvIfNoCase</span> Request_URI \.(?:gif|jpe?g|png|rar|zip)$ no-gzip dont-vary
-    <span class="Comment"><span class="Comment">#</span>&lt;IfModule mod_headers.c&gt;</span>
-      <span class="Comment"><span class="Comment">#</span> properly handle requests coming from behind proxies</span>
-      <span class="Comment"><span class="Comment">#</span>Header append Vary User-Agent</span>
-   <span class="Comment"><span class="Comment">#</span>&lt;/IfModule&gt;</span>
-  <span class="MarkupTag"><span class="MarkupTag">&lt;/</span><span class="MarkupNameOfTag">IfModule</span><span class="MarkupTag">&gt;</span></span>
-<span class="MarkupTag"><span class="MarkupTag">&lt;/</span><span class="MarkupNameOfTag">LocationMatch</span><span class="MarkupTag">&gt;</span></span></pre>
+<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="nt">&lt;LocationMatch</span> <span class="s">&quot;^/.*&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;IfModule</span> <span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+    <span class="c"># place filter &#39;DEFLATE&#39; on all outgoing content</span>
+    <span class="nb">SetOutputFilter</span> DEFLATE
+    <span class="c"># add additional filters by file mimetype</span>
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/plain
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/xhtml+xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/css
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE image/svg+xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/rss+xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/atom_xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-javascript
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-php
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-fastphp
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-eruby
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/html
+    <span class="c"># only for ie</span>
+    <span class="nb">BrowserMatch</span> \bMSIE no-gzip gzip-only-text/html
+    <span class="c"># exclude uncompressible content via file type</span>
+    <span class="nb">SetEnvIfNoCase</span> Request_URI \.(?:gif|jpe?g|png|rar|zip)$ no-gzip dont-vary
+    <span class="c">#&lt;IfModule mod_headers.c&gt;</span>
+      <span class="c"># properly handle requests coming from behind proxies</span>
+      <span class="c">#Header append Vary User-Agent</span>
+   <span class="c">#&lt;/IfModule&gt;</span>
+  <span class="nt">&lt;/IfModule&gt;</span>
+<span class="nt">&lt;/LocationMatch&gt;</span></code></pre></div>
 
       <footer class="entry-meta">
         <span class="entry-tags"><a href="/tags/#sysadmin" title="Pages tagged sysadmin" class="tag">sysadmin</a></span>

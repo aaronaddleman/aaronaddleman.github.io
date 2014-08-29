@@ -18,11 +18,11 @@ When using Ruby's IRB tool to investigate some code you have the power to list o
 
 Here is how to create the method into the class of Object:
 
-{% uvhighlight lang=ruby %}
+{% highlight ruby %}
 class Object
   # Return only the methods not present on basic objects
   def interesting_methods
     (self.methods - Object.instance_methods).sort
   end
 end
-{% enduvhighlight %}
+{% endhighlight %}
