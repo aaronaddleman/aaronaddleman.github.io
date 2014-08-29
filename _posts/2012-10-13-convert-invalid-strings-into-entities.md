@@ -46,11 +46,10 @@ Using ruby string#encode to convert the invalids did work, but it converted some
 
 I came across the library called [htmlentities][1] and with a little testing I found a great combination of what I wanted to do with the scrapped content. First, the code takes the inner html and encodes the invalid characters. Then I use gsub to return some of the entities back into what I would like to use for Wordpress content to uphold the html classes, tags, and design.
 
-    {% highlight ruby %}
-    require 'htmlentities'
-    
-    HTMLEntities::new::encode(results.inner_html, :basic, :named, :decimal).gsub("&lt;", "<").gsub("&gt;", ">").gsub("&#10;", "").gsub("&quot;", "\"")
-    {% endhighlight %}
+{% highlight ruby %}
+require 'htmlentities'
+HTMLEntities::new::encode(results.inner_html, :basic, :named, :decimal).gsub("&lt;", "<").gsub("&gt;", ">").gsub("&#10;", "").gsub("&quot;", "\"")
+{% endhighlight %}
     
 I might try to use the results.inner_text but this works great for this project.
 
@@ -58,11 +57,10 @@ I might try to use the results.inner_text but this works great for this project.
 
 I finally realized that in the case you have a document that contains entities and characters that should be in entity form, you need to decode the entities first, then encode all of the characters that need to be in entity form.  Not sure why 'htmlentities' does not do this automatically, but oh well. Below is an example of what I like to do in my code:
 
-    {% highlight ruby %}
-    require 'htmlentities'
-
-    decoded_value = HTMLEntities::new::decode(value)
-    HTMLEntities::new::encode(decoded_value, :basic, :named, :decimal).gsub(/\s\s+/, " ").gsub(/&#10;/, "")
-    {% highlight %}
+{% highlight ruby %}
+require 'htmlentities'
+decoded_value = HTMLEntities::new::decode(value)
+HTMLEntities::new::encode(decoded_value, :basic, :named, :decimal).gsub(/\s\s+/, " ").gsub(/&#10;/, "")
+{% endhighlight %}
 
 [1]: http://htmlentities.rubyforge.org/ "Html Entities"
