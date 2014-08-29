@@ -11,7 +11,7 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/11788942253_6c55c0f770_o.jpg">
+<meta name="twitter:image" content="/images/9553056715_0a418a1852_o.jpg">
 
 <meta name="twitter:title" content="Philomathy">
 <meta name="twitter:description" content="The blog by Aaron Addleman">
@@ -123,7 +123,7 @@
   <div class="image-credit">Image source: <a href="">Aaron Addleman</a></div><!-- /.image-credit -->
   
     <div class="entry-image">
-      <img src="/images/11788942253_6c55c0f770_o.jpg" alt="Philomathy">
+      <img src="/images/9553056715_0a418a1852_o.jpg" alt="Philomathy">
     </div><!-- /.entry-image -->
   
   <div class="header-title">
@@ -136,78 +136,6 @@
 
 <div id="main" role="main">
   
-<article class="hentry">
-  <header>
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2012-08-20T00:00:00-07:00"><a href="/articles/backup_ee_environments/">August 20, 2012</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/backup_ee_environments/#disqus_thread">Comment</a></span>
-      
-      <span class="entry-reading-time pull-right">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/articles/backup_ee_environments/" rel="bookmark" title="No frills shell script to backup multiple environments with a database dump" itemprop="url">No frills shell script to backup multiple environments with a database dump</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <h1 id="this-is-a-test">this is a test</h1>
-
-<p>here is the script</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
-  <span class="c"># usage:</span>
-  <span class="c"># </span>
-  <span class="c"># ./backup_ee.sh (dev|prod|stage)</span>
-  <span class="k">function</span> backup_site <span class="o">()</span> <span class="o">{</span>
-    <span class="nb">echo</span> <span class="s2">&quot;mkdir -p $backup_dir&quot;</span>
-    <span class="nv">archive_name</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$backup_file</span><span class="sb">`</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Archiving: $1 ($backup_file to $backup_dir/$archive_name)&quot;</span>
-    <span class="nb">echo</span> <span class="s2">&quot;tar pzcvf $backup_dir/$archive_name.tar --totals $backup_file&quot;</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Compressing: $1 ($backup_file to $backup_dir/$archive_name)&quot;</span>
-    <span class="nb">echo</span> <span class="s2">&quot;gzip $backup_dir/$archive_name.tar&quot;</span>
-    <span class="nb">echo</span> <span class="s2">&quot;mysqldump -u $backup_db_user -p$backup_db_pass $backup_dv &gt; $backup_dir/$backup_db.sql&quot;</span>
-  <span class="o">}</span>
-  <span class="k">function</span> site <span class="o">()</span> <span class="o">{</span>
-    <span class="k">case</span> <span class="nv">$1</span> in
-      dev <span class="o">)</span>
-      <span class="c">#backup dev</span>
-      <span class="nv">backup_file</span><span class="o">=</span><span class="s2">&quot;/var/www/dev&quot;</span>
-      <span class="nv">backup_db</span><span class="o">=</span><span class="s2">&quot;db_name&quot;</span>
-      <span class="nv">backup_db_user</span><span class="o">=</span><span class="s2">&quot;db_user&quot;</span>
-      <span class="nv">backup_db_pass</span><span class="o">=</span><span class="s2">&quot;db_pass&quot;</span>
-      backup_site
-        <span class="p">;;</span>
-      prod <span class="o">)</span>
-      <span class="c">#backup prod</span>
-      <span class="nv">backup_file</span><span class="o">=</span><span class="s2">&quot;/var/www/prod&quot;</span>
-      <span class="nv">backup_db</span><span class="o">=</span><span class="s2">&quot;db_name&quot;</span>
-      <span class="nv">backup_db_user</span><span class="o">=</span><span class="s2">&quot;db_user&quot;</span>
-      <span class="nv">backup_db_pass</span><span class="o">=</span><span class="s2">&quot;db_pass&quot;</span>
-      backup_site
-        <span class="p">;;</span>
-      stage <span class="o">)</span>
-      <span class="c">#backup stage</span>
-      <span class="nv">backup_file</span><span class="o">=</span><span class="s2">&quot;/var/www/stage&quot;</span>
-      <span class="nv">backup_db</span><span class="o">=</span><span class="s2">&quot;db_name&quot;</span>
-      <span class="nv">backup_db_user</span><span class="o">=</span><span class="s2">&quot;db_user&quot;</span>
-      <span class="nv">backup_db_pass</span><span class="o">=</span><span class="s2">&quot;db_pass&quot;</span>
-      backup_site
-        <span class="p">;;</span>
-    <span class="k">esac</span>
-  <span class="o">}</span>
-  <span class="c"># get backup selection from input</span>
-  <span class="nv">backup_selection</span><span class="o">=</span><span class="nv">$1</span>
-  <span class="c"># set backup destination</span>
-  <span class="nv">backup_dir</span><span class="o">=</span><span class="s2">&quot;/home/path/to/backups/$backup_selection/`date +%Y-%m-%d-%H-%M-%S`&quot;</span>
-  <span class="c"># execute backup</span>
-  site <span class="nv">$backup_selection</span></code></pre></div>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
 <article class="hentry">
   <header>
     <div class="entry-meta">
@@ -384,6 +312,102 @@ EOXML
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
+<article class="hentry">
+  <header>
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2012-05-10T00:00:00-07:00"><a href="/articles/nesta-passenger-rvm-apache/">May 10, 2012</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/nesta-passenger-rvm-apache/#disqus_thread">Comment</a></span>
+      
+      <span class="entry-reading-time pull-right">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/articles/nesta-passenger-rvm-apache/" rel="bookmark" title="Nestacms with passenger, rvm, apache" itemprop="url">Nestacms with passenger, rvm, apache</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h1 id="nestacms-with-passenger-rvm-apache">Nestacms with passenger, rvm, apache</h1>
+
+<h2 id="objective">Objective</h2>
+
+<p>To get Nesta to be served from Apache with Passenger.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>About a couple months ago, I came across Nesta which is really awesome and really simple CMS built off the Sinatra framework. But I could not figure out how to host the application with Apache. Fast forward to this evening and I finally found a solution. If you have any suggestions on how it could be done different, please post a comment as I would like to hear about it.</p>
+
+<h2 id="build">Build</h2>
+
+<p>So! you want to build it. Ok, here are the steps I did:</p>
+
+<ol>
+  <li>Install RVM and Ruby (I ended up with the single user install as you will notice)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>curl -L get.rvm.io</td>
+          <td>bash -s stable</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>rvm requirements</li>
+  <li>(install necessary stuff to compile ruby and gems)</li>
+  <li>rvm install 1.9.2</li>
+  <li>rvm use –default 1.9.2</li>
+  <li>Install Nesta</li>
+  <li>gem install nesta</li>
+  <li>Create your site home and site itself</li>
+  <li>mkdir /apps</li>
+  <li>cd /apps</li>
+  <li>nesta new mysite</li>
+  <li>(take note that all additional steps use “/apps/mysite” as the nesta directory)</li>
+  <li>Install Passenger</li>
+  <li>gem install passenger</li>
+  <li>passenger-install-apache2-module</li>
+  <li>Apache config</li>
+  <li>mkdir /etc/httpd/sites-available /etc/httpd/sites-enabled /etc/httpd/mods-available /etc/httpd/mods-enabled</li>
+  <li>Create the file /etc/httpd/mods-available/passenger.conf (see git gist below)</li>
+  <li>Create the file /etc/httpd/sites-available/mysite (see git gist below)</li>
+  <li>cd /etc/httpd/sites-enabled</li>
+  <li>ln -s ../sites-available/mysite mysite</li>
+  <li>cd /etc/httpd/mods-enabled</li>
+  <li>ln -s ../mods-available/passenger.conf passenger.conf</li>
+  <li>turn on NameVirtualHosts feature</li>
+  <li>sudo /etc/init.d/httpd restart</li>
+  <li>goto your new site!</li>
+  <li>SetEnv LD_LIBRARY_PATH /home/aaron/.rvm/rubies/ruby-1.9.2-p320/lib</li>
+  <li>SetEnv GEM_PATH /home/aaron/.rvm/gems/ruby-1.9.2-p320:/home/aaron/.rvm/gems/ruby-1.9.2-p320@global</li>
+</ol>
+
+<p>Next, put the following into your Apache configuration:</p>
+
+<pre><code>:::apache-config
+LoadModule passenger_module /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12/ext/apache2/mod_passenger.so
+PassengerRoot /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12
+PassengerRuby /home/aaron/.rvm/rubies/ruby-1.9.2-p320/bin/ruby
+  
+&lt;VirtualHost *:80&gt;
+  ServerName centos
+  # !!! Be sure to point DocumentRoot to "public"
+  DocumentRoot /apps/mysite/public
+
+  &lt;Directory /apps/mysite/public&gt;
+    # This relaxes Apache security settings.
+    AllowOverride all
+    # MultiViews must be turned off.
+    Options -Multiviews
+  &lt;/Directory&gt;
+&lt;/VirturalHost&gt;
+</code></pre>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
 
 <div class="pagination">
   
@@ -428,15 +452,9 @@ EOXML
         
       </li>
     
-      <li>
-        
-          <a href="/page7">7</a>
-        
-      </li>
-    
   </ul>
   
-    <a href="/page7" class="btn">Next</a>
+    Next
   
 </div><!-- /.pagination -->
 </div><!-- /#main -->

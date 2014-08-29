@@ -5,36 +5,9 @@
     <description>My Philomathy</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 29 Aug 2014 16:08:53 -0700</pubDate>
-    <lastBuildDate>Fri, 29 Aug 2014 16:08:53 -0700</lastBuildDate>
+    <pubDate>Fri, 29 Aug 2014 16:13:16 -0700</pubDate>
+    <lastBuildDate>Fri, 29 Aug 2014 16:13:16 -0700</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
-To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 29 Aug 2014 02:17:14 -0700</pubDate>
-        <link>/articles/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">/articles/welcome-to-jekyll/</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
     
       <item>
         <title>Ruby&#39;s &#39;Interesting methods&#39;</title>
@@ -468,6 +441,48 @@ Built on ruby makes this project a little easier to install. It helps if you hav
         <guid isPermaLink="true">/articles/verify-redirects-with-ruby/</guid>
         
         <category>ruby</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Apache compression</title>
+        <description>&lt;p&gt;Small example of how to enable compression in Apache while excluding the IE browser for those times when Microsoft decides to do things differently.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apache&quot; data-lang=&quot;apache&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;LocationMatch&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;^/.*&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;IfModule&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mod_deflate.c&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# place filter &amp;#39;DEFLATE&amp;#39; on all outgoing content&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;SetOutputFilter&lt;/span&gt; DEFLATE
+    &lt;span class=&quot;c&quot;&gt;# add additional filters by file mimetype&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/plain
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/xml
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/xhtml+xml
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/css
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/xml
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE image/svg+xml
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/rss+xml
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/atom_xml
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-javascript
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-httpd-php
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-httpd-fastphp
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE application/x-httpd-eruby
+    &lt;span class=&quot;nb&quot;&gt;AddOutputFilterByType&lt;/span&gt; DEFLATE text/html
+    &lt;span class=&quot;c&quot;&gt;# only for ie&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;BrowserMatch&lt;/span&gt; \bMSIE no-gzip gzip-only-text/html
+    &lt;span class=&quot;c&quot;&gt;# exclude uncompressible content via file type&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;SetEnvIfNoCase&lt;/span&gt; Request_URI \.(?:gif|jpe?g|png|rar|zip)$ no-gzip dont-vary
+    &lt;span class=&quot;c&quot;&gt;#&amp;lt;IfModule mod_headers.c&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;# properly handle requests coming from behind proxies&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#Header append Vary User-Agent&lt;/span&gt;
+   &lt;span class=&quot;c&quot;&gt;#&amp;lt;/IfModule&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/IfModule&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LocationMatch&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 30 Apr 2013 00:00:00 -0700</pubDate>
+        <link>/articles/apache-deflating-my-brain/</link>
+        <guid isPermaLink="true">/articles/apache-deflating-my-brain/</guid>
+        
+        <category>sysadmin</category>
         
         
       </item>

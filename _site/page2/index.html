@@ -11,7 +11,7 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/11788942253_6c55c0f770_o.jpg">
+<meta name="twitter:image" content="/images/9553056715_0a418a1852_o.jpg">
 
 <meta name="twitter:title" content="Philomathy">
 <meta name="twitter:description" content="The blog by Aaron Addleman">
@@ -123,7 +123,7 @@
   <div class="image-credit">Image source: <a href="">Aaron Addleman</a></div><!-- /.image-credit -->
   
     <div class="entry-image">
-      <img src="/images/11788942253_6c55c0f770_o.jpg" alt="Philomathy">
+      <img src="/images/9553056715_0a418a1852_o.jpg" alt="Philomathy">
     </div><!-- /.entry-image -->
   
   <div class="header-title">
@@ -136,65 +136,6 @@
 
 <div id="main" role="main">
   
-<article class="hentry">
-  <header>
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-06-24T00:00:00-07:00"><a href="/articles/varnish-notes-and-lessons-learned/">June 24, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/varnish-notes-and-lessons-learned/#disqus_thread">Comment</a></span>
-      
-      <span class="entry-reading-time pull-right">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/articles/varnish-notes-and-lessons-learned/" rel="bookmark" title="Varnish notes and lessons" itemprop="url">Varnish notes and lessons</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>While spending time with Varnish I started a note pad with my notes and lessons of how to work with Varnish. I should say I am still new to Varnish and my notes are by no means a best solution for the problems they address, but I found myself refering back multiple times.</p>
-
-<h2 id="diagnostics">Diagnostics</h2>
-
-<p>To get some information on what is going on in Varnish, I have used the following methods for help in these matters:</p>
-
-<h3 id="view-the-headers">View the headers</h3>
-
-<p>It’s nice to view the headers of the page or resource to determain some fields that may have been set from Varnish to help with troublesooting. Or to show which cookies you might need to remove.</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># install the GET program to help with diagnostics</span>
-yum install perl-libwww-perl
-<span class="c"># install firefox addon to help view http headers</span>
-https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/</code></pre></div>
-
-<h3 id="ulrs-hitting-the-backend-and-not-getting-cached">ULRs hitting the backend and not getting cached</h3>
-
-<p>If you need to view the requests that are not getting cached, this command helps. There are two ways to view this list, one that is constantly updating, and the other that prints out the top entries and then exits.</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># looking for urls that are hitting the backend</span>
-varnishtop -i txurl
-<span class="c"># looking for urls that are hitting the backend, print out and exit</span>
-varnishtop -1 -i txurl
-<span class="c"># after finding the heavy hitter, examine the log entries of the url /foo/bar</span>
-varnishlog -c -m <span class="err">&#39;</span>RxURL:^/foo/bar</code></pre></div>
-
-<h3 id="test-varnish-configuration-script-for-errors">Test varnish configuration script for errors</h3>
-
-<p>Sometimes making changes to the VCL configuration can results in error. Find out where the error is with this command:  /usr/sbin/varnishd -C -f default.vcl</p>
-
-<h2 id="vcl-configuration-notes">VCL configuration notes</h2>
-
-<h2 id="cache-management">Cache management</h2>
-
-<h3 id="example-of-adding-a-ban-using-telnet-localhost-6082">Example of adding a ban using <code>telnet localhost 6082</code></h3>
-
-<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="err">ban</span>.<span class="nb">url</span> req.http.host ~ <span class="s2">&quot;www.website.com&quot;</span> &amp;&amp; req.url ~ <span class="s2">&quot;/directory/of/path/&quot;</span></code></pre></div>
-
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
 <article class="hentry">
   <header>
     <div class="entry-meta">
@@ -508,6 +449,57 @@ Built on ruby makes this project a little easier to install. It helps if you hav
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
+<article class="hentry">
+  <header>
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2013-04-30T00:00:00-07:00"><a href="/articles/apache-deflating-my-brain/">April 30, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/apache-deflating-my-brain/#disqus_thread">Comment</a></span>
+      
+      <span class="entry-reading-time pull-right">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/articles/apache-deflating-my-brain/" rel="bookmark" title="Apache compression" itemprop="url">Apache compression</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>Small example of how to enable compression in Apache while excluding the IE browser for those times when Microsoft decides to do things differently.</p>
+
+<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="nt">&lt;LocationMatch</span> <span class="s">&quot;^/.*&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;IfModule</span> <span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+    <span class="c"># place filter &#39;DEFLATE&#39; on all outgoing content</span>
+    <span class="nb">SetOutputFilter</span> DEFLATE
+    <span class="c"># add additional filters by file mimetype</span>
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/plain
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/xhtml+xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/css
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE image/svg+xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/rss+xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/atom_xml
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-javascript
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-php
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-fastphp
+    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-eruby
+    <span class="nb">AddOutputFilterByType</span> DEFLATE text/html
+    <span class="c"># only for ie</span>
+    <span class="nb">BrowserMatch</span> \bMSIE no-gzip gzip-only-text/html
+    <span class="c"># exclude uncompressible content via file type</span>
+    <span class="nb">SetEnvIfNoCase</span> Request_URI \.(?:gif|jpe?g|png|rar|zip)$ no-gzip dont-vary
+    <span class="c">#&lt;IfModule mod_headers.c&gt;</span>
+      <span class="c"># properly handle requests coming from behind proxies</span>
+      <span class="c">#Header append Vary User-Agent</span>
+   <span class="c">#&lt;/IfModule&gt;</span>
+  <span class="nt">&lt;/IfModule&gt;</span>
+<span class="nt">&lt;/LocationMatch&gt;</span></code></pre></div>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
 
 <div class="pagination">
   
@@ -549,12 +541,6 @@ Built on ruby makes this project a little easier to install. It helps if you hav
       <li>
         
           <a href="/page6">6</a>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/page7">7</a>
         
       </li>
     

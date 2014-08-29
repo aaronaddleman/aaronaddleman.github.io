@@ -11,7 +11,7 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/11788942253_6c55c0f770_o.jpg">
+<meta name="twitter:image" content="/images/9553056715_0a418a1852_o.jpg">
 
 <meta name="twitter:title" content="Philomathy">
 <meta name="twitter:description" content="The blog by Aaron Addleman">
@@ -123,7 +123,7 @@
   <div class="image-credit">Image source: <a href="">Aaron Addleman</a></div><!-- /.image-credit -->
   
     <div class="entry-image">
-      <img src="/images/11788942253_6c55c0f770_o.jpg" alt="Philomathy">
+      <img src="/images/9553056715_0a418a1852_o.jpg" alt="Philomathy">
     </div><!-- /.entry-image -->
   
   <div class="header-title">
@@ -136,36 +136,6 @@
 
 <div id="main" role="main">
   
-<article class="hentry">
-  <header>
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-04-11T00:00:00-07:00"><a href="/articles/rvm-ruby-and-osx/">April 11, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/rvm-ruby-and-osx/#disqus_thread">Comment</a></span>
-      
-      <span class="entry-reading-time pull-right">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/articles/rvm-ruby-and-osx/" rel="bookmark" title="RVM with OS X Mountain Lion" itemprop="url">RVM with OS X Mountain Lion</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <h1 id="rvm-with-os-x-mountain-lion">RVM with OS X Mountain Lion</h1>
-
-<p>When installing RVM, I found some issues after resetting my environment. Most of (if not all) of my problems had to do with Brew not having the necessary links.</p>
-
-<p>Most of the time the problem had to do with an libssl package not being loaded. To fix the problem, I ran the following programs below to relink the libraries.</p>
-
-<pre><code>brew unlink (package complaining)
-brew link (package complaining)
-</code></pre>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
 <article class="hentry">
   <header>
     <div class="entry-meta">
@@ -454,6 +424,68 @@ $ rm -rf old-repo.git
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
+<article class="hentry">
+  <header>
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2012-10-15T00:00:00-07:00"><a href="/articles/open-file-in-external-editor/">October 15, 2012</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/open-file-in-external-editor/#disqus_thread">Comment</a></span>
+      
+      <span class="entry-reading-time pull-right">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/articles/open-file-in-external-editor/" rel="bookmark" title="Open files from the terminal into an external editor" itemprop="url">Open files from the terminal into an external editor</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h1 id="open-files-from-the-terminal-into-an-external-editor">Open files from the terminal into an external editor</h1>
+
+<p>When using Mac OSX there are times when opening a file from the terminal into your favorite editor is necessary. This is accomplished by using the .profile file located in your home directory.</p>
+
+<h2 id="open-files-into-macvim">Open files into MacVim</h2>
+
+<p>Add the following to your .profile and use “vim filename” top open the file into the external editor</p>
+
+<pre><code>:::shell
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g -f '
+</code></pre>
+
+<p>Now when you want to edit files in your terminal use:</p>
+
+<pre><code>:::shell
+vim thefilename.txt
+</code></pre>
+
+<p>and your MacVim editor will pop open with all its happyness.</p>
+
+<h2 id="open-files-in-textmate">Open files in TextMate</h2>
+
+<p>To open files in TextMate, you have to create a link to the ‘mate’ program. This is easily done during the install, but sometimes I forget to do this. The next way that is pretty easy is to run the following in your shell prompt:</p>
+
+<pre><code>:::shell
+sudo ls /Applications/TextMate.app/Contents/Resources/mate /usr/bin/mate
+</code></pre>
+
+<p>Now you are able to open folders and files into Textmate from the terminal using these commands:</p>
+
+<pre><code>:::shell
+cd to/your/folder
+mate .
+</code></pre>
+
+<p>or</p>
+
+<pre><code>:::shell
+cd to/your/folder
+mate thefilename.txt
+</code></pre>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
 
 <div class="pagination">
   
@@ -495,12 +527,6 @@ $ rm -rf old-repo.git
       <li>
         
           <a href="/page6">6</a>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/page7">7</a>
         
       </li>
     

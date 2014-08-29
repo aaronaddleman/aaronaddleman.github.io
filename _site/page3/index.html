@@ -11,7 +11,7 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/11788942253_6c55c0f770_o.jpg">
+<meta name="twitter:image" content="/images/9553056715_0a418a1852_o.jpg">
 
 <meta name="twitter:title" content="Philomathy">
 <meta name="twitter:description" content="The blog by Aaron Addleman">
@@ -123,7 +123,7 @@
   <div class="image-credit">Image source: <a href="">Aaron Addleman</a></div><!-- /.image-credit -->
   
     <div class="entry-image">
-      <img src="/images/11788942253_6c55c0f770_o.jpg" alt="Philomathy">
+      <img src="/images/9553056715_0a418a1852_o.jpg" alt="Philomathy">
     </div><!-- /.entry-image -->
   
   <div class="header-title">
@@ -136,57 +136,6 @@
 
 <div id="main" role="main">
   
-<article class="hentry">
-  <header>
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-04-30T00:00:00-07:00"><a href="/articles/apache-deflating-my-brain/">April 30, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/apache-deflating-my-brain/#disqus_thread">Comment</a></span>
-      
-      <span class="entry-reading-time pull-right">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/articles/apache-deflating-my-brain/" rel="bookmark" title="Apache compression" itemprop="url">Apache compression</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>Small example of how to enable compression in Apache while excluding the IE browser for those times when Microsoft decides to do things differently.</p>
-
-<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="nt">&lt;LocationMatch</span> <span class="s">&quot;^/.*&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;IfModule</span> <span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
-    <span class="c"># place filter &#39;DEFLATE&#39; on all outgoing content</span>
-    <span class="nb">SetOutputFilter</span> DEFLATE
-    <span class="c"># add additional filters by file mimetype</span>
-    <span class="nb">AddOutputFilterByType</span> DEFLATE text/plain
-    <span class="nb">AddOutputFilterByType</span> DEFLATE text/xml
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/xhtml+xml
-    <span class="nb">AddOutputFilterByType</span> DEFLATE text/css
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/xml
-    <span class="nb">AddOutputFilterByType</span> DEFLATE image/svg+xml
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/rss+xml
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/atom_xml
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-javascript
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-php
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-fastphp
-    <span class="nb">AddOutputFilterByType</span> DEFLATE application/x-httpd-eruby
-    <span class="nb">AddOutputFilterByType</span> DEFLATE text/html
-    <span class="c"># only for ie</span>
-    <span class="nb">BrowserMatch</span> \bMSIE no-gzip gzip-only-text/html
-    <span class="c"># exclude uncompressible content via file type</span>
-    <span class="nb">SetEnvIfNoCase</span> Request_URI \.(?:gif|jpe?g|png|rar|zip)$ no-gzip dont-vary
-    <span class="c">#&lt;IfModule mod_headers.c&gt;</span>
-      <span class="c"># properly handle requests coming from behind proxies</span>
-      <span class="c">#Header append Vary User-Agent</span>
-   <span class="c">#&lt;/IfModule&gt;</span>
-  <span class="nt">&lt;/IfModule&gt;</span>
-<span class="nt">&lt;/LocationMatch&gt;</span></code></pre></div>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
 <article class="hentry">
   <header>
     <div class="entry-meta">
@@ -782,6 +731,36 @@ _   underscore
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
+<article class="hentry">
+  <header>
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2013-04-11T00:00:00-07:00"><a href="/articles/rvm-ruby-and-osx/">April 11, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Aaron Addleman">Aaron Addleman</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="/articles/rvm-ruby-and-osx/#disqus_thread">Comment</a></span>
+      
+      <span class="entry-reading-time pull-right">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/articles/rvm-ruby-and-osx/" rel="bookmark" title="RVM with OS X Mountain Lion" itemprop="url">RVM with OS X Mountain Lion</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h1 id="rvm-with-os-x-mountain-lion">RVM with OS X Mountain Lion</h1>
+
+<p>When installing RVM, I found some issues after resetting my environment. Most of (if not all) of my problems had to do with Brew not having the necessary links.</p>
+
+<p>Most of the time the problem had to do with an libssl package not being loaded. To fix the problem, I ran the following programs below to relink the libraries.</p>
+
+<pre><code>brew unlink (package complaining)
+brew link (package complaining)
+</code></pre>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
 
 <div class="pagination">
   
@@ -823,12 +802,6 @@ _   underscore
       <li>
         
           <a href="/page6">6</a>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/page7">7</a>
         
       </li>
     
