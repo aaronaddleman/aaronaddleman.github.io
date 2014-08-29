@@ -153,61 +153,57 @@
     
   </header>
   <div class="entry-content">
-    
-<pre class="eiffel"><span class="Comment"><span class="Comment">#</span>!/usr/bin/env bash</span>
+    <h1 id="this-is-a-test">this is a test</h1>
 
-<span class="Comment"><span class="Comment">#</span> usage:</span>
-<span class="Comment"><span class="Comment">#</span> </span>
-<span class="Comment"><span class="Comment">#</span> ./backup_ee.sh (dev|prod|stage)</span>
+<p>here is the script</p>
 
-function <span class="FunctionName">backup_site</span> () {
-	echo <span class="String"><span class="String">&quot;</span>mkdir -p <span class="Variable"><span class="Variable">$</span>backup_dir</span><span class="String">&quot;</span></span>
-	archive_name=<span class="String"><span class="String">`</span>basename $backup_file<span class="String">`</span></span>
-	echo <span class="String"><span class="String">&quot;</span>Archiving: <span class="Variable"><span class="Variable">$</span>1</span> (<span class="Variable"><span class="Variable">$</span>backup_file</span> to <span class="Variable"><span class="Variable">$</span>backup_dir</span>/<span class="Variable"><span class="Variable">$</span>archive_name</span>)<span class="String">&quot;</span></span>
-	echo <span class="String"><span class="String">&quot;</span>tar pzcvf <span class="Variable"><span class="Variable">$</span>backup_dir</span>/<span class="Variable"><span class="Variable">$</span>archive_name</span>.tar --totals <span class="Variable"><span class="Variable">$</span>backup_file</span><span class="String">&quot;</span></span>
-	echo <span class="String"><span class="String">&quot;</span>Compressing: <span class="Variable"><span class="Variable">$</span>1</span> (<span class="Variable"><span class="Variable">$</span>backup_file</span> to <span class="Variable"><span class="Variable">$</span>backup_dir</span>/<span class="Variable"><span class="Variable">$</span>archive_name</span>)<span class="String">&quot;</span></span>
-	echo <span class="String"><span class="String">&quot;</span>gzip <span class="Variable"><span class="Variable">$</span>backup_dir</span>/<span class="Variable"><span class="Variable">$</span>archive_name</span>.tar<span class="String">&quot;</span></span>
-	echo <span class="String"><span class="String">&quot;</span>mysqldump -u <span class="Variable"><span class="Variable">$</span>backup_db_user</span> -p<span class="Variable"><span class="Variable">$</span>backup_db_pass</span> <span class="Variable"><span class="Variable">$</span>backup_dv</span> &gt; <span class="Variable"><span class="Variable">$</span>backup_dir</span>/<span class="Variable"><span class="Variable">$</span>backup_db</span>.sql<span class="String">&quot;</span></span>
-}
-
-
-function <span class="FunctionName">site</span> () {
-	<span class="Keyword">case</span> <span class="Variable"><span class="Variable">$</span>1</span> <span class="Keyword">in</span>
-		dev )
-		<span class="Comment"><span class="Comment">#</span>backup dev</span>
-		backup_file=<span class="String"><span class="String">&quot;</span>/var/www/dev<span class="String">&quot;</span></span>
-		backup_db=<span class="String"><span class="String">&quot;</span>db_name<span class="String">&quot;</span></span>
-		backup_db_user=<span class="String"><span class="String">&quot;</span>db_user<span class="String">&quot;</span></span>
-		backup_db_pass=<span class="String"><span class="String">&quot;</span>db_pass<span class="String">&quot;</span></span>
-		backup_site
-			<span class="Keyword">;</span><span class="Keyword">;</span>
-		prod )
-		<span class="Comment"><span class="Comment">#</span>backup prod</span>
-		backup_file=<span class="String"><span class="String">&quot;</span>/var/www/prod<span class="String">&quot;</span></span>
-		backup_db=<span class="String"><span class="String">&quot;</span>db_name<span class="String">&quot;</span></span>
-		backup_db_user=<span class="String"><span class="String">&quot;</span>db_user<span class="String">&quot;</span></span>
-		backup_db_pass=<span class="String"><span class="String">&quot;</span>db_pass<span class="String">&quot;</span></span>
-		backup_site
-			<span class="Keyword">;</span><span class="Keyword">;</span>
-		stage )
-		<span class="Comment"><span class="Comment">#</span>backup stage</span>
-		backup_file=<span class="String"><span class="String">&quot;</span>/var/www/stage<span class="String">&quot;</span></span>
-		backup_db=<span class="String"><span class="String">&quot;</span>db_name<span class="String">&quot;</span></span>
-		backup_db_user=<span class="String"><span class="String">&quot;</span>db_user<span class="String">&quot;</span></span>
-		backup_db_pass=<span class="String"><span class="String">&quot;</span>db_pass<span class="String">&quot;</span></span>
-		backup_site
-			<span class="Keyword">;</span><span class="Keyword">;</span>
-	<span class="Keyword">esac</span>
-}
-
-<span class="Comment"><span class="Comment">#</span> get backup selection from input</span>
-backup_selection=<span class="Variable"><span class="Variable">$</span>1</span>
-
-<span class="Comment"><span class="Comment">#</span> set backup destination</span>
-backup_dir=<span class="String"><span class="String">&quot;</span>/home/path/to/backups/<span class="Variable"><span class="Variable">$</span>backup_selection</span>/<span class="String"><span class="String">`</span>date +%Y-%m-%d-%H-%M-%S<span class="String">`</span></span><span class="String">&quot;</span></span>
-
-<span class="Comment"><span class="Comment">#</span> execute backup</span>
-site <span class="Variable"><span class="Variable">$</span>backup_selection</span></pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
+  <span class="c"># usage:</span>
+  <span class="c"># </span>
+  <span class="c"># ./backup_ee.sh (dev|prod|stage)</span>
+  <span class="k">function</span> backup_site <span class="o">()</span> <span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;mkdir -p $backup_dir&quot;</span>
+    <span class="nv">archive_name</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$backup_file</span><span class="sb">`</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Archiving: $1 ($backup_file to $backup_dir/$archive_name)&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;tar pzcvf $backup_dir/$archive_name.tar --totals $backup_file&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Compressing: $1 ($backup_file to $backup_dir/$archive_name)&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;gzip $backup_dir/$archive_name.tar&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;mysqldump -u $backup_db_user -p$backup_db_pass $backup_dv &gt; $backup_dir/$backup_db.sql&quot;</span>
+  <span class="o">}</span>
+  <span class="k">function</span> site <span class="o">()</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nv">$1</span> in
+      dev <span class="o">)</span>
+      <span class="c">#backup dev</span>
+      <span class="nv">backup_file</span><span class="o">=</span><span class="s2">&quot;/var/www/dev&quot;</span>
+      <span class="nv">backup_db</span><span class="o">=</span><span class="s2">&quot;db_name&quot;</span>
+      <span class="nv">backup_db_user</span><span class="o">=</span><span class="s2">&quot;db_user&quot;</span>
+      <span class="nv">backup_db_pass</span><span class="o">=</span><span class="s2">&quot;db_pass&quot;</span>
+      backup_site
+        <span class="p">;;</span>
+      prod <span class="o">)</span>
+      <span class="c">#backup prod</span>
+      <span class="nv">backup_file</span><span class="o">=</span><span class="s2">&quot;/var/www/prod&quot;</span>
+      <span class="nv">backup_db</span><span class="o">=</span><span class="s2">&quot;db_name&quot;</span>
+      <span class="nv">backup_db_user</span><span class="o">=</span><span class="s2">&quot;db_user&quot;</span>
+      <span class="nv">backup_db_pass</span><span class="o">=</span><span class="s2">&quot;db_pass&quot;</span>
+      backup_site
+        <span class="p">;;</span>
+      stage <span class="o">)</span>
+      <span class="c">#backup stage</span>
+      <span class="nv">backup_file</span><span class="o">=</span><span class="s2">&quot;/var/www/stage&quot;</span>
+      <span class="nv">backup_db</span><span class="o">=</span><span class="s2">&quot;db_name&quot;</span>
+      <span class="nv">backup_db_user</span><span class="o">=</span><span class="s2">&quot;db_user&quot;</span>
+      <span class="nv">backup_db_pass</span><span class="o">=</span><span class="s2">&quot;db_pass&quot;</span>
+      backup_site
+        <span class="p">;;</span>
+    <span class="k">esac</span>
+  <span class="o">}</span>
+  <span class="c"># get backup selection from input</span>
+  <span class="nv">backup_selection</span><span class="o">=</span><span class="nv">$1</span>
+  <span class="c"># set backup destination</span>
+  <span class="nv">backup_dir</span><span class="o">=</span><span class="s2">&quot;/home/path/to/backups/$backup_selection/`date +%Y-%m-%d-%H-%M-%S`&quot;</span>
+  <span class="c"># execute backup</span>
+  site <span class="nv">$backup_selection</span></code></pre></div>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

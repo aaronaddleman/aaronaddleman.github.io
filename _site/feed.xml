@@ -5,8 +5,8 @@
     <description>My Philomathy</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 29 Aug 2014 09:43:42 -0700</pubDate>
-    <lastBuildDate>Fri, 29 Aug 2014 09:43:42 -0700</lastBuildDate>
+    <pubDate>Fri, 29 Aug 2014 16:08:53 -0700</pubDate>
+    <lastBuildDate>Fri, 29 Aug 2014 16:08:53 -0700</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
@@ -46,12 +46,12 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 &lt;p&gt;Here is how to create the method into the class of Object:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;TypeName&quot;&gt;Object&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Return only the methods not present on basic objects&lt;/span&gt;
-  &lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;interesting_methods&lt;/span&gt;
-    (&lt;span class=&quot;Variable&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;methods&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Object&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;instance_methods&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;sort&lt;/span&gt;
-  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Return only the methods not present on basic objects&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;interesting_methods&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;methods&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance_methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
         <pubDate>Sat, 23 Aug 2014 00:00:00 -0700</pubDate>
         <link>/articles/ruby-interesting-methods/</link>
@@ -155,21 +155,21 @@ vmware_mount_vmhgfs() {
 
 &lt;p&gt;It’s nice to view the headers of the page or resource to determain some fields that may have been set from Varnish to help with troublesooting. Or to show which cookies you might need to remove.&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; install the GET program to help with diagnostics&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# install the GET program to help with diagnostics&lt;/span&gt;
 yum install perl-libwww-perl
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; install firefox addon to help view http headers&lt;/span&gt;
-https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/&lt;/pre&gt;
+&lt;span class=&quot;c&quot;&gt;# install firefox addon to help view http headers&lt;/span&gt;
+https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;ulrs-hitting-the-backend-and-not-getting-cached&quot;&gt;ULRs hitting the backend and not getting cached&lt;/h3&gt;
 
 &lt;p&gt;If you need to view the requests that are not getting cached, this command helps. There are two ways to view this list, one that is constantly updating, and the other that prints out the top entries and then exits.&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; looking for urls that are hitting the backend&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# looking for urls that are hitting the backend&lt;/span&gt;
 varnishtop -i txurl
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; looking for urls that are hitting the backend, print out and exit&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# looking for urls that are hitting the backend, print out and exit&lt;/span&gt;
 varnishtop -1 -i txurl
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; after finding the heavy hitter, examine the log entries of the url /foo/bar&lt;/span&gt;
-varnishlog -c -m &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;RxURL:^/foo/bar&lt;/span&gt;&lt;/pre&gt;
+&lt;span class=&quot;c&quot;&gt;# after finding the heavy hitter, examine the log entries of the url /foo/bar&lt;/span&gt;
+varnishlog -c -m &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;RxURL:^/foo/bar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;test-varnish-configuration-script-for-errors&quot;&gt;Test varnish configuration script for errors&lt;/h3&gt;
 
@@ -181,7 +181,7 @@ varnishlog -c -m &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;Strin
 
 &lt;h3 id=&quot;example-of-adding-a-ban-using-telnet-localhost-6082&quot;&gt;Example of adding a ban using &lt;code&gt;telnet localhost 6082&lt;/code&gt;&lt;/h3&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;ban.url req.http.host ~ &amp;quot;www.website.com&amp;quot; &amp;amp;&amp;amp; req.url ~ &amp;quot;/directory/of/path/&amp;quot;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apache&quot; data-lang=&quot;apache&quot;&gt;&lt;span class=&quot;err&quot;&gt;ban&lt;/span&gt;.&lt;span class=&quot;nb&quot;&gt;url&lt;/span&gt; req.http.host ~ &lt;span class=&quot;s2&quot;&gt;&amp;quot;www.website.com&amp;quot;&lt;/span&gt; &amp;amp;&amp;amp; req.url ~ &lt;span class=&quot;s2&quot;&gt;&amp;quot;/directory/of/path/&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Mon, 24 Jun 2013 00:00:00 -0700</pubDate>
@@ -207,62 +207,58 @@ varnishlog -c -m &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;Strin
 
 &lt;p&gt;Download the bundle (usually from a github respository) to get ready for conversion. Once you have the &lt;code&gt;Language.tmLanguage&lt;/code&gt; convert the language file to a yaml file which should end up with a file name like &lt;code&gt;source.Language.syntax&lt;/code&gt; by using this command:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;plist2yaml Language.tmLanguage &lt;span class=&quot;Keyword&quot;&gt;&amp;gt;&lt;/span&gt; source.Language.syntax&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;plist2yaml Language.tmLanguage &amp;gt; source.Language.syntax&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;If you get an error like the following you need to be inside the &lt;code&gt;Language.tmbundle/Syntaxes&lt;/code&gt; directory where the &lt;code&gt;.tmLanuage&lt;/code&gt; file is located:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;read&amp;#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)&lt;/span&gt;
-&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;initialize&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `new&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;parse_xml&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Keyword&quot;&gt;&amp;lt;&lt;/span&gt;top (required)&lt;span class=&quot;Keyword&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;eval&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `&amp;lt;main&amp;gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in `initialize&amp;#39;&lt;/span&gt;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;new&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `parse_xml&amp;#39;&lt;/span&gt;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&amp;lt;top &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;required&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&amp;gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load&amp;#39;&lt;/span&gt;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `eval&amp;#39;&lt;/span&gt;
+  from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;load-the-syntax-file-into-nestacms&quot;&gt;Load the syntax file into Nestacms&lt;/h2&gt;
 
 &lt;p&gt;By adding the following code into your app.rb file the syntax will be available:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;SyntaxNode&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;expand_path&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;public/syntaxes/source.vcl.syntax&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;LibraryObject&quot;&gt;Nesta&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;App&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;root&lt;/span&gt;))&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Textpow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyntaxNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;public/syntaxes/source.vcl.syntax&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Nesta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;use-the-syntax-on-you-files&quot;&gt;Use the syntax on you files&lt;/h2&gt;
 
 &lt;p&gt;To apply the syntax I came up with some code for printing code from the &lt;code&gt;app.rb&lt;/code&gt; file by making this method:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; load custom syntaxes&lt;/span&gt;
-    &lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;SyntaxNode&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;expand_path&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;public/syntaxes/source.vcl.syntax&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;LibraryObject&quot;&gt;Nesta&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;App&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;root&lt;/span&gt;))
-
-    &lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;print_code&lt;/span&gt;(&lt;span class=&quot;FunctionParameter&quot;&gt;opt&lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;FunctionParameter&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;FunctionParameter&quot;&gt;}&lt;/span&gt;&lt;/span&gt;)
-      filename &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt;]
-      theme &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;theme&lt;/span&gt;] &lt;span class=&quot;Keyword&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;brilliance_black&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-      syntax &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;syntax&lt;/span&gt;]
-      show_code &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;show_code&lt;/span&gt;] &lt;span class=&quot;Keyword&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;
-
-      text &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;read&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;Dir&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;pwd&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;/public/&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;+&lt;/span&gt; filename)
-      processor &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;RecordingProcessor&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;
-      result &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Uv&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;parse&lt;/span&gt;( text, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;xhtml&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, syntax, &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;eiffel&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)
-
-      &lt;span class=&quot;FunctionName&quot;&gt;haml&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;print_code&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;layout&lt;/span&gt; =&amp;gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;locals&lt;/span&gt; =&amp;gt; { &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;code&lt;/span&gt; =&amp;gt; result, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt; =&amp;gt; filename })
-
-      &lt;span class=&quot;Keyword&quot;&gt;case&lt;/span&gt; show_code
-      &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;haml&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;print_code&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;layout&lt;/span&gt; =&amp;gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;locals&lt;/span&gt; =&amp;gt; { &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;code&lt;/span&gt; =&amp;gt; result, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt; =&amp;gt; filename })
-      &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;
-        &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; download_link
-      &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# load custom syntaxes&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Textpow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyntaxNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;public/syntaxes/source.vcl.syntax&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Nesta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;theme&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:theme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;brilliance_black&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;syntax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:syntax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;show_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:show_code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/public/&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;processor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Textpow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;RecordingProcessor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Uv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;xhtml&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;syntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;eiffel&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;haml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:print_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:layout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:locals&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;show_code&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;haml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:print_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:layout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:locals&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;download_link&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now when you want to call some code, make a &lt;code&gt;haml&lt;/code&gt; file and include the file with the following:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;= print_code(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;file_with_language.vcl&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; print_code&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;file_with_language.vcl&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;notes&quot;&gt;Notes&lt;/h1&gt;
 
 &lt;p&gt;To list the availble syntaxes:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;uv --list syntaxes&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;uv --list syntaxes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Tue, 18 Jun 2013 00:00:00 -0700</pubDate>
@@ -375,96 +371,96 @@ Built on ruby makes this project a little easier to install. It helps if you hav
 
 &lt;p&gt;Here is my code:&lt;/p&gt;
 
-&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;uri&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;net/http&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;csv&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;typhoeus&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;uri&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;net/http&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;csv&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;typhoeus&amp;#39;&lt;/span&gt;
 
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =====================================================================&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = Check_Redirection.rb =&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; &lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Verify urls for redirection by comparing the old url to the new url&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; CSV format:&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; old_url,new_url&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; &lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Expected output:&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; status,old_url,new_url&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =====================================================================&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =====================================================================&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# = Check_Redirection.rb =&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Verify urls for redirection by comparing the old url to the new url&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# CSV format:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# old_url,new_url&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Expected output:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# status,old_url,new_url&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =====================================================================&lt;/span&gt;
 
 
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =======================================&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The new way with typhoeus and hydra =&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =======================================&lt;/span&gt;
-hydra &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Hydra&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;max_concurrency&lt;/span&gt; =&amp;gt; &lt;span class=&quot;Number&quot;&gt;5&lt;/span&gt;)
+&lt;span class=&quot;c1&quot;&gt;# =======================================&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# = The new way with typhoeus and hydra =&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =======================================&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hydra&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Typhoeus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Hydra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:max_concurrency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;Variable&quot;&gt;CSV&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;redirects.csv&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;row&lt;/span&gt;|
-&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; by using followlocation, we can use the response_code to validate the redirect&lt;/span&gt;
-  request &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Request&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;(row[&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;], followlocation: &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;)
+&lt;span class=&quot;no&quot;&gt;CSV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;redirects.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# by using followlocation, we can use the response_code to validate the redirect&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Typhoeus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;followlocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   
-  request.&lt;span class=&quot;FunctionName&quot;&gt;on_complete&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;response&lt;/span&gt;|
-    &lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; response.&lt;span class=&quot;FunctionName&quot;&gt;response_code&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;200&lt;/span&gt;
-      puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Working,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
-      puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Broken,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;  
-  hydra.&lt;span class=&quot;FunctionName&quot;&gt;queue&lt;/span&gt;(request)
-&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on_complete&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Working,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Broken,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;hydra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-hydra.&lt;span class=&quot;FunctionName&quot;&gt;run&lt;/span&gt;
-
-
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; ==========================&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The test with typhoeus =&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; ==========================&lt;/span&gt;
-results &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Request&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;get&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;http://google.com&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)
-puts results.&lt;span class=&quot;FunctionName&quot;&gt;response_code&lt;/span&gt;
-
-&lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; results.&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;http://google.com&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-  puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;GOOD - should be &lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;results&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
-  puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;BAD - should be &lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;results&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hydra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;
 
 
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =============================&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The old way with net/http =&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =============================&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(&lt;span class=&quot;FunctionParameter&quot;&gt;uri_str&lt;span class=&quot;FunctionParameter&quot;&gt;,&lt;/span&gt; limit &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;10&lt;/span&gt;&lt;/span&gt;)
-&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; You should choose a better exception.&lt;/span&gt;
-  &lt;span class=&quot;Keyword&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;Variable&quot;&gt;ArgumentError&lt;/span&gt;, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;too many HTTP redirects&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; limit &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;
-  response &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTP&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;get_response&lt;/span&gt;(&lt;span class=&quot;Variable&quot;&gt;URI&lt;/span&gt;(uri_str))
-  &lt;span class=&quot;Keyword&quot;&gt;case&lt;/span&gt; response
-  &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPSuccess&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;then&lt;/span&gt;
-    response
-  &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPRedirection&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;then&lt;/span&gt;
-    location &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; response[&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;location&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;]
-&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; print redirect&lt;/span&gt;
-    redirected_to &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; location
-    &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(location, limit &lt;span class=&quot;Keyword&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;)
-    &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; redirected_to
-  &lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
-    response.&lt;span class=&quot;FunctionName&quot;&gt;value&lt;/span&gt;
-  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# ==========================&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# = The test with typhoeus =&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# ==========================&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Typhoeus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://google.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response_code&lt;/span&gt;
 
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; test one url&lt;/span&gt;
-print &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;http://www.ruby-lang.org&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;)
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;effective_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://google.com&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;GOOD - should be &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;effective_url&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;BAD - should be &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;effective_url&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; test urls from csv file&lt;/span&gt;
-&lt;span class=&quot;Variable&quot;&gt;CSV&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;redirects.csv&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;row&lt;/span&gt;|
-  &lt;span class=&quot;Keyword&quot;&gt;begin&lt;/span&gt;
-    fetching &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-    redirected_to &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(row[&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;])
-&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; if redirected_to == row[1]&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;   puts &amp;quot;Working,#{fetching}&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; end&lt;/span&gt;
-  &lt;span class=&quot;Keyword&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPServerException&lt;/span&gt;
-    puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Broken,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;fetching&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# =============================&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# = The old way with net/http =&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =============================&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# You should choose a better exception.&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ArgumentError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;too many HTTP redirects&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTPSuccess&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTPRedirection&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;location&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# print redirect&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;redirected_to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;redirected_to&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# test one url&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://www.ruby-lang.org&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# test urls from csv file&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;CSV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;redirects.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fetching&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;redirected_to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# if redirected_to == row[1]&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#   puts &amp;quot;Working,#{fetching}&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTPServerException&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Broken,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetching&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Wed, 08 May 2013 00:00:00 -0700</pubDate>
