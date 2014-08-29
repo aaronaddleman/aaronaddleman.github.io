@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aaron Addleman</title>
+    <description>My Philomathy</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 29 Aug 2014 09:43:42 -0700</pubDate>
+    <lastBuildDate>Fri, 29 Aug 2014 09:43:42 -0700</lastBuildDate>
+    <generator>Jekyll v2.1.1</generator>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 29 Aug 2014 02:17:14 -0700</pubDate>
+        <link>/articles/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">/articles/welcome-to-jekyll/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Ruby&#39;s &#39;Interesting methods&#39;</title>
+        <description>&lt;h1 id=&quot;why&quot;&gt;Why&lt;/h1&gt;
+
+&lt;p&gt;When using Ruby’s IRB tool to investigate some code you have the power to list of the methods that are available on objects. You can do this by typing the object’s name followed by a “.” and then hitting the tab button. While this is nice, it happens to list all of the methods. Below is a nice way of removing the methods from the object called Object and then you are showed only the “interesting_methods” that might be relevent.&lt;/p&gt;
+
+&lt;h1 id=&quot;how&quot;&gt;How&lt;/h1&gt;
+
+&lt;p&gt;Here is how to create the method into the class of Object:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;TypeName&quot;&gt;Object&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Return only the methods not present on basic objects&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;interesting_methods&lt;/span&gt;
+    (&lt;span class=&quot;Variable&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;methods&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Object&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;instance_methods&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;sort&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sat, 23 Aug 2014 00:00:00 -0700</pubDate>
+        <link>/articles/ruby-interesting-methods/</link>
+        <guid isPermaLink="true">/articles/ruby-interesting-methods/</guid>
+        
+        <category>ruby</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>SourceTree cli</title>
+        <description>&lt;h2 id=&quot;what&quot;&gt;What&lt;/h2&gt;
+
+&lt;p&gt;When using Source Tree for the Mac, I noticed there is an option for installing a CLI based tool that is called &lt;code&gt;stree&lt;/code&gt;. This allows for launching Source Tree from a terminal prompt which can save a couple of clicks.&lt;/p&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+
+&lt;p&gt;There are no fancy arguments that you can pass to the &lt;code&gt;stree&lt;/code&gt; program, other than just the path you want to have added in SourceTree, but I like that I can make a new git area and add the folder into SourceTree.&lt;/p&gt;
+
+&lt;h2 id=&quot;how&quot;&gt;How&lt;/h2&gt;
+
+&lt;p&gt;To install the command line tool you can do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to the SourceTree app menu&lt;/li&gt;
+  &lt;li&gt;Click on &lt;code&gt;Install Commandline Tool&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Type in your admin credentials&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Fri, 25 Jul 2014 00:00:00 -0700</pubDate>
+        <link>/articles/sourcetree-cli/</link>
+        <guid isPermaLink="true">/articles/sourcetree-cli/</guid>
+        
+        <category>programming</category>
+        
+        <category>git</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Multiple Line Editing with Sublime Text 2</title>
+        <description>&lt;h1 id=&quot;multiple-line-editing-with-sublime-text-2&quot;&gt;Multiple Line Editing with Sublime Text 2&lt;/h1&gt;
+
+&lt;p&gt;This morning I almost yelled out “that is so @#%*ing awesome” at work because the multiple line editing in Sublime Text 2 is so cool. Below are the notes of what I found out about this amazing setup.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-situation&quot;&gt;The situation&lt;/h2&gt;
+
+&lt;p&gt;I was making a Puppet module in Sublime Text 2 and had the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  :::puppet
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Wed, 21 Aug 2013 00:00:00 -0700</pubDate>
+        <link>/articles/multiple-line-editing-with-sublime-text-2/</link>
+        <guid isPermaLink="true">/articles/multiple-line-editing-with-sublime-text-2/</guid>
+        
+        <category>sublime-text-2</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>VMWare Fusion and the HGFS permissions</title>
+        <description>&lt;p&gt;Flag: draft&lt;/p&gt;
+
+&lt;h1 id=&quot;vmware-fusion-and-the-hgfs-permissions&quot;&gt;VMWare Fusion and the HGFS permissions&lt;/h1&gt;
+&lt;p&gt;While working with VMware Fusion on my Mac I noticed a problem with the permissions. In summary (rest of my notes are below) I modified the start script of the vmware tools to mount the &lt;code&gt;hgfs&lt;/code&gt; directory with the permissions I wanted for my project.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+# Mount all hgfs filesystems
+vmware_mount_vmhgfs() {
+  if [ &quot;`is_vmhgfs_mounted`&quot; = &quot;no&quot; ]; then
+    #OLD vmware_exec_selinux &quot;mount -t vmhgfs .host:/ $vmhgfs_mnt&quot;
+    vmware_exec_selinux &quot;mount -o uid=48,gid=48 -t vmhgfs .host:/ $vmhgfs_mnt&quot;
+  fi
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Might be a good idea to have these numbers be the same as my Mac operating system.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Jun 2013 00:00:00 -0700</pubDate>
+        <link>/articles/vmware-fusion-hgfs-permissions/</link>
+        <guid isPermaLink="true">/articles/vmware-fusion-hgfs-permissions/</guid>
+        
+        <category>sysadmin</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Varnish notes and lessons</title>
+        <description>&lt;p&gt;While spending time with Varnish I started a note pad with my notes and lessons of how to work with Varnish. I should say I am still new to Varnish and my notes are by no means a best solution for the problems they address, but I found myself refering back multiple times.&lt;/p&gt;
+
+&lt;h2 id=&quot;diagnostics&quot;&gt;Diagnostics&lt;/h2&gt;
+
+&lt;p&gt;To get some information on what is going on in Varnish, I have used the following methods for help in these matters:&lt;/p&gt;
+
+&lt;h3 id=&quot;view-the-headers&quot;&gt;View the headers&lt;/h3&gt;
+
+&lt;p&gt;It’s nice to view the headers of the page or resource to determain some fields that may have been set from Varnish to help with troublesooting. Or to show which cookies you might need to remove.&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; install the GET program to help with diagnostics&lt;/span&gt;
+yum install perl-libwww-perl
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; install firefox addon to help view http headers&lt;/span&gt;
+https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/&lt;/pre&gt;
+
+&lt;h3 id=&quot;ulrs-hitting-the-backend-and-not-getting-cached&quot;&gt;ULRs hitting the backend and not getting cached&lt;/h3&gt;
+
+&lt;p&gt;If you need to view the requests that are not getting cached, this command helps. There are two ways to view this list, one that is constantly updating, and the other that prints out the top entries and then exits.&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; looking for urls that are hitting the backend&lt;/span&gt;
+varnishtop -i txurl
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; looking for urls that are hitting the backend, print out and exit&lt;/span&gt;
+varnishtop -1 -i txurl
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; after finding the heavy hitter, examine the log entries of the url /foo/bar&lt;/span&gt;
+varnishlog -c -m &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;RxURL:^/foo/bar&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;test-varnish-configuration-script-for-errors&quot;&gt;Test varnish configuration script for errors&lt;/h3&gt;
+
+&lt;p&gt;Sometimes making changes to the VCL configuration can results in error. Find out where the error is with this command:  /usr/sbin/varnishd -C -f default.vcl&lt;/p&gt;
+
+&lt;h2 id=&quot;vcl-configuration-notes&quot;&gt;VCL configuration notes&lt;/h2&gt;
+
+&lt;h2 id=&quot;cache-management&quot;&gt;Cache management&lt;/h2&gt;
+
+&lt;h3 id=&quot;example-of-adding-a-ban-using-telnet-localhost-6082&quot;&gt;Example of adding a ban using &lt;code&gt;telnet localhost 6082&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;ban.url req.http.host ~ &amp;quot;www.website.com&amp;quot; &amp;amp;&amp;amp; req.url ~ &amp;quot;/directory/of/path/&amp;quot;&lt;/pre&gt;
+
+</description>
+        <pubDate>Mon, 24 Jun 2013 00:00:00 -0700</pubDate>
+        <link>/articles/varnish-notes-and-lessons-learned/</link>
+        <guid isPermaLink="true">/articles/varnish-notes-and-lessons-learned/</guid>
+        
+        <category>sysadmin</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Add new syntax into Nestacms for use with Ultraviolet and Textpow</title>
+        <description>&lt;p&gt;Flags: draft&lt;/p&gt;
+
+&lt;h1 id=&quot;add-new-syntax-into-nestacms-for-use-with-ultraviolet-and-textpow&quot;&gt;Add new syntax into Nestacms for use with Ultraviolet and Textpow&lt;/h1&gt;
+
+&lt;h2 id=&quot;how-to-start&quot;&gt;How to start&lt;/h2&gt;
+
+&lt;p&gt;Make sure you have all the necessary changes to Nestacms for &lt;a href=&quot;/articles/rack-codehighligher&quot;&gt;Setting up rack-codehighligher with Nestacms&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;converting-a-textmate-syntax-bundle&quot;&gt;Converting a Textmate Syntax bundle&lt;/h2&gt;
+
+&lt;p&gt;Download the bundle (usually from a github respository) to get ready for conversion. Once you have the &lt;code&gt;Language.tmLanguage&lt;/code&gt; convert the language file to a yaml file which should end up with a file name like &lt;code&gt;source.Language.syntax&lt;/code&gt; by using this command:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;plist2yaml Language.tmLanguage &lt;span class=&quot;Keyword&quot;&gt;&amp;gt;&lt;/span&gt; source.Language.syntax&lt;/pre&gt;
+
+&lt;p&gt;If you get an error like the following you need to be inside the &lt;code&gt;Language.tmbundle/Syntaxes&lt;/code&gt; directory where the &lt;code&gt;.tmLanuage&lt;/code&gt; file is located:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;/Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;read&amp;#39;: Is a directory - Varnish.tmbundle (Errno::EISDIR)&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:67:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;initialize&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:in `new&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/plist-3.1.0/lib/plist/parser.rb:28:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;parse_xml&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/gems/textpow-1.3.0/bin/plist2yaml:7:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Keyword&quot;&gt;&amp;lt;&lt;/span&gt;top (required)&lt;span class=&quot;Keyword&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:in `load&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/plist2yaml:19:&lt;span class=&quot;Keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in &lt;span class=&quot;String&quot;&gt;`&lt;/span&gt;&lt;/span&gt;eval&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;String&quot;&gt;      from /Users/aaron/.rvm/gems/ruby-1.9.2-p320/bin/ruby_noexec_wrapper:14:in `&amp;lt;main&amp;gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;load-the-syntax-file-into-nestacms&quot;&gt;Load the syntax file into Nestacms&lt;/h2&gt;
+
+&lt;p&gt;By adding the following code into your app.rb file the syntax will be available:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;SyntaxNode&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;expand_path&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;public/syntaxes/source.vcl.syntax&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;LibraryObject&quot;&gt;Nesta&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;App&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;root&lt;/span&gt;))&lt;/pre&gt;
+
+&lt;h2 id=&quot;use-the-syntax-on-you-files&quot;&gt;Use the syntax on you files&lt;/h2&gt;
+
+&lt;p&gt;To apply the syntax I came up with some code for printing code from the &lt;code&gt;app.rb&lt;/code&gt; file by making this method:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; load custom syntaxes&lt;/span&gt;
+    &lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;SyntaxNode&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;expand_path&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;public/syntaxes/source.vcl.syntax&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;LibraryObject&quot;&gt;Nesta&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;App&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;root&lt;/span&gt;))
+
+    &lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;print_code&lt;/span&gt;(&lt;span class=&quot;FunctionParameter&quot;&gt;opt&lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;FunctionParameter&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;FunctionParameter&quot;&gt;}&lt;/span&gt;&lt;/span&gt;)
+      filename &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt;]
+      theme &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;theme&lt;/span&gt;] &lt;span class=&quot;Keyword&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;brilliance_black&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+      syntax &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;syntax&lt;/span&gt;]
+      show_code &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; opt[&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;show_code&lt;/span&gt;] &lt;span class=&quot;Keyword&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;
+
+      text &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;read&lt;/span&gt;(&lt;span class=&quot;LibraryObject&quot;&gt;Dir&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;pwd&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;/public/&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;+&lt;/span&gt; filename)
+      processor &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Textpow&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;RecordingProcessor&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;
+      result &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Uv&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;parse&lt;/span&gt;( text, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;xhtml&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, syntax, &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;eiffel&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)
+
+      &lt;span class=&quot;FunctionName&quot;&gt;haml&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;print_code&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;layout&lt;/span&gt; =&amp;gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;locals&lt;/span&gt; =&amp;gt; { &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;code&lt;/span&gt; =&amp;gt; result, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt; =&amp;gt; filename })
+
+      &lt;span class=&quot;Keyword&quot;&gt;case&lt;/span&gt; show_code
+      &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;haml&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;print_code&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;layout&lt;/span&gt; =&amp;gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;locals&lt;/span&gt; =&amp;gt; { &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;code&lt;/span&gt; =&amp;gt; result, &lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;filename&lt;/span&gt; =&amp;gt; filename })
+      &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;BuiltInConstant&quot;&gt;false&lt;/span&gt;
+        &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; download_link
+      &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now when you want to call some code, make a &lt;code&gt;haml&lt;/code&gt; file and include the file with the following:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;= print_code(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;file_with_language.vcl&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)&lt;/pre&gt;
+
+&lt;h1 id=&quot;notes&quot;&gt;Notes&lt;/h1&gt;
+
+&lt;p&gt;To list the availble syntaxes:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;uv --list syntaxes&lt;/pre&gt;
+
+</description>
+        <pubDate>Tue, 18 Jun 2013 00:00:00 -0700</pubDate>
+        <link>/articles/add-syntax-to-textpow-for-ultraviolet/</link>
+        <guid isPermaLink="true">/articles/add-syntax-to-textpow-for-ultraviolet/</guid>
+        
+        <category>ruby</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Monitoring log files visually with logstalgia or gltail</title>
+        <description>&lt;h1 id=&quot;monitoring-log-files-visually-with-logstalgia-or-gltail&quot;&gt;Monitoring log files visually with logstalgia or gltail&lt;/h1&gt;
+
+&lt;p&gt;Log files can sometimes get boring. But monitoring them visually can make them awesome. There are two tools that I have found which provide a visual look at log files: &lt;strong&gt;&lt;a href=&quot;https://code.google.com/p/logstalgia/&quot;&gt;logstalgia&lt;/a&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;a href=&quot;http://www.fungie.org&quot;&gt;gltail&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;logstalgia&quot;&gt;Logstalgia&lt;/h1&gt;
+&lt;p&gt;## Summary
+Very cool program that takes the log file and sets up two columns on the far left and far right. On the far left is the host who has requested the resource and a small round ball goes across to the right column. On the right column is the resource that the host has requested while the ball size represents the size of the request. When the ball moves across the screen and reaches the right side column the status code appears. Most status codes bounce off a moving paddle, while others like a 404 or 403 status code continue through. This visual difference between good status codes and not so good status codes is one of the main benefits of using the visual tool, in my humble opinion. Some other benefits are the size of the ball, amount of hosts on the left side, and amount of resources used per host being represented by the total count of balls flying around.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-on-mac-os-x&quot;&gt;Installing on Mac OS X&lt;/h2&gt;
+
+&lt;p&gt;Here are the steps necessary for building &lt;a href=&quot;https://code.google.com/p/logstalgia/&quot;&gt;logstalgia&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-short-summary&quot;&gt;The short summary&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Install brew&lt;/li&gt;
+  &lt;li&gt;Install the necessary recipies using brew&lt;/li&gt;
+  &lt;li&gt;Download &lt;a href=&quot;/public/files/logstalgia-1.0.3.tar.gz&quot;&gt;logstalgia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Run &lt;code&gt;./configure&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Run &lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;straight-up-commands-after-installing-brew&quot;&gt;Straight up commands (after installing brew)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;:::shell
+(cd to the logstalgia source directory)
+brew install ftgl
+brew install sdl
+brew install sdl_image
+brew install pcre
+brew install libpng
+brew install jpeg
+./configure
+make
+./logstalgia data/example.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;running-logstalgia&quot;&gt;Running logstalgia&lt;/h2&gt;
+&lt;p&gt;### &lt;/p&gt;
+
+&lt;h1 id=&quot;gltail&quot;&gt;Gltail&lt;/h1&gt;
+&lt;p&gt;## Summary
+Built on ruby makes this project a little easier to install. It helps if you have the &lt;a href=&quot;http://rvm.io&quot;&gt;RVM&lt;/a&gt; manager installed because there is a &lt;code&gt;.rvm&lt;/code&gt; folder inside the main directory of gltail. The &lt;code&gt;.rvm&lt;/code&gt; folder switches over to Ruby 1.9.2-p290 when changing directories. Its really great when that all works out after you are prompted to trust the &lt;code&gt;.rvm&lt;/code&gt; folder. Features about this visualizer is its customization, pulling from multiple log files from multiple hosts, defining the layout, and visual attributes. Its very similar to logstalgia, but with greater configuration.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-on-mac-os-x-1&quot;&gt;Installing on Mac OS X&lt;/h2&gt;
+
+</description>
+        <pubDate>Thu, 30 May 2013 00:00:00 -0700</pubDate>
+        <link>/articles/monitoring-log-files-visually/</link>
+        <guid isPermaLink="true">/articles/monitoring-log-files-visually/</guid>
+        
+        <category>sysadmin</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Removing wp-admin directory</title>
+        <description>&lt;h1 id=&quot;removing-wp-admin-directory&quot;&gt;Removing wp-admin directory&lt;/h1&gt;
+
+&lt;p&gt;While having the wp-admin directory is helpful, on a production environment there is no need to have these files available by the web server. So I started to move the files out. &lt;/p&gt;
+
+&lt;h2 id=&quot;what-happened-first&quot;&gt;What happened first&lt;/h2&gt;
+
+&lt;p&gt;When I moved the folder wp-admin out of the Wordpress folder the entire site went blank. Not a good start.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-wp-adminincludes-folder&quot;&gt;The ‘./wp-admin/includes’ folder&lt;/h2&gt;
+
+&lt;p&gt;While looking around the wp-admin directory I noticed the ‘includes’ folder. So I made a folder structure of ‘./wp-admin/includes/’ and I moved all of the files that were in the includes directory back into the proper place. When I refreshed the site, it came back!&lt;/p&gt;
+
+&lt;h2 id=&quot;now-what-files-do-you-need&quot;&gt;Now, what files do you need?&lt;/h2&gt;
+
+&lt;p&gt;After moving the files out of the includes directory, I was able to find 4 key files that seemed to be required.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;class-wp-list-table.php&lt;/li&gt;
+  &lt;li&gt;class-wp-media-list-table.php&lt;/li&gt;
+  &lt;li&gt;class-wp-ms-sites-list-table.php&lt;/li&gt;
+  &lt;li&gt;class-wp-ms-themes-list-table.php&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 08 May 2013 00:00:00 -0700</pubDate>
+        <link>/articles/wordpress-without-wp-admin/</link>
+        <guid isPermaLink="true">/articles/wordpress-without-wp-admin/</guid>
+        
+        <category>wordpress</category>
+        
+        <category>sysadmin</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Using Ruby to check redirects</title>
+        <description>&lt;h1 id=&quot;using-ruby-to-check-redirects&quot;&gt;Using Ruby to check redirects&lt;/h1&gt;
+
+&lt;p&gt;While writing the script, I first stared out with net/http. This was going pretty slow and when I had 1900+ urls to verify, I calculated it would take approximately 2 hours to complete. While that was acceptable I found out that a lot of links were broken which translated into running this script more than 10 times to re-verify. So I did some searching around and found the gem “typhoeus”. Very cool gem indeed. This made things go much faster. I included both snippets of code in my script to show progression and for note gathering.&lt;/p&gt;
+
+&lt;p&gt;Here is my code:&lt;/p&gt;
+
+&lt;pre class=&quot;eiffel&quot;&gt;&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;uri&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;net/http&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;csv&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;typhoeus&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =====================================================================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = Check_Redirection.rb =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; &lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Verify urls for redirection by comparing the old url to the new url&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; CSV format:&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; old_url,new_url&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; &lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; Expected output:&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; status,old_url,new_url&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =====================================================================&lt;/span&gt;
+
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =======================================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The new way with typhoeus and hydra =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =======================================&lt;/span&gt;
+hydra &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Hydra&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;UserDefinedConstant&quot;&gt;&lt;span class=&quot;UserDefinedConstant&quot;&gt;:&lt;/span&gt;max_concurrency&lt;/span&gt; =&amp;gt; &lt;span class=&quot;Number&quot;&gt;5&lt;/span&gt;)
+
+&lt;span class=&quot;Variable&quot;&gt;CSV&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;redirects.csv&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;row&lt;/span&gt;|
+&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; by using followlocation, we can use the response_code to validate the redirect&lt;/span&gt;
+  request &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Request&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;new&lt;/span&gt;(row[&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;], followlocation: &lt;span class=&quot;BuiltInConstant&quot;&gt;true&lt;/span&gt;)
+  
+  request.&lt;span class=&quot;FunctionName&quot;&gt;on_complete&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;response&lt;/span&gt;|
+    &lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; response.&lt;span class=&quot;FunctionName&quot;&gt;response_code&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;200&lt;/span&gt;
+      puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Working,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
+      puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Broken,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;  
+  hydra.&lt;span class=&quot;FunctionName&quot;&gt;queue&lt;/span&gt;(request)
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+
+hydra.&lt;span class=&quot;FunctionName&quot;&gt;run&lt;/span&gt;
+
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; ==========================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The test with typhoeus =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; ==========================&lt;/span&gt;
+results &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Typhoeus&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;Request&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;get&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;http://google.com&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)
+puts results.&lt;span class=&quot;FunctionName&quot;&gt;response_code&lt;/span&gt;
+
+&lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; results.&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;http://google.com&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+  puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;GOOD - should be &lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;results&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
+  puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;BAD - should be &lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;results&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;FunctionName&quot;&gt;effective_url&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =============================&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; = The old way with net/http =&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; =============================&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(&lt;span class=&quot;FunctionParameter&quot;&gt;uri_str&lt;span class=&quot;FunctionParameter&quot;&gt;,&lt;/span&gt; limit &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;10&lt;/span&gt;&lt;/span&gt;)
+&lt;span class=&quot;Comment&quot;&gt;  &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; You should choose a better exception.&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;Variable&quot;&gt;ArgumentError&lt;/span&gt;, &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;too many HTTP redirects&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;if&lt;/span&gt; limit &lt;span class=&quot;Keyword&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;
+  response &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTP&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;get_response&lt;/span&gt;(&lt;span class=&quot;Variable&quot;&gt;URI&lt;/span&gt;(uri_str))
+  &lt;span class=&quot;Keyword&quot;&gt;case&lt;/span&gt; response
+  &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPSuccess&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;then&lt;/span&gt;
+    response
+  &lt;span class=&quot;Keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPRedirection&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;then&lt;/span&gt;
+    location &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; response[&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;location&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;]
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; print redirect&lt;/span&gt;
+    redirected_to &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; location
+    &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(location, limit &lt;span class=&quot;Keyword&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;)
+    &lt;span class=&quot;Keyword&quot;&gt;return&lt;/span&gt; redirected_to
+  &lt;span class=&quot;Keyword&quot;&gt;else&lt;/span&gt;
+    response.&lt;span class=&quot;FunctionName&quot;&gt;value&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; test one url&lt;/span&gt;
+print &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;http://www.ruby-lang.org&lt;span class=&quot;String&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;)
+
+&lt;span class=&quot;Comment&quot;&gt;&lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; test urls from csv file&lt;/span&gt;
+&lt;span class=&quot;Variable&quot;&gt;CSV&lt;/span&gt;.&lt;span class=&quot;FunctionName&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;redirects.csv&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;).&lt;span class=&quot;FunctionName&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;Keyword&quot;&gt;do &lt;/span&gt;|&lt;span class=&quot;Variable&quot;&gt;row&lt;/span&gt;|
+  &lt;span class=&quot;Keyword&quot;&gt;begin&lt;/span&gt;
+    fetching &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;row&lt;span class=&quot;StringInterpolation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;Number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+    redirected_to &lt;span class=&quot;Keyword&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;FunctionName&quot;&gt;fetch&lt;/span&gt;(row[&lt;span class=&quot;Number&quot;&gt;0&lt;/span&gt;])
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; if redirected_to == row[1]&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt;   puts &amp;quot;Working,#{fetching}&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;Comment&quot;&gt;    &lt;span class=&quot;Comment&quot;&gt;#&lt;/span&gt; end&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;LibraryObject&quot;&gt;Net&lt;/span&gt;::&lt;span class=&quot;FunctionName&quot;&gt;HTTPServerException&lt;/span&gt;
+    puts &lt;span class=&quot;String&quot;&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;Broken,&lt;span class=&quot;StringInterpolation&quot;&gt;&lt;span class=&quot;StringInterpolation&quot;&gt;#{&lt;/span&gt;fetching&lt;span class=&quot;StringInterpolation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;String&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;Keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+
+</description>
+        <pubDate>Wed, 08 May 2013 00:00:00 -0700</pubDate>
+        <link>/articles/verify-redirects-with-ruby/</link>
+        <guid isPermaLink="true">/articles/verify-redirects-with-ruby/</guid>
+        
+        <category>ruby</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
