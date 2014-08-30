@@ -10,24 +10,24 @@ comments: true
 share: true
 ---
 
-# Puppet Cheatsheet
-
 I really like puppet and there seems like lots to learn. This article is the home of all the examples and methods for managing changes to puppet.
 
 ## Apply a single manifest
 
-    :::shell
+    {% highlight bash %}
       %> puppet apply my_test_manifest.pp
+    {% endhighlight %}
 
 ## File resource
 
-    :::ruby
+    {% highlight ruby %}
     file {'testfile':
           path    => '/tmp/testfile',
           ensure  => present,
           mode    => 0640,
           content => "I'm a test file.",
         }
-
+    {% endhighlight %}
 ## User resource
 
+TODO: Finish article

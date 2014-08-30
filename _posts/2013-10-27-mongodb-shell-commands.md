@@ -17,7 +17,7 @@ share: true
 To view a list of databases, the following command will print out a list for you:
 
     show databases
-    
+        
 ### list collections in database
 
     show collections

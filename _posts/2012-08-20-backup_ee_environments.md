@@ -11,10 +11,6 @@ comments: true
 share: true
 ---
 
-# this is a test
-
-here is the script
-
 {% highlight bash %}
   #!/usr/bin/env bash
   # usage:
@@ -63,5 +59,4 @@ here is the script
   backup_dir="/home/path/to/backups/$backup_selection/`date +%Y-%m-%d-%H-%M-%S`"
   # execute backup
   site $backup_selection
-
 {% endhighlight %}

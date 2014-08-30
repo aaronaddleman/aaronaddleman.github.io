@@ -4,7 +4,7 @@ title: "Ruby spidering and storing in MongoDB"
 description: "Notes on mongodb and how I use it."
 tags: [databases]
 image:
-  feature: 8160227607_ba0919e74a_o.jpg
+  feature: DSC03476_m.jpeg
   credit: Aaron Addleman
 comments: true
 share: true

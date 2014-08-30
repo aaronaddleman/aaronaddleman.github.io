@@ -4,7 +4,7 @@ title: "Crawling a site with Anemone and Redis"
 description: ""
 tags: [databases]
 image:
-  feature: 8273732260_46ea8166b3_o.jpg
+  feature: 11786474283_9f0f30e96c_o_m.jpeg
   credit: Aaron Addleman
 comments: true
 share: true
@@ -33,3 +33,5 @@ Then to load redis now:
 Or, if you don't want/need launchctl, you can just run:
 
     redis-server /usr/local/etc/redis.conf
+
+TODO: Finish this article

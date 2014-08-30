@@ -36,6 +36,11 @@
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
+      <!-- my custom google search -->
+      <form onsubmit="my_search_google()" >
+        <input type="text" id="my-google-search">
+      </form>
+      <!-- end my custom google search -->
       {{ content }}
       <footer class="entry-meta">
         {% if page.modified %}{{ page.title }} was last modified on <span class="entry-date date modified"><time datetime="{{ page.modified }}">{{ page.modified }}</time></span>

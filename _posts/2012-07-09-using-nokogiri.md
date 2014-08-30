@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Nokogiri
-
 ## Sample Data
 
     [employees.xml]
@@ -30,7 +28,7 @@ share: true
 
 ## Nokogiri example
 
-<pre lang="ruby" class="highlight">
+{% highlight ruby %}
   require 'nokogiri'
 
   f = File.open("employees.xml")
@@ -52,4 +50,4 @@ share: true
   doc.employees.employee(:css => "[status='active']").fullname.content # => "Dean Martin"
   
   f.close
-</pre>
+{% endhighlight %}

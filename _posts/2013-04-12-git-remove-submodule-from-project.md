@@ -10,7 +10,6 @@ comments: true
 share: true
 ---
 
-# Remove a submodule from a git project
 
 Within your project directory follow these steps to remove the submodule:
 

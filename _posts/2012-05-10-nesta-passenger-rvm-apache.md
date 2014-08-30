@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# Nestacms with passenger, rvm, apache
-
 ## Objective
 
 To get Nesta to be served from Apache with Passenger.
@@ -56,7 +54,7 @@ So! you want to build it. Ok, here are the steps I did:
 
 Next, put the following into your Apache configuration:
 
-    :::apache-config
+    {% highlight apache %}
     LoadModule passenger_module /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12/ext/apache2/mod_passenger.so
     PassengerRoot /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12
     PassengerRuby /home/aaron/.rvm/rubies/ruby-1.9.2-p320/bin/ruby
@@ -73,3 +71,4 @@ Next, put the following into your Apache configuration:
         Options -Multiviews
       </Directory>
     </VirturalHost>
+    {% endhighlight %}

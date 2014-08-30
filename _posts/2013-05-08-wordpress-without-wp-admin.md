@@ -4,7 +4,7 @@ title: "Removing wp-admin directory"
 description: "Running Wordpress with no wp-admin directory to improve security on an production environment server while other environments have the admin files necessary for management of content."
 tags: [wordpress, sysadmin]
 image:
-  feature: 8160155219_edf33c3485_o.jpg
+  feature: 8160155219_edf33c3485_o_p.jpeg
   credit: Aaron Addleman
 comments: true
 share: true
