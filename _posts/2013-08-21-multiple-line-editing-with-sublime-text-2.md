@@ -14,6 +14,12 @@ This morning I almost yelled out "that is so @#%*ing awesome" at work because th
 
 ## The situation
 
-I was making a Puppet module in Sublime Text 2 and had the following code:
+I was making a change to a content of code when there was a variable that I wanted to replace.
 
-      :::puppet
+## The action
+
+Highlight the pattern of text you want to replace. Then hit:
+
+CTRL + CMD + g
+
+You should notice your selection has expanded out to all of the occurences of the patten of text you highlighted. From here you can replace the text or do some limited moving of the input cursor to change its position to another area of editing.
