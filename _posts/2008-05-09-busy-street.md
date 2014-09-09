@@ -2,7 +2,7 @@
 layout: post
 title: "busy street"
 description: ""
-tags: [photos]
+tags: [personal, photos]
 image:
   feature: DSC03138_s.jpeg
   credit: Aaron Addleman

@@ -2,7 +2,7 @@
 layout: post
 title: "when, where, and how to use cpio "
 description: ""
-tags: [uncategorized]
+tags: [sysadmin]
 image:
   feature: DSC03476.JPG
   credit: Aaron Addleman

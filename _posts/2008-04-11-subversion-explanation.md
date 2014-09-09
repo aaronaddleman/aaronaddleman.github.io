@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "subversion explanation"
+title: "Subversion explanation"
 description: ""
-tags: [uncategorized]
+tags: [programming]
 image:
   feature: 11786474283_9f0f30e96c_o_m.jpeg
   credit: Aaron Addleman

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SaaS questions"
-description: ""
+description: "Some questions that could be important when considering SaaS."
 tags: [programming, web]
 image:
   feature: 11786474283_9f0f30e96c_o.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "SFK bike event"
 description: ""
-tags: [photos, travel]
+tags: [personal, photos, travel]
 image:
   feature: 8160227607_ba0919e74a_o.jpg
   credit: Aaron Addleman

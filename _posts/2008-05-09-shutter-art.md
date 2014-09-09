@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "shutter art"
+title: "Shutter art"
 description: ""
-tags: [photos, art]
+tags: [personal, photos, art]
 image:
   feature: 11786474283_9f0f30e96c_o_m.jpeg
   credit: Aaron Addleman

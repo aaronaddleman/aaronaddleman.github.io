@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "cafe van puffelen"
-description: ""
-tags: [photos, travel]
+title: "Cafe van puffelen"
+description: "One of the many places we had dinner and drinking while in Amsterdam."
+tags: [personal, photos, travel]
 image:
   feature: 11786474283_9f0f30e96c_o.jpg
   credit: Aaron Addleman

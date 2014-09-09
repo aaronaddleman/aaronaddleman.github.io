@@ -2,7 +2,7 @@
 layout: post
 title: "Automate your next college paper"
 description: ""
-tags: [news]
+tags: [automation]
 image:
   feature: 8160262732_04666c38b1_o.jpg
   credit: Aaron Addleman
@@ -11,7 +11,7 @@ share: true
 ---
 
 
-<p>So now, instead of having to write a paper, you can just tell the computer what you want to report about and the range of dates to choose from, then, click "okay". 
+<p>So now, instead of having to write a paper, you can just tell the computer what you want to report about and the range of dates to choose from, then, click "okay".
 Your graphs, table of contents, comparisons, and sources will all be generated in about 15 min (give and take on the computer speed and topic of paper).
 If only I had this in school when I was there!!!!
 <object height="350" width="425"><param name="movie" value="http://www.youtube.com/v/SkS5PkHQphY">

@@ -2,7 +2,7 @@
 layout: post
 title: "Untangaling my phone cord super fast"
 description: ""
-tags: [uncategorized]
+tags: [howtos]
 image:
   feature: IMG_0613.JPG
   credit: Aaron Addleman

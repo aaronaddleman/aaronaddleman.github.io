@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "death at the dam"
-description: ""
-tags: [photos, travel]
+title: "Death at the dam"
+description: "While at The Dam, someone was sharing their costume with fans."
+tags: [personal, photos, travel]
 image:
   feature: 8160262732_04666c38b1_o.jpg
   credit: Aaron Addleman

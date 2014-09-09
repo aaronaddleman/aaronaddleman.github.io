@@ -2,7 +2,7 @@
 layout: post
 title: "hanging out"
 description: ""
-tags: [photos, travel]
+tags: [personal, photos, travel]
 image:
   feature: DSC03309.JPG
   credit: Aaron Addleman

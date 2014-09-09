@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ironman trailer might be a real movie afterall"
+title: "Ironman trailer might be a real movie afterall"
 description: ""
 tags: [videos, funny]
 image:

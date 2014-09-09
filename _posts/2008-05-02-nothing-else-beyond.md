@@ -2,7 +2,7 @@
 layout: post
 title: "nothing else beyond"
 description: ""
-tags: [photos]
+tags: [personal, photos]
 image:
   feature: 11786474283_9f0f30e96c_o.jpg
   credit: Aaron Addleman

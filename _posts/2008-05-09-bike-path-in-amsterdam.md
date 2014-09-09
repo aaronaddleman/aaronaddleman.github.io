@@ -2,7 +2,7 @@
 layout: post
 title: "bike path in amsterdam"
 description: ""
-tags: [photos, travel]
+tags: [personal, photos, travel]
 image:
   feature: DSC03476.JPG
   credit: Aaron Addleman
