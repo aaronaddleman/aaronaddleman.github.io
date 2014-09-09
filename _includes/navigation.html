@@ -6,7 +6,9 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
+					{% if site.owner.avatar %}
 					<img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
+					{% endif %}
 					<h4>{{ site.owner.name }}</h4>
 					<p>{{ site.owner.bio }}</p>
 				</li>
