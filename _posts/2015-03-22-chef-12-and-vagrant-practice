@@ -1,0 +1,108 @@
+---
+layout: post
+title: "Chef 12 and Vagrant Practice"
+description: "A tutorial on how to configure vagrant in various ways with Chef 12"
+tags: [sysadmin, chef]
+image:
+  feature: 8273732260_46ea8166b3_o.jpg
+  credit: Aaron Addleman
+comments: true
+share: true
+---
+
+## What
+
+To practice with chef and vagrant.
+
+## Why
+
+To observe changes and have a test setup for you to experiment with your existing or planned infrastructure.
+
+## How
+
+### Install stuff
+
+1. https://www.vagrantup.com/
+1. https://www.virtualbox.org/wiki/Downloads
+
+### Creating a chef server
+#### Overview of steps
+
+* Make a directory on our computer to work from
+* Add a box (downloaded if necessary)
+* Create instances and run tests
+
+#### Making a directory to work
+
+{% highlight bash %}
+mkdir -p ~/chefwork/chefserver
+{% endhighlight %}
+
+Fill up your Gemfile with the following:
+
+{% highlight ruby %}
+source "https://rubygems.org"
+
+gem 'chef'
+gem 'berkshelf'
+gem 'knife-solo'
+{% endhighlight %}
+
+Now run your bundler to install your gems
+
+{% highlight bash %}
+bundle install
+{% endhighlight %}
+
+
+
+
+
+#### Creating your vagrant file
+
+Change to your new directory and create a vagrant file:
+
+{% highlight bash %}
+cd ~/chefwork/chefserver
+vagrant init .
+{% endhighlight %}
+
+Fill up the file ~/chefwork/chefserver/Vagrantfile with:
+
+{% highlight ruby %}
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# require 'chef'
+# require 'json'
+
+Chef::Config.from_file(File.join(File.dirname(__FILE__), '.chef', 'knife.rb'))
+
+chef_server_json = JSON.parse(Pathname(__FILE__).dirname.join('nodes', 'chef-server.example.com.json').read)
+
+Vagrant.configure(2) do |config|
+
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+    v.cpus = 1
+  end
+
+  config.vm.define :chef_server do |chef_server|
+    chef_server.vm.box = "chef/centos-6.6"
+    chef_server.vm.network "private_network", ip: "10.33.33.33"
+
+
+    chef_server.vm.provision :chef_solo do |chef| 
+      # chef.add_recipe "chef-server"
+      chef.log_level = "debug"
+      chef.cookbooks_path = Chef::Config[:cookbook_path]
+      chef.roles_path = Chef::Config[:role_path]
+      chef.data_bags_path = Chef::Config[:data_bag_path]
+      chef.environments_path = Chef::Config[:environment_path]
+      chef.run_list = chef_server_json.delete('run_list')
+      chef.json = chef_server_json 
+    end
+  end
+end
+
+{% endhighlight %}
