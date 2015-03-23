@@ -20,6 +20,6 @@ Take advantage of your editor's power to move/search/modify your command to your
 
 ## How
 
-When running BASH and you our command is way too long, type: CTRL+x v
+When running BASH and you our command is way too long, type: CTRL+x e
 
-That is today, hold down ctrl, type x, then type v.
+That is today, hold down ctrl the entire time, type x, then type e.
