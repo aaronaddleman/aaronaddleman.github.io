@@ -17,55 +17,87 @@ To obtain a position where I can exercise my creativity and strengths in providi
 
 ## Technical
 
-__Languages:__ Ruby, Python, Bash, PHP, Perl
+__Languages:__ Ruby, Python, Bash, PHP, Perl, Java
 
 __Operating Systems:__ RedHat EL, FreeBSD, Ubuntu, VMware vSphere
 
 __Automation:__ Puppet, Chef, NightwatchJS
 
-__Applications:__ GIT, Varnish, Apache, Splunk, Nagios, OpenLDAP, QMail, RedMine, Nessus, Passenger, NetBackup, WireShark, TCPDump, Munin, RRD
+__Applications:__ GIT, Varnish, Apache, Splunk, Nagios, OpenLDAP, QMail, RedMine, Nessus, Passenger, NetBackup, WireShark, TCPDump, Munin, RRD, Tomcat, RPMBuild
 
 __Databases:__ MongoDB, MySQL, SQLite
 
 ## Experience
 
-### Contractor at Gap
+### AUTOMATION ENGINEER, GAP INC, SF, CA 
 
-August 2014 - present
-DevOps - Deployment Engineer
+`2014 - present`
 
-### Network Administrator at Federal Reserve Bank of San Francisco
+Collaborating across multiple projects to assist importing of automation into Chef environment while keeping to preferred procedures.
 
-November 2003 - 2014 (8 years 11 months)
-network administrator responsible for computer services both on the external network and internal network. desktop support for web development team.
-4 recommendations available upon request
+* Contributed code changes to existing tools to expedite importing automation into Chef
 
-### UNIX Administrator at Riverdeep
+* Coordinated and implemented application deployments into production environment
 
-August 2001 - November 2003 (2 years 4 months)
-Maintenance of UNIX servers and administration involving security, email, dns, web services, database administration.
-4 recommendations available upon request
+* Created safe area for testing new cookbooks without disturbing exiting development environments
 
-### Desktop Support at Mattel
+* Diagnosed issues with Tomcat applications to assist developers in resolving startup issues
 
-May 2000 - August 2001 (1 year 4 months)
-support of employee computers ranging from graphic artists, to ceo's.
-aided in transferring novell network system to windows platform.
+* Captured and created documentation for multiple software processes and workflows
 
-### QA at SSI
+### UNIX/NETWORK ENGINEER, FEDERAL RESERVE BANK OF SAN FRANCISCO, SF, CA 
 
-July 1999 - April 2000 (10 months)
-1 recommendation available upon request
-Technical Support via Phone at Broderbund
-January 1998 - March 1998 (3 months)
-supported mostly Riven over the phone. Trained for supporting Printshop Pro
+`2003 - 2014`
 
-### QA at Broderbund
+Network administrator responsible for computer services both on the external and internal networks. Desktop support for Web Development team. Oversee team for network security, as well as training on new technologies to foster growth within the team.
 
-September 1997 - December 1997 (4 months) reported software errors to management
-Courses
-Network Administrator
-Federal Reserve Bank of San Francisco Python Programming
+* Designed, trained, coordinated, and implemented the creation of multiple environments (from local to production) and launch of new workflow for applying changes to public website with Git
+
+* Recognized and implemented browser automation by writing code and code and documentation with NightwatchJS driving multiple browsers
+
+* Created utility scripts with Ruby to assist in migrating content from flat file system to relational database format
+
+* Designed and implemented Varnish proxy caching and improved page speed load times and security
+
+* Designed, implemented and maintained 20+ virtual hosts with custom regular express rules to aid in site redesign and 200+ SEO based urls
+
+* Installation and maintenance of the Passenger software package to support rack based web applications.
+
+* Planned and coordinated move of entire infrastructure from eleventh floor to second floor by writing automation tests, ensuring mirroring between servers with an end result of only five minutes of down time
+
+* Selected and implemented open source software solutions to enhance service performance and availability for email, web analytics, log watching, and monitoring
+
+* Implemented open source software for various services (email, web analytics, log watching, service monitoring)
+
+* Created Ruby program to implement new HTML navigation elements in over 4,000 files
+
+* Troubleshooting and implemented script to render PDF using custom font and inputs from web interface
+
+### BOARD MEMBER, MARIN SOCIETY OF HOME BREWING, NOVATO, CA 
+
+`2013-PRESENT`
+
+Volunteer position responsible for management and future planning of web site for members.
+
+### UNIX ADMINISTRATOR, BRODERBUND/RIVERDEEP, NOVATO, CA
+
+`2001-2003`
+
+Development and maintenance of UNIX and Solaris servers and administration including:
+
+* Responsible for all UNIX system services, maintenance, preparation and updates/   upgrades
+
+* Designed, migrated, and maintained 5 qmail servers that took the place of sendmail, improving email routing performance for edge email routing of 50+ domains
+
+* Implemented tools for monitoring services for collecting performance statistics
+
+* Server consolidation, security updates, email configuration for 30+ domains, DNS record management, Web services, and database administration including daily meetings with Oracle DB Administrators to ensure optimization
+
+### Prior Work Experience:
+
+DESKTOP SUPPORT, MATTEL INTERACTIVE, NOVATO, CA, `2000-2001`
+
+QUALITY ASSURANCE, STRATEGIC SIMULATIONS, INC., NOVATO, CA, `1998-2000`
 
 ## Education
 
