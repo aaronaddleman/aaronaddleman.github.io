@@ -18,18 +18,18 @@ Using `rsync` is much easier if you have that option. I have not seen a down sid
 
 To clone your repository from one location to another the following steps can be used in your terminal prompt:
 
-    {% highlight bash %}
-    git clone --bare https://github.com/exampleuser/old-repo.git
-    # Make a bare clone of the repo
+{% highlight bash %}
+git clone --bare https://github.com/exampleuser/old-repo.git
+# Make a bare clone of the repo
 
-    cd old-repo.git
-    $ git push --mirror https://newserver.com/exampleuser/new-repo.git
-    # Mirror-push to the new repo
+cd old-repo.git
+$ git push --mirror https://newserver.com/exampleuser/new-repo.git
+# Mirror-push to the new repo
 
-    cd ..
-    $ rm -rf old-repo.git
-    # Remove our temporary local repo
-    {% endhighlight %}
+cd ..
+$ rm -rf old-repo.git
+# Remove our temporary local repo
+{% endhighlight %}
     
 ## The long answer
 

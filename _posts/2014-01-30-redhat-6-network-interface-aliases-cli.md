@@ -26,29 +26,31 @@ What follows are the necessary files that are needed for setting a interface for
     The first interface and also the parent interface file that holds the settings of the network:
 
 {% highlight bash %}
-        DEVICE=eth0
-        HWADDR=00:00:00:00:00:00
-        TYPE=Ethernet
-        UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-        ONBOOT=no
-        BOOTPROTO=dhcp
-        USERCTL=no
-        IPV6INIT=no
-        PEERDNS=yes
+DEVICE=eth0
+HWADDR=00:00:00:00:00:00
+TYPE=Ethernet
+UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+ONBOOT=no
+BOOTPROTO=dhcp
+USERCTL=no
+IPV6INIT=no
+PEERDNS=yes
 {% endhighlight %}
 
 1.  /etc/sysconfig/networking/profiles/_foo_/ifcfg-eth0:1
-    
-        GATEWAY=###.###.###.###
-        TYPE=Ethernet
-        DEVICE=eth0:1
-        BOOTPROTO=none
-        NETMASK=255.255.255.###
-        IPADDR=###.###.###.###
-        USERCTL=no
-        IPV6INIT=no
-        ONPARENT=yes
-        PEERDNS=yes
+
+{% highlight bash %}    
+GATEWAY=###.###.###.###
+TYPE=Ethernet
+DEVICE=eth0:1
+BOOTPROTO=none
+NETMASK=255.255.255.###
+IPADDR=###.###.###.###
+USERCTL=no
+IPV6INIT=no
+ONPARENT=yes
+PEERDNS=yes
+{% endhighlight %}
 
 
 1.  /etc/sysconfig/networking/network
@@ -58,10 +60,10 @@ What follows are the necessary files that are needed for setting a interface for
     Here is an example of what my `network` file looks like:
 
 {% highlight bash %}
-        NETWORKING=yes
-        NETWORKING_IPV6=no
-        HOSTNAME=web.domain.com
-        CURRENT_PROFILE=production
+NETWORKING=yes
+NETWORKING_IPV6=no
+HOSTNAME=web.domain.com
+CURRENT_PROFILE=production
 {% endhighlight %}
 
 1.  /etc/sysconfig/network-scripts/ifcfg-eth0
@@ -69,12 +71,12 @@ What follows are the necessary files that are needed for setting a interface for
     This file is for defining the startup of the interface with the hardware mac address. Note that there is no gateway. Here is an example of what I have in my basic setup:
 
 {% highlight bash %}
-        DEVICE=eth0
-        HWADDR=00:50:56:A8:28:0A
-        TYPE=Ethernet
-        UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-        ONBOOT=no
-        BOOTPROTO=dhcp
+DEVICE=eth0
+HWADDR=00:50:56:A8:28:0A
+TYPE=Ethernet
+UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+ONBOOT=no
+BOOTPROTO=dhcp
 {% endhighlight %}
 
 1. /etc/sysconfig/network-scripts/ifcfg-eth0:1
@@ -82,13 +84,13 @@ What follows are the necessary files that are needed for setting a interface for
     This is a alias of the eth0 device. Note there is also no gateway. Here is an example of what I have in my basic setup:
 
 {% highlight bash %}
-        DEVICE=eth0:1
-        HWADDR=00:00:00:00:00:00
-        TYPE=Ethernet
-        UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-        ONBOOT=yes
-        BOOTPROTO=none
-        IPADDR=###.###.###.###
-        PEERDNS=yes
+DEVICE=eth0:1
+HWADDR=00:00:00:00:00:00
+TYPE=Ethernet
+UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+ONBOOT=yes
+BOOTPROTO=none
+IPADDR=###.###.###.###
+PEERDNS=yes
 {% endhighlight %}
 

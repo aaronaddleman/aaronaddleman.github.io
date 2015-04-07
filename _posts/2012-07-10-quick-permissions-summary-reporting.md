@@ -16,12 +16,14 @@ While in a directory and you are changing permissions, its really helpful to get
 
 The first command I came up with lists sorts the permissions then gets a count of each type which is useful for looking at the list in order of permissive. The lower number is a lower permission mode (at the top of the list) and the items going down progressively get more permissive.
 
-    {% highlight bash %}
-      %> find . -type f -exec stat -c "%a" {} \; | sort | uniq -c
+{% highlight bash %}
+$ find . -type f -exec stat -c "%a" {} \; | sort
+{% endhighlight %}
 
 ## Summary of permissions sorted by count
 
 This is command is pretty much the same as above but with some extra sorting to find the popular type of permissions (sorted by the uniqueness count):
 
-    {% endhighlight %}
-      %> find . -type f -exec stat -c "%a" {} \; | sort | uniq -c
+{% highlight bash %}
+$ find . -type f -exec stat -c "%a" {} \; | sort | uniq -c
+{% endhighlight %}

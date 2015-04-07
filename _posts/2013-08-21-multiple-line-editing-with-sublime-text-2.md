@@ -20,6 +20,13 @@ I was making a change to a content of code when there was a variable that I want
 
 Highlight the pattern of text you want to replace. Then hit:
 
-CTRL + CMD + g
+`CTRL + CMD + g`
 
 You should notice your selection has expanded out to all of the occurences of the patten of text you highlighted. From here you can replace the text or do some limited moving of the input cursor to change its position to another area of editing.
+
+## In addition
+
+You can highlight one match at a time by:
+
+1. highlight the first occurance
+1. hit `CMD + D`

@@ -19,12 +19,12 @@ To fix this, remove the certificate from both the master and the agent and then 
 On the master:
 
 {% highlight bash %}
-    puppet cert clean pagent
+puppet cert clean pagent
 {% endhighlight %}
 
 On the agent:
 
 {% highlight bash %}
-    rm -f /etc/puppetlabs/puppet/ssl/certs/pagent.pem
-    puppet agent -t
+rm -f /etc/puppetlabs/puppet/ssl/certs/pagent.pem
+puppet agent -t
 {% endhighlight %}

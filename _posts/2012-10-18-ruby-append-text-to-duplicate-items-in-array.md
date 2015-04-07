@@ -12,27 +12,27 @@ share: true
 
 When faced with an array with duplicate items and the output needs to be unique, the following code loops through the items and addes it to the h hash with a value being the count of duplicates. Next, the each loop adds a number at the end making the items become unique.
 
-    {% highlight ruby %}
-    @items = [
-      "topic number one",
-      "topic number two",
-      "topic number two",
-      "topic number three",
-      ]
+{% highlight ruby %}
+@items = [
+  "topic number one",
+  "topic number two",
+  "topic number two",
+  "topic number three",
+  ]
 
-    h ={}
+h ={}
 
-    puts @items.each{|e| h[e] = h[e].nil? ? 1 : h[e]+1}
+puts @items.each{|e| h[e] = h[e].nil? ? 1 : h[e]+1}
 
-    puts h.inspect
+puts h.inspect
 
-    @counter = 0
-    @items.each do |item|
+@counter = 0
+@items.each do |item|
 
-      if h[item] > 1
-        p "#{item}-p#{@counter += 1}of#{h[item]}"
-      else
-        p "#{item}"
-      end
-    end
-    {% endhighlight %}
+  if h[item] > 1
+    p "#{item}-p#{@counter += 1}of#{h[item]}"
+  else
+    p "#{item}"
+  end
+end
+{% endhighlight %}

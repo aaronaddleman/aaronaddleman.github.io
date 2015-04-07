@@ -13,8 +13,10 @@ share: true
 
 To force the guest to have a static ip address, edit the following file below and add in the example of code:
 
-    # file
     sudo vi /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf
+
+Here is an example of a host with a static ip address:
+
     # example host
     host vm-numberone {
     hardware ethernet 00:0C:29:0B:7E:07;

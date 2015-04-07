@@ -54,26 +54,26 @@ So! you want to build it. Ok, here are the steps I did:
 ## Apache configuration example
 
 {% highlight apache %}
-    SetEnv LD_LIBRARY_PATH /home/aaron/.rvm/rubies/ruby-1.9.2-p320/lib
-    SetEnv GEM_PATH /home/aaron/.rvm/gems/ruby-1.9.2-p320:/home/aaron/.rvm/gems/ruby-1.9.2-p320@global
- 
-    <VirtualHost *:80>
-       ServerName centos
-       # !!! Be sure to point DocumentRoot to 'public'!
-       DocumentRoot /apps/mysite/public
-       <Directory /apps/mysite/public>
-          # This relaxes Apache security settings.
-          AllowOverride all
-          # MultiViews must be turned off.
-          Options -MultiViews
-       </Directory>
-    </VirtualHost>
+SetEnv LD_LIBRARY_PATH /home/aaron/.rvm/rubies/ruby-1.9.2-p320/lib
+SetEnv GEM_PATH /home/aaron/.rvm/gems/ruby-1.9.2-p320:/home/aaron/.rvm/gems/ruby-1.9.2-p320@global
+
+<VirtualHost *:80>
+   ServerName centos
+   # !!! Be sure to point DocumentRoot to 'public'!
+   DocumentRoot /apps/mysite/public
+   <Directory /apps/mysite/public>
+      # This relaxes Apache security settings.
+      AllowOverride all
+      # MultiViews must be turned off.
+      Options -MultiViews
+   </Directory>
+</VirtualHost>
 {% endhighlight %}
 
 ## Loaded modules in Apache
 
 {% highlight apache %}
-    LoadModule passenger_module /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12/ext/apache2/mod_passenger.so
-    PassengerRoot /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12
-    PassengerRuby /home/aaron/.rvm/rubies/ruby-1.9.2-p320/bin/ruby
+LoadModule passenger_module /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12/ext/apache2/mod_passenger.so
+PassengerRoot /home/aaron/.rvm/gems/ruby-1.9.2-p320/gems/passenger-3.0.12
+PassengerRuby /home/aaron/.rvm/rubies/ruby-1.9.2-p320/bin/ruby
 {% endhighlight %}

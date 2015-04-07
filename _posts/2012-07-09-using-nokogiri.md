@@ -29,25 +29,25 @@ share: true
 ## Nokogiri example
 
 {% highlight ruby %}
-  require 'nokogiri'
+require 'nokogiri'
 
-  f = File.open("employees.xml")
-  doc = Nokogiri::XML(f)
-  
-  
-  # navigate!
-  doc.employees.employee.last.fullname.content # => "Jerry Lewis"
+f = File.open("employees.xml")
+doc = Nokogiri::XML(f)
 
-  # access node attributes!
-  doc.employees.employee.first["status"] # => "active"
 
-  # use some xpath!
-  doc.employees.employee("[@status='active']").fullname.content # => "Dean Martin"
-  doc.employees.employee(:xpath => "@status='active'").fullname.content # => "Dean Martin"
+# navigate!
+doc.employees.employee.last.fullname.content # => "Jerry Lewis"
 
-  # use some css!
-  doc.employees.employee("[status='active']").fullname.content # => "Dean Martin"
-  doc.employees.employee(:css => "[status='active']").fullname.content # => "Dean Martin"
-  
-  f.close
+# access node attributes!
+doc.employees.employee.first["status"] # => "active"
+
+# use some xpath!
+doc.employees.employee("[@status='active']").fullname.content # => "Dean Martin"
+doc.employees.employee(:xpath => "@status='active'").fullname.content # => "Dean Martin"
+
+# use some css!
+doc.employees.employee("[status='active']").fullname.content # => "Dean Martin"
+doc.employees.employee(:css => "[status='active']").fullname.content # => "Dean Martin"
+
+f.close
 {% endhighlight %}

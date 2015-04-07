@@ -13,6 +13,6 @@ share: true
 At some point, you might get this error message with Zimbra (I hope you don't experience this problem) and the problem is that the certificate is not valid. The short solution for me was to check if Zimbra can use untrusted certs, and if that returns false, I can set the value to true and restart Zimbra. The longer fix would be to make a valid cert. Here are the commands to do the short fix:
 
 {% highlight bash %}
-    $ zmlocalconfig -s ssl_allow_untrusted_certs <-- checks status
-    $ zmlocalconfig -e ssl_allow_untrusted_certs=true; zmcontrol restart
+$ zmlocalconfig -s ssl_allow_untrusted_certs <-- checks status
+$ zmlocalconfig -e ssl_allow_untrusted_certs=true; zmcontrol restart
 {% endhighlight %}

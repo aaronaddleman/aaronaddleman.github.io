@@ -16,43 +16,43 @@ In Ruby 1.9 the library [Shellwords][1] has some useful methods to help translat
 
 ## Example to escape command with arguments
 
-    {% highlight ruby %}
-    require 'shellwords'
-    
-    
-    open('|' + ['grep', pattern, *files].shelljoin) { |pipe|
-      # ...
-    }
-    
-    # or
-    
-    open('|' + Shellwords.join(['grep', pattern, *files])) { |pipe|
-      # ...
-    }
-    
-    # or
-    
-    url = "http://domain.com/path/to/page.html"
-    filename = "output.cfm"
+{% highlight ruby %}
+require 'shellwords'
 
-    command = ['/opt/local/bin/wget', url, '-O', filename].shelljoin
-    system(command)
-    {% endhighlight %}
+
+open('|' + ['grep', pattern, *files].shelljoin) { |pipe|
+  # ...
+}
+
+# or
+
+open('|' + Shellwords.join(['grep', pattern, *files])) { |pipe|
+  # ...
+}
+
+# or
+
+url = "http://domain.com/path/to/page.html"
+filename = "output.cfm"
+
+command = ['/opt/local/bin/wget', url, '-O', filename].shelljoin
+system(command)
+{% endhighlight %}
 
 ## Example of splitting string with quotes embedded
 
 This is pretty cool as I could see this being useful for just making an array from a string that contains a mix of text and quoted text
 
-    {% highlight ruby %}
-    require 'shellwords'
-    
-    argv = Shellwords.split('here are "two words"')
-    argv #=> ["here", "are", "two words"]
-    
-    or
-    
-    argv = 'here are "two words"'.shellsplit
-    argv #=> ["here", "are", "two words"]
-    {% endhighlight %}
+{% highlight ruby %}
+require 'shellwords'
+
+argv = Shellwords.split('here are "two words"')
+argv #=> ["here", "are", "two words"]
+
+or
+
+argv = 'here are "two words"'.shellsplit
+argv #=> ["here", "are", "two words"]
+{% endhighlight %}
 
 [1]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/shellwords/rdoc/Shellwords.html
