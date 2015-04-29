@@ -8,3 +8,4 @@ gem 'thor'
 gem 'activesupport'
 gem 'stringex'
 gem "ultraviolet", :require => "uv"
+gem 'jekyll-sitemap'
