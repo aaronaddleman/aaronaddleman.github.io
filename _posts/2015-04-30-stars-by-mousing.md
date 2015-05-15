@@ -10,7 +10,7 @@ comments: true
 share: true
 processing: |
   void setup() {
-    size(400,400);
+    size(400,400,P3D);
     noSmooth();
   }
 
@@ -19,10 +19,10 @@ processing: |
     translate(width/2,height/2);
     
     pushMatrix();
-    rotate(mouseX/PI);
+    rotate(mouseX/20/PI);
     star(6,40,60);
     translate(width/4,height/4);
-    star(12,30+mouseX,30+mouseY);
+    star(12,30+mouseX,mouseY/2);
     popMatrix();
     popMatrix();
   }
