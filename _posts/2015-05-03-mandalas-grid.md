@@ -13,7 +13,7 @@ processing: |
     size(600,600);
     background(255);
     
-    //presets
+    //presets for grid
     int rows = 4;
     int cols = 4;
     float outerRadius = width/cols;
