@@ -35,6 +35,8 @@ __Databases:__ MongoDB, MySQL, SQLite
 
 Collaborating across multiple projects to assist importing of automation into Chef environment while keeping to preferred procedures.
 
+* Provided solutions for F5 iRules to match business needs for specific projects
+
 * Contributed code changes to existing tools to expedite importing automation into Chef
 
 * Coordinated and implemented application deployments into production environment
