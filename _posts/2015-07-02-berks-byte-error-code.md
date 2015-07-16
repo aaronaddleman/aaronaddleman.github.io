@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Error with berks encode error \xE2"
-description: ""
+description: "fixing error with berks in OS X"
 tags: [chef, berks]
 image:
   feature: abstract-6.jpg
