@@ -1,7 +1,8 @@
 ---
 layout: post
+date: 2015-07-22
 title: "Favorite podcasts"
-description: "What I listen to on a semi-daily basis when my ears and brain need stimulation of creative wonder and wander.
+description: "What I listen to on a semi-daily basis when my ears and brain need stimulation of creative wonder and wander."
 tags: [personal]
 image:
   feature: abstract-6.jpg
