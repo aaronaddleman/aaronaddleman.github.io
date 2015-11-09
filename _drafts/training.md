@@ -1,0 +1,14 @@
+https://www.nostarch.com/
+https://www.codecademy.com/
+http://www.pluralsight.com/
+https://www.coursera.org/
+https://www.codeschool.com/free
+http://academy.gns3.com/courses
+https://pragmaticstudio.com/
+https://pragprog.com/
+https://www.safaribooksonline.com/home/
+http://gns3vault.com/labs/
+http://nodeschool.io/
+https://rubymonk.com/
+https://github.com/
+http://exercism.io/
