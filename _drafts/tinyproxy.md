@@ -16,3 +16,8 @@ Or, if you don't want/need launchctl, you can just run:
 🍺  /usr/local/Cellar/tinyproxy/1.8.3: 14 files, 236K
 11:45:24  ~ #
 <% endhighlight %>
+
+# Configuring
+
+## Mac OS X from homebrew
+/usr/local/opt/tinyproxy
