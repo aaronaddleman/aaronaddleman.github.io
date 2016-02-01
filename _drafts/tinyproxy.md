@@ -21,3 +21,4 @@ Or, if you don't want/need launchctl, you can just run:
 
 ## Mac OS X from homebrew
 /usr/local/opt/tinyproxy
+/usr/local/etc/tinxyproxy.conf
