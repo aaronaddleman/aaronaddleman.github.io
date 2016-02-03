@@ -4,6 +4,7 @@
 
 ## install openresty 1.9.7.3
 
+{% highlight bash %}
 sudo apt-get install libreadline-dev libncurses5-dev libpcre3-dev \
     libssl-dev perl make build-essential perl make libssl-dev \
     postgresql-9.4 postgresql-server-dev-9.4 postgresql-contrib-9.4
@@ -14,3 +15,9 @@ sudo apt-get install libreadline-dev libncurses5-dev libpcre3-dev \
 --with-pcre-jit \
 --with-ipv6 \
 --with-http_postgres_module
+
+# make with 4 spare cpu power
+make -j4
+# install
+make install
+{% endhighlight %}
