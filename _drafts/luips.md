@@ -17,7 +17,7 @@ share: true
 ## install openresty 1.9.7.3
 
 {% highlight bash %}
-sudo apt-get install libreadline-dev libncurses5-dev libpcre3-dev \
+sudo apt-get install git libreadline-dev libncurses5-dev libpcre3-dev \
     libssl-dev perl make build-essential perl make libssl-dev \
     postgresql-9.4 postgresql-server-dev-9.4 postgresql-contrib-9.4
     
@@ -34,16 +34,17 @@ make -j4
 make install
 {% endhighlight %}
 
-# test it out!
+# make a plain app to test openresty
 
-{% highlight %}
+{% highlight bash %}
 mkdir ~/work
 cd ~/work
 mkdir logs/ conf/
 {% endhighlight %}
 
-{% highlight text %}
 # contents of ~/conf/nginx.conf
+
+{% highlight json %}
 worker_processes  1;
 error_log logs/error.log;
 events {
@@ -78,4 +79,32 @@ the expected output should be:
 
 {% highlight html %}
 <p>hello, world</p>
+{% endhighlight %}
+
+# Lupis
+
+apt-get install luarocks
+luarocks install moonscript
+luarocks install lapis
+luarocks install --server=http://rocks.moonscript.org/manifests/leafo lapis
+
+# Make a test application
+
+{% highlight bash %}
+mkdir lapistest
+cd lapistest
+lapis new --lua
+lapis server
+{% endhighlight %}
+
+# Test the application with curl!
+
+{% highlight bash %}
+curl http://localhost:8080
+{% endhighlight %}
+
+you should see the following:
+
+{% highlight html %}
+<!DOCTYPE HTML><html lang="en"><head><title>Lapis Page</title></head><body>Welcome to Lapis 1.4.3</body></html>
 {% endhighlight %}
