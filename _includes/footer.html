@@ -1,62 +1,38 @@
-<div class="container">
-  <div class="row">
-    <div class="col s12 m6 l6">
-      <p>{{ site.description }}</p>
-    </div>
+<footer class="site-footer">
 
-    <div class="col s12 m6 l6">
-      <div class="row">
-        <div class="col s12 m4 l4">
-          <a href="https://github.com/aaronaddleman">
-            <div class="card-panel tiny">
-              
-                <i class="material-icons left">code</i>
-                <span class="grey-text text-darken-2">
-                  GitHub
-                </span>
-            </div>
-          </a>
-        </div>
-      
-        <div class="col s12 m4 l4">
-          <a href="https://www.flickr.com/photos/ocyrus/">
-            <div class="card-panel tiny">
-              
-                <i class="material-icons left">code</i>
-                <span class="grey-text text-darken-2">
-                  Flickr
-                </span>
-            </div>
-          </a>
-        </div>
-        
-        <div class="col s12 m4 l4">
-          <a href="https://twitter.com/aaronaddleman">
-            <div class="card-panel tiny">
-              
-                <i class="material-icons left">code</i>
-                <span class="grey-text text-darken-2">
-                  Twitter
-                </span>
-            </div>
-          </a>
-        </div>
+  <div class="wrapper">
 
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>{{ site.title }}</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
       </div>
     </div>
-  </div>
-</div>
 
-{% if page.url != "/" or page.url != "/resume" %}
-{{ page.ur. }}
-<div class="page-feature parallax-container">
-  <div class="parallax">
-    <img src="/images/{{page.image.feature}}">
   </div>
-</div>
-{% endif %}
 
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="/js/materialize.min.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
+</footer>
