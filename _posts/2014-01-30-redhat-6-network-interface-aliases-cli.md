@@ -4,7 +4,7 @@ title: "RedHat EL 6 Network Interfaces and Aliases with CLI"
 description: "When I installed RedHat EL 6 with the minimal install option, there is very little to manage the system. This is good for boot times and less packages that are unnecessary. When trying to add network aliases with files and scripts, I did not find much. Here is my contribution for how to add and manage your network interfaces, aliases, and profiles for RedHat EL 6."
 tags: [sysadmin]
 image:
-  feature: 8160262794_3ba58b187f_o.jpg
+  feature: IMG_0309.jpg
   credit: Aaron Addleman
 comments: true
 share: true

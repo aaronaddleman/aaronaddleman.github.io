@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Puppet certificate problem and resolution"
-description: ""
+description: "Fixing certificate problem with Puppet when the master does not match the private key"
 tags: [puppet]
 image:
-  feature: 8160262794_3ba58b187f_o.jpg
+  feature: DSC05313.jpg
   credit: Aaron Addleman
 comments: true
 share: true

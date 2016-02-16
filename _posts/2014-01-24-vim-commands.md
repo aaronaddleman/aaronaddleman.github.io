@@ -4,7 +4,7 @@ title: "VIm commands"
 description: "VIm is a great editor and I have used it for many years. However, mastering the indepth commands are very helpful for System Administrators because its almost always available. Here are some helpful commands to remember."
 tags: [sysadmin]
 image:
-  feature: 8160263904_6dd8c8e420_o.jpg
+  feature: IMG_0009.jpg
   credit: Aaron Addleman
 comments: true
 share: true

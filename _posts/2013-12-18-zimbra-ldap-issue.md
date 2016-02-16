@@ -4,7 +4,7 @@ title: "Zimbra error message Unable to determain services from ldap"
 description: "How to resolve the error message Unable to determain services from ldap"
 tags: [sysadmin]
 image:
-  feature: 8273732260_46ea8166b3_o.jpg
+  feature: DSC05314.jpg
   credit: Aaron Addleman
 comments: true
 share: true

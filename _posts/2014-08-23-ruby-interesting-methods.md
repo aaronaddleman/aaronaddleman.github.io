@@ -4,7 +4,7 @@ title: "Ruby's 'Interesting methods'"
 description: "While in IRB and listing methods on an object, adding this new method to the Object allows for helpful listing of methods."
 tags: [ruby]
 image:
-  feature: 8160237453_62c4c8c48e_o.jpg
+  feature: IMG_0447.jpg
   credit: Aaron Addleman
 comments: true
 share: true

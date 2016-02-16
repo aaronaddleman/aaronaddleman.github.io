@@ -5,7 +5,7 @@ description: "Augeas C libray is included with puppet to help manipulate configu
 "
 tags: [puppet]
 image:
-  feature: 8272584751_feb76bdf1e_o.jpg
+  feature: IMG_0360.jpg
   credit: Aaron Addleman
 comments: true
 share: true
