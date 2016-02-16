@@ -4,7 +4,7 @@ title: "Crawling a site with Anemone and Redis"
 description: ""
 tags: [databases]
 image:
-  feature: IMG_0576.jpeg
+  feature: IMG_0576.jpg
   credit: Aaron Addleman
 comments: true
 share: true

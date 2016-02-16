@@ -4,7 +4,7 @@ title: "Setting custom ruby binary in Sublime Text 2"
 description: "When making scripts in Sublime Text 2 and running Cmd+B sometimes you want to use a custom version of ruby. How do you do it?"
 tags: [sublime-text-2, ruby]
 image:
-  feature: IMG_0568.jpg
+  feature: IMG_0568.JPG
   credit: Aaron Addleman
 comments: true
 share: true
