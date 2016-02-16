@@ -4,8 +4,8 @@
 .highlight {
     background: #EAEDEE;
     @extend %vertical-rhythm;
-    border-radius: 15px;
-    padding: 0.005em;
+    border-radius: 5px;
+    padding: 0 0 0 0.08em;
 
     .highlighter-rouge & {
       background: #eef;
