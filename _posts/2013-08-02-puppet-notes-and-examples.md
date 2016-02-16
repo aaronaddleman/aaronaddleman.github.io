@@ -4,7 +4,7 @@ title: "Puppet Notes and Examples"
 description: ""
 tags: [puppet]
 image:
-  feature: IMG_0605.jpg
+  feature: IMG_0605.JPG
   credit: Aaron Addleman
 comments: true
 share: true
