@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -48,6 +49,8 @@ redcarpet:
 # syntax coloring
 highlighter: rouge
 =======
+=======
+>>>>>>> parent of fc2136e... reset to blank slate
 title:            Aaron Addleman
 description:      My Philomathy
 disqus_shortname: aaronaddleman
@@ -122,4 +125,7 @@ kramdown:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "divshot.json", ".ruby-gemset", ".ruby-version"]
+<<<<<<< HEAD
+>>>>>>> parent of fc2136e... reset to blank slate
+=======
 >>>>>>> parent of fc2136e... reset to blank slate
