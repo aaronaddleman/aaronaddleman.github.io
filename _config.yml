@@ -6,16 +6,43 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
+title: Aaron Addleman
+owner: Aaron Addleman
+author: Aaron Addleman
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: > 
+  Archived thoughts, technical experiments, notes, and media created by myself.
+  Take a look around and I welcome your comments on anything you see. Thanks for
+  visiting.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://aaronaddleman.com" # the base hostname & protocol for your site
+permalink: /articles/:title
+twitter_username: aaronaddleman
+github_username: aaronaddleman
+discus_shortname: aaronaddleman
 
 # Build settings
 markdown: kramdown
+
+# Analytics
+google_analytics: UA-31631239-1
+
+# Webmaster Tools
+google_verify:
+bing_verify:
+
+# Style
+sass:
+  sass_dir: _sass
+  style: compressed
+
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - fenced_code_blocks
+    - autolink
+    - tables
+    - with_toc_data
+
+# syntax coloring
+highlighter: rouge

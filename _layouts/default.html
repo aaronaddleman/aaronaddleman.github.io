@@ -4,17 +4,20 @@
   {% include head.html %}
 
   <body>
+    <head>
+      {% if page.url != "/" %}
+      {% include nav.html %}
+      {% endif %}
+    </head>
 
-    {% include header.html %}
+    <main>
+      {{ content }}
+    </main>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    <div class="divider"></div>
 
-    {% include footer.html %}
-
+    <footer>
+      {% include footer.html %}
+    </footer>
   </body>
-
 </html>
