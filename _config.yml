@@ -31,7 +31,6 @@ google_analytics: UA-31631239-1
 google_verify:
 bing_verify:
 
-<<<<<<< HEAD
 # Style
 sass:
   sass_dir: _sass
@@ -47,46 +46,3 @@ redcarpet:
 
 # syntax coloring
 highlighter: rouge
-=======
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: Resume
-    url: /resume
-  # - title: External Link
-    # url: http://mademistakes.com
-    # external: true
-
-code_path: "/assets/files"
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Los_Angeles
-future:      true
-#pygments:    true
-#highlighter: pygments
-markdown:    kramdown
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /articles/:title
-
-# Amount of post to show on home page
-paginate: 6
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: true
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "divshot.json", ".ruby-gemset", ".ruby-version"]
-gems:
-  - jekyll-sitemap
->>>>>>> 68efee43dbd875d95a6c8fbc19e4ff7e4743b6df
