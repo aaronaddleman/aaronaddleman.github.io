@@ -1,76 +1,48 @@
-title:            Aaron Addleman
-description:      My Philomathy
-disqus_shortname: aaronaddleman
-reading_time:     true
-words_per_minute: 200
-#Your site's domain goes here. Leave localhost server or blank when working locally.
-# url:              http://development.aaronaddleman-jekyll.divshot.io
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Owner/author information
-owner:
-  name:           Aaron Addleman
-  avatar:         
-  bio:            "Nerd and geek with passion for learning and exploring."
-  email:          aaronaddleman@gmail.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        aaronaddleman
-  facebook:       aaronaddleman
-  github:         aaronaddleman
-  stackexchange:
-  linkedin:       "aaron-addleman/0/428/276"
-  instagram:      
-  flickr:
-  tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    aaronaddleman
+# Site settings
+title: Aaron Addleman
+owner: Aaron Addleman
+author: Aaron Addleman
+email: your-email@domain.com
+description: > 
+  Archived thoughts, technical experiments, notes, and media created by myself.
+  Take a look around and I welcome your comments on anything you see. Thanks for
+  visiting.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://aaronaddleman.com" # the base hostname & protocol for your site
+permalink: /articles/:title
+twitter_username: aaronaddleman
+github_username: aaronaddleman
+discus_shortname: aaronaddleman
 
-# Background image to be tiled on all pages
-background:
+# Build settings
+markdown: kramdown
 
-# Analytics and webmaster tools stuff goes here
+# Analytics
 google_analytics: UA-31631239-1
+
+# Webmaster Tools
 google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: Resume
-    url: /resume
-  # - title: External Link
-    # url: http://mademistakes.com
-    # external: true
+# Style
+sass:
+  sass_dir: _sass
+  style: compressed
 
-code_path: "/assets/files"
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Los_Angeles
-future:      true
-#pygments:    true
-highlighter: pygments
-markdown:    kramdown
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - fenced_code_blocks
+    - autolink
+    - tables
+    - with_toc_data
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /articles/:title
-
-# Amount of post to show on home page
-paginate: 6
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: true
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "divshot.json", ".ruby-gemset", ".ruby-version"]
-gems:
-  - jekyll-sitemap
+# syntax coloring
+highlighter: rouge

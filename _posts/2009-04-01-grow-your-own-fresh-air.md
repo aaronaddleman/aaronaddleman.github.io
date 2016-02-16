@@ -2,7 +2,7 @@
 layout: post
 title: "Grow your own fresh air"
 description: ""
-tags: [news, health]
+tags: [howto]
 image:
   feature: IMG_0612.JPG
   credit: Aaron Addleman

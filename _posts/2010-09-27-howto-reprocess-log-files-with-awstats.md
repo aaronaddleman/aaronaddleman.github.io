@@ -2,15 +2,13 @@
 layout: post
 title: "Howto (re)process log files with AWstats"
 description: ""
-tags: [system, programming, analysis]
+tags: [system, programming]
 image:
   feature: IMG_0613.JPG
   credit: Aaron Addleman
 comments: true
 share: true
 ---
-
-# Howto (re)process log files with AWstats
 
 ## Overview
 

@@ -1,9 +1,12 @@
 ---
 layout: page
 permalink: /resume/
-title: "Resume"
+title: "Résumé"
 modified: 2014-08-30 20:28
 tags: []
+icon: perm_identity
+description: >
+  Experiences, history of employment, and accomplishments. <a href="/assets/Aaron_Addleman_Resume.pdf">Download in PDF</a>
 image:
   feature:
   credit:
@@ -81,7 +84,7 @@ Network administrator responsible for computer services both on the external and
 
 Volunteer position responsible for management and future planning of web site for members.
 
-### UNIX ADMINISTRATOR, BRODERBUND/RIVERDEEP, NOVATO, CA
+### UNIX ADMINISTRATOR, BRODERBUND / RIVERDEEP, NOVATO, CA
 
 `2001-2003`
 

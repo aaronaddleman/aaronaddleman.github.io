@@ -2,7 +2,7 @@
 layout: post
 title: "Stuff about vagrant and test kitchen"
 description: ""
-tags: [vagrant, test-kitchen, chef]
+tags: [chef]
 image:
   feature: DSC03138_s.jpeg
   credit: Aaron Addleman

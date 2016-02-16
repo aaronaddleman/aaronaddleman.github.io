@@ -2,7 +2,7 @@
 layout: post
 title: "Ironman trailer might be a real movie afterall"
 description: ""
-tags: [videos, funny]
+tags: [videos, fun]
 image:
   feature: 11786474283_9f0f30e96c_o.jpg
   credit: Aaron Addleman

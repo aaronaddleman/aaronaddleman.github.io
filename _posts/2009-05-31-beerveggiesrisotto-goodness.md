@@ -2,7 +2,7 @@
 layout: post
 title: "beer+veggies+risotto = goodness"
 description: ""
-tags: [food, photos]
+tags: [photos]
 image:
   feature: DSC03309.JPG
   credit: Aaron Addleman

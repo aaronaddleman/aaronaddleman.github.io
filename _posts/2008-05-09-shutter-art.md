@@ -2,7 +2,7 @@
 layout: post
 title: "Shutter art"
 description: ""
-tags: [personal, photos, art]
+tags: [personal, photos]
 image:
   feature: 11786474283_9f0f30e96c_o_m.jpeg
   credit: Aaron Addleman

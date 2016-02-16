@@ -2,7 +2,7 @@
 layout: post
 title: "No frills shell script to backup multiple environments with a database dump"
 description: "While working on a project related to Expression Engine, I created a small shell script to allow backing up of the various environments. This script is bare bones simple and just gets the job done. Nothing fancy here."
-tags: [ee]
+tags: [sysadmin]
 image:
   feature: abstract-6.jpg
   credit: dargadgetz

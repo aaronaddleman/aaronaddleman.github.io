@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Permissions Reporting"
 description: "Sometimes a small list of permissions for all files in a directory is really helpful. Here are some commands to help out with printing the octal permissions mode for all files and counting the results."
-tags: [bash]
+tags: [sysadmin]
 image:
   feature: 8160237453_62c4c8c48e_o.jpg
   credit: Aaron Addleman

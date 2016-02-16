@@ -2,7 +2,7 @@
 layout: post
 title: "Nestacms with passenger, rvm, apache"
 description: "The steps that I took for setting up the Nestacms with passenger, RVM, and Apache on a hosting server."
-tags: [bash, sysadmin]
+tags: [sysadmin]
 image:
   feature: 11788942253_6c55c0f770_o.jpg
   credit: Aaron Addleman

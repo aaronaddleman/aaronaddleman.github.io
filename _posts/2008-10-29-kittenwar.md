@@ -2,7 +2,7 @@
 layout: post
 title: "kittenwar"
 description: ""
-tags: [funny]
+tags: [fun]
 image:
   feature: DSC03138_s.jpeg
   credit: Aaron Addleman

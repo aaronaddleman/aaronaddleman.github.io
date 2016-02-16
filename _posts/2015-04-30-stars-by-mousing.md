@@ -55,8 +55,6 @@ processing: |
 
 ---
 
-## Stars by mousing
-
 While having some fun with Processing, I started to experiment with pushMatrix(),  popMatrix(), and translate(). This was a fun experiment to play with as I found the interesting benefits you get when passing mouseX and mouseY to isolated functions. I hope to try and slow down the rendering of the shapes some day.
 
 <script type="application/processing" data-processing-target="pjs">

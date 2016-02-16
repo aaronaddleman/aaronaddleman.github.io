@@ -2,7 +2,7 @@
 layout: post
 title: "My favorite crackers"
 description: ""
-tags: [food, photos]
+tags: [photos]
 image:
   feature: 9617788379_75ab730213_o.jpg
   credit: Aaron Addleman

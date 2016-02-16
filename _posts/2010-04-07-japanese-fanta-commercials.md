@@ -2,7 +2,7 @@
 layout: post
 title: "Japanese Fanta Commercials"
 description: ""
-tags: [videos, funny]
+tags: [videos, fun]
 image:
   feature: IMG_0566.JPG
   credit: Aaron Addleman

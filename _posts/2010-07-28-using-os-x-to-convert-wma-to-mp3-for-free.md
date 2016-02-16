@@ -2,7 +2,7 @@
 layout: post
 title: "Using VLC to Convert WMA to MP3 for free"
 description: "How to convert WMA files into MP3 for free using the open source program called VLC."
-tags: [os-x]
+tags: [osx]
 image:
   feature: 11788942253_6c55c0f770_o.jpg
   credit: Aaron Addleman

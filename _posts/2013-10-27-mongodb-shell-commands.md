@@ -2,7 +2,7 @@
 layout: post
 title: "MongoDB shell commands"
 description: "When using MongoDB sometimes it's nice to drop into the shell interface and practice some of your data before commiting to the logic. When using the shell, here are some examples of how to issue commands. I will warn you this is pretty basic stuff and is ment as a cheat sheet for reference."
-tags: [database]
+tags: [databases]
 image:
   feature: 8160155219_edf33c3485_o.jpg
   credit: Aaron Addleman

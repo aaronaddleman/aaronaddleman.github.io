@@ -2,7 +2,7 @@
 layout: post
 title: "Open files from the terminal into an external editor"
 description: "If you are a mac user and like macvim, opening up files from the terminal into macvim is what this article is about"
-tags: [os-x, bash]
+tags: [osx]
 image:
   feature: 8160263904_6dd8c8e420_o.jpg
   credit: Aaron Addleman

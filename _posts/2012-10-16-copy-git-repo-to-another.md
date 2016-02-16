@@ -2,7 +2,7 @@
 layout: post
 title: "Cloning your git repository from one server to another"
 description: "How to move/clone your repository from one server to another and some small background information of why to use the --bare option (really its here for my note taking)."
-tags: [bash, git, sysadmin]
+tags: [git, sysadmin]
 image:
   feature: 8160262794_3ba58b187f_o.jpg
   credit: Aaron Addleman

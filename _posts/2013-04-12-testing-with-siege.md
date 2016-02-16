@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Testing with Siege"
-description: ""
-tags: [siege]
+description: "When trying to stress test your website, using a tool like siege helps simulate the traffic load."
+tags: [programming]
 image:
-  feature: 11788942253_6c55c0f770_o.jpg
+  feature: 8272584751_feb76bdf1e_o.jpg
   credit: Aaron Addleman
 comments: true
 share: true

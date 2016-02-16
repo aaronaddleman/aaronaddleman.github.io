@@ -2,7 +2,7 @@
 layout: post
 title: "automatically archiving Lotus Notes email with windows vbs script"
 description: ""
-tags: [windows, mail]
+tags: [sysadmin]
 image:
   feature: IMG_0613.JPG
   credit: Aaron Addleman

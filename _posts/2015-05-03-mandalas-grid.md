@@ -82,8 +82,6 @@ processing: |
   } // end star
 ---
 
-## Mandalas grid
-
 This was in my book of learning processing and made for a great exercise in experimenting with permutations of generating variations of geometry.
 
 <script type="application/processing" data-processing-target="pjs">

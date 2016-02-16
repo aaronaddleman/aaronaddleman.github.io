@@ -51,6 +51,6 @@ Sometimes making changes to the VCL configuration can results in error. Find out
 
 ### Example of adding a ban using `telnet localhost 6082`
 
-{% highlight apache %}
+{% highlight text %}
 ban.url req.http.host ~ "www.website.com" && req.url ~ "/directory/of/path/"
 {% endhighlight %}

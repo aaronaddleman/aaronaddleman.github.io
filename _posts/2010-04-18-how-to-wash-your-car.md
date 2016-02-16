@@ -2,7 +2,7 @@
 layout: post
 title: "How to wash your car"
 description: ""
-tags: [howto, cleaning]
+tags: [howto]
 image:
   feature: 8160206665_e2eb9a1382_o.jpg
   credit: Aaron Addleman
