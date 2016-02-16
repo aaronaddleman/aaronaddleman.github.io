@@ -97,7 +97,12 @@ pre {
   visibility: hidden;
 }
 
-.parallax-container {
+.parallax-container-top {
   height: 250px;
+  width: 100%
+}
+
+.parallax-container-bottom {
+  height: 650px;
   width: 100%
 }
