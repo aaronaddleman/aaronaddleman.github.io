@@ -13,7 +13,7 @@ share: true
 
 Small example of how to enable compression in Apache while excluding the IE browser for those times when Microsoft decides to do things differently.
 
-{% highlight apache %}
+{% highlight plain %}
 <LocationMatch "^/.*">
   <IfModule mod_deflate.c>
     # place filter 'DEFLATE' on all outgoing content
