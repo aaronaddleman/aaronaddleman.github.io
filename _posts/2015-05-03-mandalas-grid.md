@@ -10,7 +10,7 @@ comments: true
 share: true
 processing: |
   void setup() {
-    size(600,600);
+    size(350,350);
     background(255);
     
     //presets for grid

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Apache compression"
-description: "Howto enable compression in Apache with an exeception for the IE browser."
+description: "Howto enable compression with mod_deflate in Apache with an exception for the IE browser."
 tags: [sysadmin]
+categories: 
+  - abc
 image:
   feature: IMG_5081.jpg
   credit: Aaron Addleman
