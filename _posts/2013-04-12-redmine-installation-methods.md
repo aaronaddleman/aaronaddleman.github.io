@@ -44,7 +44,7 @@ ln -s /apps/redmine/public /var/www/redmine
 
 1. Create a virtual host with the following basic config:
 
-{% highlight apache %}
+{% highlight plain %}
 <VirtualHost *:80>
   ServerName red.example.com
   DocumentRoot /var/www/
@@ -80,7 +80,7 @@ When you want to have your Redmine application be hosted under a custom director
 
 ### Steps to the sub-directory
 
-{% highlight apache %}
+{% highlight plain %}
 <VirtualHost *:80>
   ServerName red.example.com
   DocumentRoot /var/www/
