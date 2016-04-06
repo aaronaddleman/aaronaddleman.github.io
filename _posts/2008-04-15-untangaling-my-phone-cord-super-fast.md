@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Untangaling my phone cord super fast"
-description: ""
-tags: [howtos]
+description: "Removing those pesky twists from a phone cord"
+tags: [howto]
 image:
   feature: IMG_0613.JPG
   credit: Aaron Addleman
