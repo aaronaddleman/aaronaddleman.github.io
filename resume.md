@@ -56,6 +56,9 @@ Collaborating across multiple projects to assist importing of automation into Ch
 
 * Analysed existing software applications and provided updates or created replacements due to lack of support
 
+* Lead efforts for projects providing solutions to fit within the infrastructure constraints and business expectations
+
+
 ### UNIX/NETWORK ENGINEER, FEDERAL RESERVE BANK OF SAN FRANCISCO, SF, CA 
 
 `2003 - 2014`
