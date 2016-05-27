@@ -20,13 +20,15 @@ To obtain a position where I can exercise my creativity and strengths in providi
 
 ## Technical
 
-__Languages:__ Ruby, Python, Bash, PHP, Perl, Java
+__Languages:__ Ruby, Bash, PHP, Python, Perl, JavaScript
 
-__Operating Systems:__ RedHat EL, FreeBSD, Ubuntu, VMware vSphere
+__Operating Systems:__ RedHat EL, FreeBSD, Ubuntu, VMware vSphere, VirtualBox
 
 __Automation:__ Puppet, Chef, NightwatchJS
 
-__Applications:__ GIT, Varnish, Apache, Splunk, Nagios, OpenLDAP, QMail, RedMine, Nessus, Passenger, NetBackup, WireShark, TCPDump, Munin, RRD, Tomcat, RPMBuild
+__Appliances:__ F5 LoadBalancer
+
+__Applications:__ Varnish, Apache, Splunk, Nagios, OpenLDAP, QMail, RedMine, Nessus, Passenger, NetBackup, WireShark, TCPDump, Munin, RRD, Tomcat, RPMBuild, Electric Commander, Vagrant, OpenStack
 
 __Databases:__ MongoDB, MySQL, SQLite
 
@@ -42,13 +44,17 @@ Collaborating across multiple projects to assist importing of automation into Ch
 
 * Contributed code changes to existing tools to expedite importing automation into Chef
 
-* Coordinated and implemented application deployments into production environment
+* Coordinated and implemented application upgrades, deployments, and patches into production environment
 
 * Created safe area for testing new cookbooks without disturbing exiting development environments
 
 * Diagnosed issues with Tomcat applications to assist developers in resolving startup issues
 
 * Captured and created documentation for multiple software processes and workflows
+
+* Designed chef cookbooks to match business needs
+
+* Analysed existing software applications and provided updates or created replacements due to lack of support
 
 ### UNIX/NETWORK ENGINEER, FEDERAL RESERVE BANK OF SAN FRANCISCO, SF, CA 
 
