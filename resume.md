@@ -20,13 +20,13 @@ To obtain a position where I can exercise my creativity and strengths in providi
 
 ## Technical
 
-__Languages:__ Ruby, Bash, PHP, Python, Perl, JavaScript
+__Languages:__ Ruby, Bash, PHP, Python, Perl, JavaScript, HTML design
 
 __Operating Systems:__ RedHat EL, FreeBSD, Ubuntu, VMware vSphere, VirtualBox
 
 __Automation:__ Puppet, Chef, NightwatchJS
 
-__Appliances:__ F5 LoadBalancer
+__Appliances:__ F5 LoadBalancer, Cisco 3500s router
 
 __Applications:__ Varnish, Apache, Splunk, Nagios, OpenLDAP, QMail, RedMine, Nessus, Passenger, NetBackup, WireShark, TCPDump, Munin, RRD, Tomcat, RPMBuild, Electric Commander, Vagrant, OpenStack
 
