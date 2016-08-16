@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Docker cheatsheet"
+description: "Things that make working with docker easier"
+tags: [sysadmin]
+image:
+  feature: IMG_0601.JPG
+  credit: Aaron Addleman
+comments: true
+share: true
+---
+
+## What
+
+Notes about docker commands and options
+
+## Why
+
+When using docker, somethings are helpful when trying to either use or get up and running.
+
+## How
+
+### To get the ip address of a container
+
+  docker inspect --format '{{ .NetworkSettings.IPAddress }}' NAME_OF_CONTAINER
+  
