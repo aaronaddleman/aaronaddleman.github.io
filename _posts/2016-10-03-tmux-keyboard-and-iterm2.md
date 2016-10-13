@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: post2
 title: "Iterm2 and Tmux"
 description: "How to use Tmux and iTerm2 with navigation"
 tags: [iterm, tmux]
 image:
-  feature: 8160206665_e2eb9a1382_o.jpg
+  feature: https://c7.staticflickr.com/1/492/18690330934_a3e31467b7_o.jpg
   credit: Aaron Addleman
 comments: true
 share: true
