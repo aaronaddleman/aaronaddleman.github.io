@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include ga.html %}  
+    <head>
+      {% if page.url != "/" %}
+      {% include nav.html %}
+      {% endif %}
+    </head>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <div class="divider"></div>
+
+    <footer>
+      {% include footer2.html %}
+    </footer>
+    {% include scripts.html %}
+  </body>
+</html>
