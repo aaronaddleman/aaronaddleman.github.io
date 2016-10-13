@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: post2
 date: 2016-04-22
 title: "Capturing with Wireshark"
 description: "How to capture traffic with Wireshark remote or local and some other notes"
 tags: [networking]
 image:
-  feature: IMG_5130.jpg
+  feature: https://c5.staticflickr.com/4/3786/19125175828_ac31b727cd_o.jpg
   credit: Aaron Addleman
 comments: true
 share: true
