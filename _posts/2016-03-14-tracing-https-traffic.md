@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: post2
 title: "Tracing HTTPS traffic from Ruby program"
 description: "When making HTTP(S) calls from a Ruby program, it helps to trace down what is happening behind the curtain. This article shows how to setup the program Charles Proxy for inspection of the traffic."
 tags: [ruby]
 image:
-  feature: IMG_0141.jpg
+  feature: https://c4.staticflickr.com/1/386/19312750435_91580882aa_z.jpg
   credit: Aaron Addleman
 comments: true
 share: true

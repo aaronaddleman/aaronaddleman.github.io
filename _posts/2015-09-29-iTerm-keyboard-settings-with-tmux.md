@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: post2
 title: "iTerm keyboard shortcuts with tmux"
 description: "My settings for using iTerm with shortcuts and sending hexcodes to make movements faster"
 tags: [tmux, iterm]
 image:
-  feature: 8160206665_e2eb9a1382_o.jpg
+  feature: https://c2.staticflickr.com/9/8725/17063064865_9798110d82_z.jpg
   credit: Aaron Addleman
 comments: true
 share: true

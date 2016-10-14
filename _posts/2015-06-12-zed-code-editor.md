@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: post2
 date: 2015-06-12
 title: "Zed Code Editor"
 image:
-  feature: IMG_0613.jpg
+  feature: https://c2.staticflickr.com/8/7253/8160142329_09164c08ba_z.jpg
   credit: Aaron Addleman
 description: "Using the Zed Code Editor with Google Chrome is just like having your mobile Sublime Text or Atom.io editors (but with less features I'm sure) and being able to browse or edit your remote Git repos with ease."
 ---

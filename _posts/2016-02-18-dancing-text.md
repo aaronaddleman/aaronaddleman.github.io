@@ -1,10 +1,10 @@
 ---
-layout: processing
+layout: processing2
 title: "Dancing Text"
 description: "Dancing text while messing around with Processing"
 tags: [processing]
 image:
-  feature: DSC03138_s.jpeg
+  feature: https://c3.staticflickr.com/8/7706/16440623354_d46251d831_z.jpg
   credit: Aaron Addleman
 comments: true
 share: true

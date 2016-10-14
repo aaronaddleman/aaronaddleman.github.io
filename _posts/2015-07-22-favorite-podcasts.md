@@ -1,13 +1,12 @@
 ---
-layout: post
+layout: post2
 date: 2015-07-22
 title: "Favorite podcasts"
 description: "What I listen to on a semi-daily basis when my ears and brain need stimulation of creative wonder and wander."
 tags: [personal]
 image:
-  feature: abstract-6.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: https://c8.staticflickr.com/9/8606/16460897567_24b689e5f0_z.jpg
+  credit: Aaron Addleman
 comments: true
 share: true
 ---

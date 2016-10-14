@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: post2
 title: "Linux Cheat Sheets"
 description: "Linux commands mapped to the stack of the OS"
 tags: [linux]
 image:
-  feature: 8160206665_e2eb9a1382_o.jpg
+  feature: https://c7.staticflickr.com/9/8775/16875268078_e5dac49265_z.jpg
   credit: Aaron Addleman
 comments: true
 share: true

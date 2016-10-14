@@ -1,12 +1,11 @@
 ---
-layout: post
+layout: post2
 title: "Error with berks encode error \xE2"
 description: "fixing error with berks in OS X"
 tags: [chef]
 image:
-  feature: abstract-6.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: https://c7.staticflickr.com/6/5500/10554701814_b9be035076_z.jpg
+  credit: Aaron Addleman
 comments: true
 share: true
 ---
