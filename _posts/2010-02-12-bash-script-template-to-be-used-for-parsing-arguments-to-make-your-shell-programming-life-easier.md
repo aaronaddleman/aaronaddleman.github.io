@@ -44,7 +44,7 @@ This template keeps proving to be enough to start my script building. There is r
     (when this option is used, all others are ignored)
     -v      Verbose (boolean)
     -t      Test (dont run any commands, but print them to the command line)
-    EOF
+EOF
     }
 
     ACTION=
