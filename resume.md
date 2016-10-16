@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: resume
 permalink: /resume/
 title: "Résumé"
 modified: 2014-08-30 20:28
@@ -8,8 +8,8 @@ icon: perm_identity
 description: >
   Experiences, history of employment, and accomplishments. <a href="/assets/Aaron_Addleman_Resume.pdf">Download in PDF</a>
 image:
-  feature:
-  credit:
+  feature: https://c1.staticflickr.com/1/138/345857784_8c191c7efc_o.jpg
+  credit: Aaron Addleman
   creditlink:
 share: true
 ---
@@ -34,9 +34,17 @@ __Databases:__ MongoDB, MySQL, SQLite
 
 ## Experience
 
+### PERFORMANCE & CAPACITY ENGINEER, AUTODESK INC, SF, CA
+
+`2016 - Present`
+
+* Designed, implemented, and documented Jenkins system for Continuous Deployment with Chef in AWS
+
+* Contributed to documentation and training with team members
+
 ### AUTOMATION ENGINEER, GAP INC, SF, CA 
 
-`2014 - present`
+`2014 - 2016`
 
 Collaborating across multiple projects to assist importing of automation into Chef environment while keeping to preferred procedures.
 

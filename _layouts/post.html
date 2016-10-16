@@ -34,4 +34,15 @@ layout: default
   </div>
 
   {% if site.disqus_shortname and page.comments %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+
+  {% if page.url != "/" or page.url != "/resume" %}
+  {% if page.image.feature %}
+  <div class="page-feature parallax-container parallax-container-bottom">
+    <div class="parallax">
+      <img src="/images/{{page.image.feature}}">
+    </div>
+  </div>
+  {% endif %}
+  {% endif %}
+
 </article>
