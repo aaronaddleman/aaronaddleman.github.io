@@ -46,3 +46,6 @@ redcarpet:
 
 # syntax coloring
 highlighter: rouge
+
+gems:
+  - jekyll-sitemap
