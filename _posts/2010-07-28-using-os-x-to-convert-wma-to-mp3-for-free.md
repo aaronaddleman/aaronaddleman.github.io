@@ -30,31 +30,31 @@ I rarely need to convert files on my Mac, but when I do, I seem to think I have 
 Here are some screen shots of the steps I took and I also noticed that the converted file did not appear until I played the song. Good Luck !!
 
 ### Step 1
-![vlc os x convert wma to mp3 step 1](/images/vlc_step1.png "vlc os x convert wma to mp3 step 1")
+![vlc os x convert wma to mp3 step 1](/images/vlc_step1.png "vlc os x convert wma to mp3 step 1"){: .responsive-img }
 
 ### Step 2
-![vlc os x convert wma to mp3 step 2](/images/vlc_step2.png "vlc os x convert wma to mp3 step 2")
+![vlc os x convert wma to mp3 step 2](/images/vlc_step2.png "vlc os x convert wma to mp3 step 2"){: .responsive-img }
 
 ### Step 3
-![vlc os x convert wma to mp3 step 3](/images/vlc_step3.png "vlc os x convert wma to mp3 step 3")
+![vlc os x convert wma to mp3 step 3](/images/vlc_step3.png "vlc os x convert wma to mp3 step 3"){: .responsive-img }
 
 ### Step 4
-![vlc os x convert wma to mp3 step 4](/images/vlc_step4.png "vlc os x convert wma to mp3 step 4")
+![vlc os x convert wma to mp3 step 4](/images/vlc_step4.png "vlc os x convert wma to mp3 step 4"){: .responsive-img }
 
 ### Step 5
-![vlc os x convert wma to mp3 step 5](/images/vlc_step5.png "vlc os x convert wma to mp3 step 5")
+![vlc os x convert wma to mp3 step 5](/images/vlc_step5.png "vlc os x convert wma to mp3 step 5"){: .responsive-img }
 
 ### Step 6
-![vlc os x convert wma to mp3 step 6](/images/vlc_step6.png "vlc os x convert wma to mp3 step 6")
+![vlc os x convert wma to mp3 step 6](/images/vlc_step6.png "vlc os x convert wma to mp3 step 6"){: .responsive-img }
 
 ### Step 7
-![vlc os x convert wma to mp3 step 7](/images/vlc_step7.png "vlc os x convert wma to mp3 step 7")
+![vlc os x convert wma to mp3 step 7](/images/vlc_step7.png "vlc os x convert wma to mp3 step 7"){: .responsive-img }
 
 ### Step 8
-![vlc os x convert wma to mp3 step 8](/images/vlc_step8.png "vlc os x convert wma to mp3 step 8")
+![vlc os x convert wma to mp3 step 8](/images/vlc_step8.png "vlc os x convert wma to mp3 step 8"){: .responsive-img }
 
 ### Step 9
-![vlc os x convert wma to mp3 step 9](/images/vlc_step9.png "vlc os x convert wma to mp3 step 9")
+![vlc os x convert wma to mp3 step 9](/images/vlc_step9.png "vlc os x convert wma to mp3 step 9"){: .responsive-img }
 
 
 ## Using Automator to rename
