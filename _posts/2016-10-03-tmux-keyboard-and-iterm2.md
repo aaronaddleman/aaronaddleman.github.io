@@ -63,13 +63,13 @@ opt + shift Right Arrow
 
 Below is the configuration you need for making the iterm profiles. This will replace your default profile as well. Perhaps you can figure out how to separate them from the file below. Anyways place this file at the following location
 
-```
+{% highlight bash %}
 ~/Library/Application Support/iTerm2/DynamicProfiles/profile.json
-```
+{% endhighlight %}
 
 Here is the contents of the file:
 
-```
+{% highlight json %}
 {
 "Profiles": [
 {
@@ -804,4 +804,4 @@ Here is the contents of the file:
 }
 ]
 }
-```
+{% endhighlight %}
