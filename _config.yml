@@ -29,7 +29,7 @@ google_analytics: UA-31631239-1
 
 # Webmaster Tools
 google_verify:
-bing_verify:
+bing_verify: 7E00313F75F2D1D2CE8509127BC007DD
 
 # Style
 sass:
