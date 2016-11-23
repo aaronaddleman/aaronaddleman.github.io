@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to setup central logging with rsyslog"
-description: ""
+description: "Use MySQL for logging with rsyslog"
 tags: [system]
 image:
   feature: DSC03476.JPG
