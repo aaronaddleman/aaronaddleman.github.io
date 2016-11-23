@@ -4,7 +4,7 @@ title: "Running an emacs server on OS X"
 description: ""
 tags: [emacs]
 image:
-  feature: https://c4.staticflickr.com/1/386/19312750435_91580882aa_z.jpg
+  feature: https://c8.staticflickr.com/6/5717/30441913711_e73cdb6400_o.jpg
   credit: Aaron Addleman
 comments: true
 share: true
