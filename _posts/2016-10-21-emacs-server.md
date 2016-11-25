@@ -20,6 +20,8 @@ To make the startup time for Emacs shorter.
 
 ## How
 
+### To start emacs daemon
+
 ```
 brew install emacs --with-cocoa --with-gnutls --with-imagemagick --with-dbus --with-librsvg --with-mailutils
 ```
@@ -37,3 +39,11 @@ emacsclient -c
 ```
 
 This should connect to the Emacs server running in the background and take less time to launch.
+
+### To stop emacs daemon
+
+```
+emacsclient -e "(kill-emacs)"
+```
+
+Should end the process in a graceful mannor.
