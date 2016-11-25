@@ -9,30 +9,32 @@ image:
 comments: true
 share: true
 ---
-make a file at /Library/LaunchAgents/gnu.emacs.daemon.plist with the following:
 
-{% highlight xml %}
- <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
-        "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
-     <plist version="1.0">
-      <dict> 
-        <key>Label</key>
-        <string>gnu.emacs.daemon</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>/Applications/Emacs.app/Contents/MacOS/Emacs</string>
-          <string>--daemon</string>
-        </array>
-       <key>RunAtLoad</key>
-       <true/>
-       <key>ServiceDescription</key>
-       <string>Gnu Emacs Daemon</string>
-       <key>UserName</key>
-       <string>[YOUR USERNAME HERE]</string>
-      </dict>
-    </plist>
-{% endhighlight %}
+## What
+
+How to run a Emacs server on the Mac OS.
+
+## Why
+
+To make the startup time for Emacs shorter.
+
+## How
+
+```
+brew install emacs --with-cocoa --with-gnutls --with-imagemagick --with-dbus --with-librsvg --with-mailutils
+```
+
+After installation, start the process in the backgroun with the following:
+
+```
+/usr/local/bin/emacs --daemon
+```
+
+This will load any Lisp code and have it ready for use when the client connects. To connect a client, run the following:
+
+```
+emacsclient -c
+```
 
 then run
 

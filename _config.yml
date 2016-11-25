@@ -15,7 +15,7 @@ description: >
   Take a look around and I welcome your comments on anything you see. Thanks for
   visiting.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://aaronaddleman.com" # the base hostname & protocol for your site
+url: "https://aaronaddleman.com" # the base hostname & protocol for your site
 permalink: /articles/:title/
 twitter_username: aaronaddleman
 github_username: aaronaddleman
