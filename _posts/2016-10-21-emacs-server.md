@@ -24,7 +24,7 @@ To make the startup time for Emacs shorter.
 brew install emacs --with-cocoa --with-gnutls --with-imagemagick --with-dbus --with-librsvg --with-mailutils
 ```
 
-After installation, start the process in the backgroun with the following:
+After installation, start the process in the background with the following:
 
 ```
 /usr/local/bin/emacs --daemon
@@ -36,8 +36,4 @@ This will load any Lisp code and have it ready for use when the client connects.
 emacsclient -c
 ```
 
-then run
-
-{% highlight bash %}
-    sudo launchctl load -w /Library/LaunchAgents/gnu.emacs.daemon.plist
-{% endhighlight %}
+This should connect to the Emacs server running in the background and take less time to launch.
