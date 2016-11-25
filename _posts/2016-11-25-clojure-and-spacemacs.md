@@ -66,7 +66,7 @@ Subprocess failed
 
 Upon searching the interwebs, I found a [github issue](https://github.com/clojure-emacs/refactor-nrepl/issues/110) which suggested putting the following in the `project.clj` file:
 
-```clojure
+```
   :plugins [[refactor-nrepl "1.1.0"]
             [cider/cider-nrepl "0.9.1"]]
 ```
