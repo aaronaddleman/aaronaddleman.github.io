@@ -1,0 +1,10 @@
+- name: "refactor-nrepl.middleware/warp-refactor"
+  problem: "Caused by: java.lang.RuntimeException: Unable to resolve var: refactor-nrepl.middleware/wrap-refactor in this context"
+  solution: "Add the following to your project.clj fileUpon searching the interwebs, I found a [github issue](https://github.com/clojure-emacs/refactor-nrepl/issues/110) which suggested putting the following in the `project.clj` file:
+"
+  solution-code: |
+    :plugins [[refactor-nrepl "1.1.0"]
+             [cider/cider-nrepl "0.9.1"]]
+  references:
+    - name: "Github Issue"
+      url: "https://github.com/clojure-emacs/refactor-nrepl/issues/110"
