@@ -42,8 +42,16 @@ This should connect to the Emacs server running in the background and take less 
 
 ### To stop emacs daemon
 
+Below are two ways to kill the Emacs daemon which should end the process in a graceful mannor.
+
+#### Kill without saving
+
 ```
 emacsclient -e "(kill-emacs)"
 ```
 
-Should end the process in a graceful mannor.
+#### Kill with saving buffers
+
+```
+emacsclient -e '(client-save-kill-emacs)'
+```
