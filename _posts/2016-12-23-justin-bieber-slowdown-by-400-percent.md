@@ -4,7 +4,7 @@ title: "Justin Bieber track slowed down by 800%"
 description: "Found this post a while back of a track by Justin Bieber modified by software to slowdown the music by 800% without changing the pitch."
 tags: [music]
 image:
-  feature: https://c6.staticflickr.com/6/5779/30529131845_15260e3257_o.jpg
+  feature: https://c1.staticflickr.com/4/3944/33208697786_4128da3b8e_z.jpg
   credit: Aaron Addleman
 comments: true
 share: true
