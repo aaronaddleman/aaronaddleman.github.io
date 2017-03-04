@@ -65,7 +65,7 @@ set -x
 <div class="row">
 <div class="col s12">
 <span>
-  {% include_relative 2017-03-04-image_archiver.svg %}
+  {% include_relative _assets/2017-03-04-image_archiver.svg %}
 </span>
 </div>
 </div>
