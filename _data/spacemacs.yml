@@ -1,0 +1,6 @@
+- description: "Creating a buffer"
+  commands: ["Spc", "b", "b", "[type in buffer or new buffer]"]
+- description: "commit change to file"
+  commands: ["Spc", "g", "s", "S"]
+- description: "split frame above and below"
+  commands: ["Spc", "w", "-"]
