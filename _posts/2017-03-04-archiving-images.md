@@ -42,11 +42,11 @@ done
 
 The above script says the following:
 
-> Go through all the files in $@
-> Every time I see an image, assign to the variable f
-> If the directory /Volumes/drobo1 exist
-> echo the string "processing $f" and append to /tmp/p1.txt
-> execute the script /Users/aaddleman/processImage.sh and pass in the $f file
+1. Go through all the files in $@
+1. Every time I see an image, assign to the variable f
+1. If the directory /Volumes/drobo1 exist
+1. echo the string "processing $f" and append to /tmp/p1.txt
+1. execute the script /Users/aaddleman/processImage.sh and pass in the $f file
 
 Here is the processImage.sh script:
 
