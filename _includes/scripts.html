@@ -11,3 +11,14 @@
   (document,"script","https://cdn.quicksprout.com/qs.js");
 </script>
 <!-- End Quick Sprout -->
+<script>
+(function() {
+  function strikethrough(){
+    document.body.innerHTML = document.body.innerHTML.replace(
+      /\~\~(.+?)\~\~/gim,
+      '<del>$1</del>'
+    );
+  }
+  strikethrough();
+})();
+</script>
