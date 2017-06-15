@@ -8,7 +8,7 @@ icon: perm_identity
 description: >
   Experiences, history of employment, and accomplishments. <a href="/assets/Aaron_Addleman_Resume.pdf">Download in PDF</a>
 image:
-  feature: https://c1.staticflickr.com/1/138/345857784_8c191c7efc_o.jpg
+  feature: https://c1.staticflickr.com/6/5623/30441917841_d2e3aae4c2_b.jpg
   credit: Aaron Addleman
   creditlink:
 share: true
