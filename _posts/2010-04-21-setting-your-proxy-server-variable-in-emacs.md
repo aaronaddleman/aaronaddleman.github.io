@@ -10,8 +10,18 @@ comments: true
 share: true
 ---
 
+## Running your Emacs behind a proxy server
 
-<p>To set your proxy server in Emacs, type the following in a empty buffer:
-<code>(setenv "http_proxy" "http://your.proxy.server.com:8080")</code>
-Then execute the lisp code in the current buffer with:
-<code>M-x eval-current-buffer</code></p>
+```
+(setq url-proxy-services
+   '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+     ("http" . "proxy.com:8080")
+     ("https" . "proxy.com:8080")))
+
+(setq url-http-proxy-basic-auth-storage
+    (list (list "proxy.com:8080"
+                (cons "Input your LDAP UID !"
+                      (base64-encode-string "LOGIN:PASSWORD")))))
+```
+
+Source: https://stackoverflow.com/questions/10787087/use-elpa-emacs-behind-a-proxy-requiring-authentication/18697223#18697223
