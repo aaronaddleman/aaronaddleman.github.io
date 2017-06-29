@@ -69,3 +69,7 @@ SPC m t s
 ## TDD
 
 https://golang.org/pkg/testing/
+
+## Books
+
+I [a nice github repo](https://github.com/dariubs/GoBooks) which list many free books and paid books of the Go language.
