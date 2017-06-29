@@ -59,6 +59,13 @@ Add stuff to your .spacemacs file for customization in your layers
    )
 ```
 
+and here are some helpful commands that I found useful:
+
+```
+# run your tests
+SPC m t s 
+```
+
 ## TDD
 
 https://golang.org/pkg/testing/
