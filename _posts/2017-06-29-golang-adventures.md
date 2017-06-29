@@ -22,7 +22,7 @@ There are a couple of things you want to setup:
 1. your PATH that points to `$(go env GOPATH)/bin` which will allow you to use binaries that have been installed by `go get ...`
 1. (optionally) `GOROOT` which is where your go world lives
 
-Still using my latest choice of editors `Spacemacs` I have found, I wanted to see what layers are available. The (https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/go)[Go Layer] has a nice list of things to do:
+Still using my latest choice of editors `Spacemacs` I have found, I wanted to see what layers are available. The [Go Layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/go) has a nice list of things to do:
 
 ```
 # run this after installing go, and setting your paths
