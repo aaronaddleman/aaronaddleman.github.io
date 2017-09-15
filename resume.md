@@ -1,17 +1,19 @@
 ---
 layout: resume
 permalink: /resume/
-title: "Résumé"
-modified: 2014-08-30 20:28
+title: Résumé
+modified: '2014-08-30 20:28'
 tags: []
 icon: perm_identity
 description: >
-  Experiences, history of employment, and accomplishments. <a href="/assets/Aaron_Addleman_Resume.pdf">Download in PDF</a>
+  Experiences, history of employment, and accomplishments. <a
+  href="/assets/Aaron_Addleman_Resume.pdf">Download in PDF</a>
 image:
-  feature: https://c1.staticflickr.com/6/5623/30441917841_d2e3aae4c2_b.jpg
+  feature: 'https://c1.staticflickr.com/6/5623/30441917841_d2e3aae4c2_b.jpg'
   credit: Aaron Addleman
-  creditlink:
+  creditlink: null
 share: true
+published: true
 ---
 
 ## Profile
@@ -20,15 +22,15 @@ To obtain a position where I can exercise my creativity and strengths in providi
 
 ## Technical
 
-__Languages:__ Ruby, Bash, PHP, Python, Perl, JavaScript, HTML design
+__Languages:__ Clojure/ClojureScript, Ruby, Bash, PHP, Python, Perl, JavaScript, HTML design
 
 __Operating Systems:__ RedHat EL, FreeBSD, Ubuntu, VMware vSphere, VirtualBox
 
-__Automation:__ Puppet, Chef, NightwatchJS
+__Automation:__ Terraform, Puppet, Chef, NightwatchJS
 
 __Appliances:__ F5 LoadBalancer, Cisco 3500s router
 
-__Applications:__ Varnish, Apache, Splunk, Nagios, OpenLDAP, QMail, RedMine, Nessus, Passenger, NetBackup, WireShark, TCPDump, Munin, RRD, Tomcat, RPMBuild, Electric Commander, Vagrant, OpenStack
+__Applications:__ Jenkins, Varnish, Apache, Splunk, Nagios, OpenLDAP, QMail, RedMine, Nessus, Passenger, NetBackup, WireShark, TCPDump, Munin, RRD, Tomcat, RPMBuild, Electric Commander, Vagrant, OpenStack
 
 __Databases:__ MongoDB, MySQL, SQLite
 
