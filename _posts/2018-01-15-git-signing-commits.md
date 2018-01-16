@@ -4,11 +4,13 @@ title: "Signing Git commits with GPG"
 description: "Make your git commits with a gpg signature"
 tags: [git gpg]
 image:
-  feature: 24850125997_483c612e3c_k.jpg
+  feature: https://farm5.staticflickr.com/4711/24850125997_483c612e3c_k.jpg
   credit: Aaron Addleman
 comments: false
 share: true
 ---
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/ocyrus/24850125997/in/dateposted/" title="IMG_20171227_151258_637"><img src="https://farm5.staticflickr.com/4711/24850125997_483c612e3c_k.jpg" width="2048" height="2048" alt="IMG_20171227_151258_637"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 ## why
 
