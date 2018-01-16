@@ -10,8 +10,6 @@ comments: false
 share: true
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/ocyrus/24850125997/in/dateposted/" title="IMG_20171227_151258_637"><img src="https://farm5.staticflickr.com/4711/24850125997_483c612e3c_k.jpg" width="2048" height="2048" alt="IMG_20171227_151258_637"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
 ## why
 
 Make your code changes with a gpg signature to let everyone know the change is from a digital key of your generating. This gets us all closer to the verified change of code by individuals and helps build confidence in submitting data.
