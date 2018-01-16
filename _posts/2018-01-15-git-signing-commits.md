@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post2
 title: "Signing Git commits with GPG"
 description: "Make your git commits with a gpg signature"
 tags: [git gpg]
