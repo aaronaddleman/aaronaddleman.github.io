@@ -3,28 +3,40 @@ layout: page
 title: Articles
 permalink: /articles/
 icon: folder
-description: >
-  Items of information from the archives of my mind.
 image:
   feature: IMG_0788.jpg
   credit: Aaron Addleman
-  creditlink: 
+creditlink:
 share: false
 ---
 
 <div class="home">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+<div class="row">
+    {% for post in site.posts %}
+    <div class="col s12 m6 l4">
+    <div class="card small">
+        <a href="{{ post.url | preprend: site.baseurl }}">
+            <div class="card-image">
+                {% if post.image.feature contains "http" %}
+                <img src="{{ post.image.feature }}">
+                {% else %}
+                <img src="/images/{{ post.image.feature }}">
+                {% endif %}
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p>{{ post.title }}</p>
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    </div>
+
     {% endfor %}
-  </ul>
+</div>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
