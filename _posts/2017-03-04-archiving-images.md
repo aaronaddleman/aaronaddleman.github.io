@@ -4,7 +4,7 @@ title: "Archiving images"
 description: "How I backup my images to my mass storage with a workflow and exiftool."
 tags: [sysadmin]
 image:
-  feature: https://c1.staticflickr.com/3/2829/33121491481_e6e0fe32ca_k.jpg
+  feature: https://farm5.staticflickr.com/4750/24850129597_5d1e67e1ef_c.jpg
   credit: Aaron Addleman
 comments: true
 share: true
