@@ -4,7 +4,7 @@ title: "Fixing Spacemacs delete function"
 description: "While in Evil mode, sometimes Spacemacs does not allow for delete. Here is the fix."
 tags: [spacemacs]
 image:
-  feature: https://farm5.staticflickr.com/4711/24850125997_483c612e3c_k.jpg
+  feature: https://farm5.staticflickr.com/4717/39010345474_4e597aac92_k.jpg
   credit: Aaron Addleman
 comments: false
 share: true
