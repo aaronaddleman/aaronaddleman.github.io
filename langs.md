@@ -1,7 +1,7 @@
 ---
 layout: lang
 permalink: /lang/
-title: Résumé
+title: Languages
 modified: '2019-03-17'
 tags: []
 icon: code
