@@ -6,6 +6,25 @@ title: Spacemacs
 (put collection of spacemacs here)
 
 WARNING: This document is only for EVIL based users. Not control tower.
+
+## Navigation of files
+
+### Using neotree
+
+This is awesome way to have a visual tree of your directory structure.
+
+To open neotree:
+
+```
+SPC f t
+```
+
+To move back to neotree:
+
+```
+SPC 0
+```
+
 ## Text selection
 
 ### Highlight to a specific character
