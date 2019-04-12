@@ -3,6 +3,12 @@ title: clojure
 layout: learning
 ---
 
+## Leinigen
+
+All of the templates:
+
+https://gist.github.com/anonymous/c796cc57f4d078ca7176
+
 ## Data types
 
 Data types in clojure
