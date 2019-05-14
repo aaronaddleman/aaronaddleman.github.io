@@ -1,0 +1,6 @@
+- description: "Create new subject"
+  command: ["CTRL + Enter"]
+- description: "Change indent level"
+  command: ["ALT + <left arrow, right arrow>"]
+- description: "Shift order of heading up or down"
+  command: ["ALT + <up arrow, down arrow>"]

@@ -21,7 +21,26 @@ pyenv install -v 3.6.0
 
 Missing the OpenSSL lib?
 
+mac:
+
 ```
 brew install openssl
 ```
 
+### pipenv
+
+```
+pip install --user pipenv
+```
+
+cd to your project
+
+```
+pipenv install -r requirements.txt
+```
+
+start a virtualenv shell
+
+```
+pipenv shell
+```
