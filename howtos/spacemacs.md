@@ -3,8 +3,6 @@ layout: howtos
 title: Spacemacs
 ---
 
-(put collection of spacemacs here)
-
 WARNING: This document is only for EVIL based users. Not control tower.
 
 ## Navigation of files
@@ -24,6 +22,19 @@ To move back to neotree:
 ```
 SPC 0
 ```
+## Text manipulation
+
+### iedit (multi cursor editing)
+
+1. Select a pattern of text `v` or `SHIFT v`
+1. Enable iEdit `SPC s e`
+1. The following shortcuts are now available:
+   - press F to limit the scope to the current function
+   - press L to limit the scope to the current line
+   - press J to increase the scope (starting from the current line) one line below
+   - press K to increase the scope one line above
+   - navigate between the occurrences with n and N and press TAB to remove an occurrence.
+1. Where ever you are, just start editing!
 
 ## Text selection
 
