@@ -1,6 +1,7 @@
 ---
 title: manjaro
 layout: howto
+icon: library_music
 ---
 
 ## Fresh new system
