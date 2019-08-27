@@ -1,7 +1,7 @@
 ---
 title: manjaro
 layout: howto
-icon: library_music
+icon_svg_url: https://upload.wikimedia.org/wikipedia/commons/3/3e/Manjaro-logo.svg
 ---
 
 ## Fresh new system
