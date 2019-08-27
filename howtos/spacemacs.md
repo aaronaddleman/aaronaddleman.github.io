@@ -1,6 +1,7 @@
 ---
 layout: howtos
 title: Spacemacs
+icon_svg_url: https://upload.wikimedia.org/wikipedia/commons/1/1c/Spacemacs_logo.svg
 ---
 
 WARNING: This document is only for EVIL based users. Not control tower.
