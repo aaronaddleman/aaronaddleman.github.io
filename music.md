@@ -18,7 +18,7 @@ share: true
 
 | Name                                      | Artist                             | Album                                |
 | -------------                             | -------------                      | ------------                         |
-| [Tune For Paul](tuneforpaul)              | Small Town Therapy                 | Dreams and Circumstances             |
+| [Tune For Paul][tuneforpaul]              | Small Town Therapy                 | Dreams and Circumstances             |
 | [Fifteen (feat. Chela)][fifteen]          | Trax 7 - The Slow Wave             | Goldroom                             |
 | [Universal Traveller][universal]          | Air                                | Talkie Walkie                        |
 | [Title and Registration][title]           | Death Cab for Cutie                | Transatlanticism                     |
@@ -47,6 +47,7 @@ share: true
 
 [Keep working](https://play.google.com/music/playlist/AMaBXyk3W2uN9oaDNS0uBYHoLjQasP_OzSeHQvW3bHkEVDOZthvoB-siYt-uK8K8rMWrJnxGCsIuPUCPnN1Guw9w8ZXmOV6Y8w%3D%3D)
 
+[tuneforpaul]: https://www.youtube.com/watch?v=MLu965jw-xk&list=PLWaOqMwzKIcJkguTPSZekYrWGdz5H0aCR
 [fifteen]: https://www.youtube.com/watch?v=E-ceNI0fiig
 [universal]: https://www.youtube.com/watch?v=abkIjdT0uTk
 [title]: https://www.youtube.com/watch?v=KGEyqP0744c
