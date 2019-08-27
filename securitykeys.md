@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /keys/
-title: "Security Keys"
+title: "Keys"
 modified: 2017-03-19
 tags: []
 icon: vpn_key
