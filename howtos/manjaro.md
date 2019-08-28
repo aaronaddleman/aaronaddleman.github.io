@@ -1,7 +1,9 @@
 ---
-title: manjaro
+title: Manjaro
 layout: page
 icon_svg_url: https://upload.wikimedia.org/wikipedia/commons/3/3e/Manjaro-logo.svg
+description: |
+  Modern installation of the Arch Linux distribution. My findings of how to live with it all.
 ---
 
 ## Fresh new system

@@ -2,6 +2,8 @@
 layout: howtos
 title: Spacemacs
 icon_svg_url: https://upload.wikimedia.org/wikipedia/commons/1/1c/Spacemacs_logo.svg
+description: |
+  An editor with a twist on the conflict between Emacs and Vim, and my notes about how to make it useful.
 ---
 
 WARNING: This document is only for EVIL based users. Not control tower.
