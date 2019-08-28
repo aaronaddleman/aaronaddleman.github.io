@@ -36,7 +36,7 @@ __Databases:__ MongoDB, MySQL, SQLite
 
 ## Experience
 
-### PERFORMANCE & CAPACITY ENGINEER, AUTODESK INC, SF, CA
+### PRINCIPAL AUTOMATION ENGINEER, AUTODESK INC, SF, CA
 
 `2016 - Present`
 
@@ -99,7 +99,7 @@ Network administrator responsible for computer services both on the external and
 
 ### BOARD MEMBER, MARIN SOCIETY OF HOME BREWING, NOVATO, CA 
 
-`2013-PRESENT`
+`2013-2015`
 
 Volunteer position responsible for management and future planning of web site for members.
 
