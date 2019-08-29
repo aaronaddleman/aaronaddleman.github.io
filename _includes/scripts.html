@@ -4,6 +4,7 @@
 <!-- Compiled and minified JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/toc.js"></script>
 <!-- Quick Sprout: Grow your traffic -->
 <script>
   (function(e,t,n,c,r){c=e.createElement(t),c.async=1,c.src=n,
@@ -21,4 +22,8 @@
   }
   strikethrough();
 })();
+
+ $(document).ready(function(){
+   $('.scrollspy').scrollSpy();
+ });
 </script>

@@ -5,6 +5,28 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+.table-of-contents a.active {
+  color: red;
+  border-left: 0px
+}
+
 .post-content {
   color: #6C7A89;
+}
+
+.toc-wrapper {
+  position: sticky;
+}
+
+.toc-wrapper ul  {
+  padding: 0;
+}
+
+.toc.wrapper ul li {
+  margin-left: 1rem;
+}
+
+.toc-wrapper ul ul li {
+  margin-left: 1.25rem;
+  border-left: 1px solid #dee5ef;
 }
