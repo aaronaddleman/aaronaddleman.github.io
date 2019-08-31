@@ -12,15 +12,8 @@ image:
   credit: Aaron Addleman
   creditlink:
 share: true
-innav: true
 ---
 
-## Keys
+## GPG keys
 
-### GPG keys
-
-{% include_relative keys/aaronaddleman.gpg.txt %}
-
-### Keybase.io
-
-{% include_relative keybase.txt %}
+[aaronaddleman@gmail.com]({{ site.url }}/keys/aaronaddleman.gpg.txt)
