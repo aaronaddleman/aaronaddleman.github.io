@@ -14,7 +14,7 @@ module Jekyll
             output << '</ul>'
             h4s = 0
           end
-          output << %{<li><a href="##{href}" entry="#{entry.inspect}">#{title}</a></li>}
+          output << %{<li><a href="##{href}">#{title}</a></li>}
         when 'h4'
           if h4s == 0
             output << '<ul>'
@@ -22,7 +22,7 @@ module Jekyll
           end
 
           if h4s > 0
-            output << %{<li><a href="##{href}" entry="#{entry.inspect}">#{title}</a></li>}
+            output << %{<li><a href="##{href}">#{title}</a></li>}
             h4s += 1
           end
         end
