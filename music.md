@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /music/
-title: "Music I enjoy"
+title: "Music"
 modified: 2017-09-29
 tags: []
 icon: library_music
@@ -11,7 +11,7 @@ image:
   feature: https://c1.staticflickr.com/1/138/345857784_8c191c7efc_o.jpg
   credit: Aaron Addleman
   creditlink:
-share: true
+innav: true
 ---
 
 ## songs

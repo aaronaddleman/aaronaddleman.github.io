@@ -1,0 +1,11 @@
+- title: About Me
+  url: /aboutme/
+- title: Articles
+  url: /articles/
+- title: Setups
+  url: /setups/
+  sublinks:
+    - title: Spacemacs
+      url: /setups/spacemacs/
+    - title: Manjaro
+      url: /setups/manjaro/

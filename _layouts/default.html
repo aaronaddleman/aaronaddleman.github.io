@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body>
-    {% include ga.html %}  
+    {% include ga.html %}
     <head>
       {% if page.url != "/" %}
       {% include nav.html %}
@@ -12,7 +12,9 @@
     </head>
 
     <main>
-      {{ content }}
+      <div class="container">
+        {{ content }}
+      </div>
     </main>
 
     <div class="divider"></div>

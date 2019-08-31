@@ -3,37 +3,36 @@ layout: default
 ---
 
 <div class="container">
-
-  
-  <div class="row center">
+  <div class="row valign-wrapper">
     <div class="col s12">
-     {% include icon-logo.html %}
+      <a href="/">
+        {% include icon-logo.html %}
+      </a>
     </div>
   </div>
-
-  <div class="row">
-
-  {% for my_page in site.pages %}
-    {% if my_page.title %}
-    <a class="grey-text text-darken-2" href="{{ my_page.url | prepend: site.baseurl }}">
-      <div class="col s12 m3 l3 hoverable">
-        <p class="">
-          {% if my_page.icon %}
-          <i class="material-icons large">{{ my_page.icon }}</i>
-          {% endif %}
-          {% if my_page.icon_svg_url %}
-          <img class="material-icons large" src={{ my_page.icon_svg_url }} style="max-width:50%;
-max-height:100%;">
-          {% endif %}
-          <h4 class="promo-caption">{{ my_page.title }}</h4>
-        </p>
-        <p class="light">
-          {{ my_page.description }}
-        </p>
-      </div>
-    </a>
-    {% endif %}
-  {% endfor %} 
-
+  <div class="row valign-wrapper">
+    <div class="col s12">
+      {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <a class="grey-text text-darken-2" href="{{ my_page.url | prepend: site.baseurl }}">
+        <div class="col s12 m4 hoverable">
+          <p class="">
+            {% if my_page.icon %}
+            <i class="material-icons large">{{ my_page.icon }}</i>
+            {% endif %}
+            {% if my_page.icon_svg_url %}
+            <img class="material-icons large" src={{ my_page.icon_svg_url }} style="max-width:50%;
+                        max-height:100%;">
+            {% endif %}
+            <h4 class="promo-caption">{{ my_page.title }}</h4>
+          </p>
+          <p class="light">
+            {{ my_page.description }}
+          </p>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %} 
+    </div>
   </div>
 </div>
