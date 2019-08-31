@@ -14,7 +14,6 @@ image:
   creditlink: null
 share: true
 published: true
-innav: true
 ---
 
 ## Profile
