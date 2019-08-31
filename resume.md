@@ -24,7 +24,7 @@ To obtain a position where I can exercise my creativity and strengths in providi
 
 __Languages:__ Clojure/ClojureScript, Ruby, Bash, PHP, Python, Perl, JavaScript, HTML design
 
-__Operating Systems:__ RedHat EL, FreeBSD, Ubuntu, VMware vSphere, VirtualBox
+__Operating Systems:__ CentOS, RedHat EL, FreeBSD, Ubuntu, VMware vSphere, VirtualBox
 
 __Automation:__ Terraform, Puppet, Chef, NightwatchJS
 
