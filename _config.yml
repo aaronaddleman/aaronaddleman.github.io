@@ -21,6 +21,10 @@ twitter_username: aaronaddleman
 github_username: aaronaddleman
 discus_shortname: aaronaddleman
 
+# collections
+collections:
+  spacemacs:
+
 # Build settings
 markdown: kramdown
 
